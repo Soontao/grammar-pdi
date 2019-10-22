@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "antlr4-bodl-basic",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "bodl/examples/basic.bo",
+      "grammar": "bodl/BODLParser.g4",
+      "startRule": "program",
+      "printParseTree": true,
+      "visualParseTree": true
+    },
+    {
+      "name": "antlr4-bodl-complex",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "bodl/examples/complex.bo",
+      "grammar": "bodl/BODLParser.g4",
+      "startRule": "program",
+      "printParseTree": true,
+      "visualParseTree": true
+    }
+  ]
+}

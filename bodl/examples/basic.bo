@@ -1,0 +1,5 @@
+import ABSL;
+
+businessobject Hello {
+  element a : String;
+}
