@@ -1,2 +1,10 @@
 # github.com/antlr/antlr4 v0.0.0-20181218183524-be58ebffde8e
 github.com/antlr/antlr4/runtime/Go/antlr
+# github.com/davecgh/go-spew v1.1.0
+github.com/davecgh/go-spew/spew
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/stretchr/testify v1.4.0
+github.com/stretchr/testify/assert
+# gopkg.in/yaml.v2 v2.2.2
+gopkg.in/yaml.v2
