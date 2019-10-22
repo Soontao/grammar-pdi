@@ -17,12 +17,12 @@ businessObjectDefinition:
 
 block: OpenBrace itemList CloseBrace;
 
-itemList: (element | message | node | action | association)*;
+itemList: (element | message | node | boAction | association)*;
 
 element:
 	comments? annotationList? ELEMENT Identifier Colon type SemiColon;
 
-action:
+boAction:
 	comments? ACTION Identifier messageRaiseDefinition? SemiColon;
 
 message:
