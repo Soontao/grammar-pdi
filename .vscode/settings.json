@@ -4,6 +4,7 @@
     "ABSL",
     "BODL",
     "antlr",
+    "businessobject",
     "stretchr"
   ]
 }

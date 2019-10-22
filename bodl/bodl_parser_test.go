@@ -9,28 +9,21 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestNewBODLParser(t *testing.T) {
-	type args struct {
-		input antlr.TokenStream
-	}
+func TestParserBasicBODL(t *testing.T) {
 	basicBOStream, _ := antlr.NewFileStream("./examples/basic.bo")
-	tests := []struct {
-		name string
-		args args
-	}{
-		{
-			"Basic BO Definition",
-			args{antlr.NewCommonTokenStream(NewBODLLexer(basicBOStream), 0)},
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			
-			parser := NewBODLParser(tt.args.input)
-			program := parser.Program()
-			children := program.GetChildren()
-			assert.True(t, len(children) == 4)
+	input := antlr.NewCommonTokenStream(NewBODLLexer(basicBOStream), 0)
+	parser := NewBODLParser(input)
+	program := parser.Program()
+	children := program.GetChildren()
+	assert.True(t, len(children) == 4)
+}
 
-		})
-	}
+func TestParserComplexBODL(t *testing.T) {
+	complexBOStream, _ := antlr.NewFileStream("./examples/complex.bo")
+	input := antlr.NewCommonTokenStream(NewBODLLexer(complexBOStream), 0)
+	parser := NewBODLParser(input)
+	program := parser.Program()
+	children := program.GetChildren()
+	assert.True(t, len(children) == 4)
+
 }

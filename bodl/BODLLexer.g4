@@ -24,8 +24,8 @@ OpenBracket: '[';
 CloseBracket: ']';
 OpenParen: '(';
 CloseParen: ')';
-OpenBrace: '{' {this.ProcessOpenBrace();};
-CloseBrace: '}' {this.ProcessCloseBrace();};
+OpenBrace: '{';
+CloseBrace: '}';
 SemiColon: ';';
 Comma: ',';
 Assign: '=';
@@ -92,7 +92,7 @@ DecimalLiteral:
 
 /// Numeric Literals
 HexIntegerLiteral: '0' [xX] HexDigit+;
-OctalIntegerLiteral: '0' [0-7]+ {!this.IsStrictMode()}?;
+OctalIntegerLiteral: '0' [0-7]+;
 OctalIntegerLiteral2: '0' [oO] [0-7]+;
 BinaryIntegerLiteral: '0' [bB] [01]+;
 
