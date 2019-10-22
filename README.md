@@ -1,5 +1,7 @@
 # Grammar of PDI
 
+[![CircleCI](https://circleci.com/gh/Soontao/grammar-pdi.svg?style=shield)](https://circleci.com/gh/Soontao/grammar-pdi)
+
 Provide the AST parser for BODL (Business Object Definition Language) and ABSL (ABAP Script Language)
 
 ## [BODL Parser](./bodl)
