@@ -1,7 +1,6 @@
 # Grammar PDi
 
-Provide ast parser of BODL (Business Object Definition Language) and ABSL (ABAP Script Language)
-
+Provide the AST parser for BODL (Business Object Definition Language) and ABSL (ABAP Script Language)
 
 ## [BODL Parser](./bodl)
 
