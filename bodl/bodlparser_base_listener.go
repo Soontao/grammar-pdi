@@ -26,23 +26,17 @@ func (s *BaseBODLParserListener) EnterProgram(ctx *ProgramContext) {}
 // ExitProgram is called when production program is exited.
 func (s *BaseBODLParserListener) ExitProgram(ctx *ProgramContext) {}
 
-// EnterStatments is called when production statments is entered.
-func (s *BaseBODLParserListener) EnterStatments(ctx *StatmentsContext) {}
-
-// ExitStatments is called when production statments is exited.
-func (s *BaseBODLParserListener) ExitStatments(ctx *StatmentsContext) {}
-
 // EnterImportStatment is called when production importStatment is entered.
 func (s *BaseBODLParserListener) EnterImportStatment(ctx *ImportStatmentContext) {}
 
 // ExitImportStatment is called when production importStatment is exited.
 func (s *BaseBODLParserListener) ExitImportStatment(ctx *ImportStatmentContext) {}
 
-// EnterBusinessObjectDefinition is called when production businessObjectDefinition is entered.
-func (s *BaseBODLParserListener) EnterBusinessObjectDefinition(ctx *BusinessObjectDefinitionContext) {}
+// EnterDefinition is called when production definition is entered.
+func (s *BaseBODLParserListener) EnterDefinition(ctx *DefinitionContext) {}
 
-// ExitBusinessObjectDefinition is called when production businessObjectDefinition is exited.
-func (s *BaseBODLParserListener) ExitBusinessObjectDefinition(ctx *BusinessObjectDefinitionContext) {}
+// ExitDefinition is called when production definition is exited.
+func (s *BaseBODLParserListener) ExitDefinition(ctx *DefinitionContext) {}
 
 // EnterBlock is called when production block is entered.
 func (s *BaseBODLParserListener) EnterBlock(ctx *BlockContext) {}
@@ -112,11 +106,11 @@ func (s *BaseBODLParserListener) EnterValutaionExpression(ctx *ValutaionExpressi
 // ExitValutaionExpression is called when production valutaionExpression is exited.
 func (s *BaseBODLParserListener) ExitValutaionExpression(ctx *ValutaionExpressionContext) {}
 
-// EnterMessageRaiseDefinition is called when production messageRaiseDefinition is entered.
-func (s *BaseBODLParserListener) EnterMessageRaiseDefinition(ctx *MessageRaiseDefinitionContext) {}
+// EnterRaiseMessage is called when production raiseMessage is entered.
+func (s *BaseBODLParserListener) EnterRaiseMessage(ctx *RaiseMessageContext) {}
 
-// ExitMessageRaiseDefinition is called when production messageRaiseDefinition is exited.
-func (s *BaseBODLParserListener) ExitMessageRaiseDefinition(ctx *MessageRaiseDefinitionContext) {}
+// ExitRaiseMessage is called when production raiseMessage is exited.
+func (s *BaseBODLParserListener) ExitRaiseMessage(ctx *RaiseMessageContext) {}
 
 // EnterAnnotationList is called when production annotationList is entered.
 func (s *BaseBODLParserListener) EnterAnnotationList(ctx *AnnotationListContext) {}
@@ -189,6 +183,12 @@ func (s *BaseBODLParserListener) EnterLiteral(ctx *LiteralContext) {}
 
 // ExitLiteral is called when production literal is exited.
 func (s *BaseBODLParserListener) ExitLiteral(ctx *LiteralContext) {}
+
+// EnterCopyright is called when production copyright is entered.
+func (s *BaseBODLParserListener) EnterCopyright(ctx *CopyrightContext) {}
+
+// ExitCopyright is called when production copyright is exited.
+func (s *BaseBODLParserListener) ExitCopyright(ctx *CopyrightContext) {}
 
 // EnterComments is called when production comments is entered.
 func (s *BaseBODLParserListener) EnterComments(ctx *CommentsContext) {}

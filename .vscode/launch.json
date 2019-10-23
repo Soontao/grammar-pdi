@@ -20,6 +20,16 @@
       "startRule": "program",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "antlr4-bodl-custom-annotation",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "bodl/examples/custom_annotation.bo",
+      "grammar": "bodl/BODLParser.g4",
+      "startRule": "program",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }

@@ -4,16 +4,14 @@ options {
 	tokenVocab = BODLLexer;
 }
 
-program: comments? statments? businessObjectDefinition EOF;
-
-statments: importStatment*;
+program: EOF | copyright? (importStatment)* definition* EOF;
 
 importStatment:
-	IMPORT memberExpression SemiColon
-	| IMPORT memberExpression AS Identifier SemiColon;
+	comments? IMPORT memberExpression SemiColon
+	| comments? IMPORT memberExpression AS Identifier SemiColon;
 
-businessObjectDefinition:
-	annotationList? BUSINESSOBJECT Identifier messageRaiseDefinition? block;
+definition:
+	annotationList? BUSINESSOBJECT (Identifier | type) raiseMessage? block;
 
 block: OpenBrace itemList CloseBrace;
 
@@ -22,14 +20,13 @@ itemList: (element | message | node | boAction | association)*;
 element:
 	comments? annotationList? ELEMENT Identifier Colon type SemiColon;
 
-boAction:
-	comments? ACTION Identifier messageRaiseDefinition? SemiColon;
+boAction: comments? ACTION Identifier raiseMessage? SemiColon;
 
 message:
 	comments? MESSAGE Identifier TEXT StringLiteral Colon typeList SemiColon;
 
 node:
-	comments? annotationList? NODE Identifier multiplicity? messageRaiseDefinition? block;
+	comments? annotationList? NODE Identifier multiplicity? raiseMessage? block;
 
 association:
 	comments? annotationList? ASSOCIATION Identifier multiplicity? TO Identifier
@@ -46,7 +43,7 @@ valutaionExpressionList:
 
 valutaionExpression: Identifier compareOperator literal;
 
-messageRaiseDefinition: RAISES? identifierList?;
+raiseMessage: RAISES? identifierList?;
 
 annotationList: annotation*;
 
@@ -95,7 +92,9 @@ keyword:
 
 literal: DecimalLiteral | BooleanLiteral | StringLiteral;
 
-comments: (SingleLineComment | MultiLineComment)*;
+copyright: MultiLineComment? SingleLineComment*;
+
+comments: ( SingleLineComment | MultiLineComment)*;
 
 compareOperator:
 	Equals_

@@ -1,4 +1,7 @@
 // header doc
+// copy right text
+// @author Theo Sun
+
 import Common.Hello as Hello;
 import Common.Util;
 

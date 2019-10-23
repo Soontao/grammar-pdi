@@ -10,14 +10,11 @@ type BODLParserListener interface {
 	// EnterProgram is called when entering the program production.
 	EnterProgram(c *ProgramContext)
 
-	// EnterStatments is called when entering the statments production.
-	EnterStatments(c *StatmentsContext)
-
 	// EnterImportStatment is called when entering the importStatment production.
 	EnterImportStatment(c *ImportStatmentContext)
 
-	// EnterBusinessObjectDefinition is called when entering the businessObjectDefinition production.
-	EnterBusinessObjectDefinition(c *BusinessObjectDefinitionContext)
+	// EnterDefinition is called when entering the definition production.
+	EnterDefinition(c *DefinitionContext)
 
 	// EnterBlock is called when entering the block production.
 	EnterBlock(c *BlockContext)
@@ -52,8 +49,8 @@ type BODLParserListener interface {
 	// EnterValutaionExpression is called when entering the valutaionExpression production.
 	EnterValutaionExpression(c *ValutaionExpressionContext)
 
-	// EnterMessageRaiseDefinition is called when entering the messageRaiseDefinition production.
-	EnterMessageRaiseDefinition(c *MessageRaiseDefinitionContext)
+	// EnterRaiseMessage is called when entering the raiseMessage production.
+	EnterRaiseMessage(c *RaiseMessageContext)
 
 	// EnterAnnotationList is called when entering the annotationList production.
 	EnterAnnotationList(c *AnnotationListContext)
@@ -91,6 +88,9 @@ type BODLParserListener interface {
 	// EnterLiteral is called when entering the literal production.
 	EnterLiteral(c *LiteralContext)
 
+	// EnterCopyright is called when entering the copyright production.
+	EnterCopyright(c *CopyrightContext)
+
 	// EnterComments is called when entering the comments production.
 	EnterComments(c *CommentsContext)
 
@@ -103,14 +103,11 @@ type BODLParserListener interface {
 	// ExitProgram is called when exiting the program production.
 	ExitProgram(c *ProgramContext)
 
-	// ExitStatments is called when exiting the statments production.
-	ExitStatments(c *StatmentsContext)
-
 	// ExitImportStatment is called when exiting the importStatment production.
 	ExitImportStatment(c *ImportStatmentContext)
 
-	// ExitBusinessObjectDefinition is called when exiting the businessObjectDefinition production.
-	ExitBusinessObjectDefinition(c *BusinessObjectDefinitionContext)
+	// ExitDefinition is called when exiting the definition production.
+	ExitDefinition(c *DefinitionContext)
 
 	// ExitBlock is called when exiting the block production.
 	ExitBlock(c *BlockContext)
@@ -145,8 +142,8 @@ type BODLParserListener interface {
 	// ExitValutaionExpression is called when exiting the valutaionExpression production.
 	ExitValutaionExpression(c *ValutaionExpressionContext)
 
-	// ExitMessageRaiseDefinition is called when exiting the messageRaiseDefinition production.
-	ExitMessageRaiseDefinition(c *MessageRaiseDefinitionContext)
+	// ExitRaiseMessage is called when exiting the raiseMessage production.
+	ExitRaiseMessage(c *RaiseMessageContext)
 
 	// ExitAnnotationList is called when exiting the annotationList production.
 	ExitAnnotationList(c *AnnotationListContext)
@@ -183,6 +180,9 @@ type BODLParserListener interface {
 
 	// ExitLiteral is called when exiting the literal production.
 	ExitLiteral(c *LiteralContext)
+
+	// ExitCopyright is called when exiting the copyright production.
+	ExitCopyright(c *CopyrightContext)
 
 	// ExitComments is called when exiting the comments production.
 	ExitComments(c *CommentsContext)

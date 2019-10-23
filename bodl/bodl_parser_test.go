@@ -1,5 +1,3 @@
-// Code generated from ../BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
-
 package bodl
 
 import (
@@ -24,6 +22,6 @@ func TestParserComplexBODL(t *testing.T) {
 	parser := NewBODLParser(input)
 	program := parser.Program()
 	children := program.GetChildren()
-	assert.True(t, len(children) == 4)
+	assert.True(t, len(children) == 5)
 
 }

@@ -1,0 +1,11 @@
+
+// hello
+import ABSL;
+
+
+businessobject Hello {
+  
+  // [Text]
+  element a : String;
+
+}

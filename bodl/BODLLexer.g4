@@ -18,7 +18,13 @@ VALUATION: 'valuation';
 
 // Comments
 MultiLineComment: '/*' .*? '*/';
-SingleLineComment: '//' ~[\r\n\u2028\u2029]*;
+
+SingleLineComment:
+	SingleCommentStart ' '? ~[\u002B] CommentTextContent;
+
+fragment SingleCommentStart: '//';
+
+fragment CommentTextContent: ~[\r\n\u2028\u2029]*;
 
 OpenBracket: '[';
 CloseBracket: ']';
