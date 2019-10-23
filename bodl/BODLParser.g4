@@ -26,7 +26,7 @@ message:
 	comments? MESSAGE Identifier TEXT StringLiteral Colon typeList SemiColon;
 
 node:
-	comments? annotationList? NODE Identifier multiplicity? raiseMessage? block;
+	comments? annotationList? NODE Identifier multiplicity? raiseMessage? block?;
 
 association:
 	comments? annotationList? ASSOCIATION Identifier multiplicity? TO Identifier

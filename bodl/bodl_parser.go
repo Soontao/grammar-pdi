@@ -15,7 +15,7 @@ var _ = reflect.Copy
 var _ = strconv.Itoa
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 79, 336,
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 79, 337,
 	4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7,
 	4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13,
 	9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 4, 16, 9, 16, 4, 17, 9, 17, 4, 18, 9,
@@ -33,36 +33,36 @@ var parserATN = []uint16{
 	8, 147, 10, 8, 3, 8, 3, 8, 3, 9, 5, 9, 152, 10, 9, 3, 9, 3, 9, 3, 9, 3,
 	9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 10, 5, 10, 163, 10, 10, 3, 10, 5, 10, 166,
 	10, 10, 3, 10, 3, 10, 3, 10, 5, 10, 171, 10, 10, 3, 10, 5, 10, 174, 10,
-	10, 3, 10, 3, 10, 3, 11, 5, 11, 179, 10, 11, 3, 11, 5, 11, 182, 10, 11,
-	3, 11, 3, 11, 3, 11, 5, 11, 187, 10, 11, 3, 11, 3, 11, 3, 11, 5, 11, 192,
-	10, 11, 3, 11, 5, 11, 195, 10, 11, 3, 11, 3, 11, 3, 12, 3, 12, 3, 12, 3,
-	13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 5, 14,
-	212, 10, 14, 3, 15, 3, 15, 3, 15, 3, 15, 3, 16, 5, 16, 219, 10, 16, 3,
-	16, 5, 16, 222, 10, 16, 3, 17, 7, 17, 225, 10, 17, 12, 17, 14, 17, 228,
-	11, 17, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18,
-	3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 5, 18, 246, 10, 18, 3,
-	19, 3, 19, 3, 19, 3, 19, 3, 19, 5, 19, 253, 10, 19, 3, 20, 3, 20, 5, 20,
-	257, 10, 20, 3, 20, 3, 20, 3, 20, 3, 20, 5, 20, 263, 10, 20, 5, 20, 265,
-	10, 20, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 5, 21, 274, 10,
-	21, 3, 22, 3, 22, 3, 22, 3, 22, 3, 22, 5, 22, 281, 10, 22, 3, 23, 3, 23,
-	3, 23, 3, 23, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3,
-	24, 3, 24, 3, 24, 3, 24, 5, 24, 299, 10, 24, 3, 25, 3, 25, 3, 25, 3, 25,
-	5, 25, 305, 10, 25, 3, 26, 3, 26, 3, 26, 3, 26, 5, 26, 311, 10, 26, 3,
-	27, 3, 27, 3, 28, 3, 28, 3, 29, 5, 29, 318, 10, 29, 3, 29, 7, 29, 321,
-	10, 29, 12, 29, 14, 29, 324, 11, 29, 3, 30, 7, 30, 327, 10, 30, 12, 30,
-	14, 30, 330, 11, 30, 3, 31, 3, 31, 3, 32, 3, 32, 3, 32, 2, 2, 33, 2, 4,
-	6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42,
-	44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 2, 7, 3, 2, 3, 14, 3, 2, 70, 72,
-	3, 2, 16, 17, 3, 2, 43, 48, 3, 2, 54, 55, 2, 351, 2, 81, 3, 2, 2, 2, 4,
-	99, 3, 2, 2, 2, 6, 102, 3, 2, 2, 2, 8, 114, 3, 2, 2, 2, 10, 125, 3, 2,
-	2, 2, 12, 129, 3, 2, 2, 2, 14, 141, 3, 2, 2, 2, 16, 151, 3, 2, 2, 2, 18,
-	162, 3, 2, 2, 2, 20, 178, 3, 2, 2, 2, 22, 198, 3, 2, 2, 2, 24, 201, 3,
-	2, 2, 2, 26, 211, 3, 2, 2, 2, 28, 213, 3, 2, 2, 2, 30, 218, 3, 2, 2, 2,
-	32, 226, 3, 2, 2, 2, 34, 245, 3, 2, 2, 2, 36, 252, 3, 2, 2, 2, 38, 264,
-	3, 2, 2, 2, 40, 273, 3, 2, 2, 2, 42, 280, 3, 2, 2, 2, 44, 282, 3, 2, 2,
-	2, 46, 298, 3, 2, 2, 2, 48, 304, 3, 2, 2, 2, 50, 310, 3, 2, 2, 2, 52, 312,
-	3, 2, 2, 2, 54, 314, 3, 2, 2, 2, 56, 317, 3, 2, 2, 2, 58, 328, 3, 2, 2,
-	2, 60, 331, 3, 2, 2, 2, 62, 333, 3, 2, 2, 2, 64, 82, 7, 2, 2, 3, 65, 67,
+	10, 3, 10, 5, 10, 177, 10, 10, 3, 11, 5, 11, 180, 10, 11, 3, 11, 5, 11,
+	183, 10, 11, 3, 11, 3, 11, 3, 11, 5, 11, 188, 10, 11, 3, 11, 3, 11, 3,
+	11, 5, 11, 193, 10, 11, 3, 11, 5, 11, 196, 10, 11, 3, 11, 3, 11, 3, 12,
+	3, 12, 3, 12, 3, 13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 14, 3, 14, 3, 14, 3,
+	14, 3, 14, 5, 14, 213, 10, 14, 3, 15, 3, 15, 3, 15, 3, 15, 3, 16, 5, 16,
+	220, 10, 16, 3, 16, 5, 16, 223, 10, 16, 3, 17, 7, 17, 226, 10, 17, 12,
+	17, 14, 17, 229, 11, 17, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18,
+	3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 5, 18, 247,
+	10, 18, 3, 19, 3, 19, 3, 19, 3, 19, 3, 19, 5, 19, 254, 10, 19, 3, 20, 3,
+	20, 5, 20, 258, 10, 20, 3, 20, 3, 20, 3, 20, 3, 20, 5, 20, 264, 10, 20,
+	5, 20, 266, 10, 20, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 5,
+	21, 275, 10, 21, 3, 22, 3, 22, 3, 22, 3, 22, 3, 22, 5, 22, 282, 10, 22,
+	3, 23, 3, 23, 3, 23, 3, 23, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3,
+	24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 5, 24, 300, 10, 24, 3, 25, 3, 25,
+	3, 25, 3, 25, 5, 25, 306, 10, 25, 3, 26, 3, 26, 3, 26, 3, 26, 5, 26, 312,
+	10, 26, 3, 27, 3, 27, 3, 28, 3, 28, 3, 29, 5, 29, 319, 10, 29, 3, 29, 7,
+	29, 322, 10, 29, 12, 29, 14, 29, 325, 11, 29, 3, 30, 7, 30, 328, 10, 30,
+	12, 30, 14, 30, 331, 11, 30, 3, 31, 3, 31, 3, 32, 3, 32, 3, 32, 2, 2, 33,
+	2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38,
+	40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 2, 7, 3, 2, 3, 14, 3, 2,
+	70, 72, 3, 2, 16, 17, 3, 2, 43, 48, 3, 2, 54, 55, 2, 353, 2, 81, 3, 2,
+	2, 2, 4, 99, 3, 2, 2, 2, 6, 102, 3, 2, 2, 2, 8, 114, 3, 2, 2, 2, 10, 125,
+	3, 2, 2, 2, 12, 129, 3, 2, 2, 2, 14, 141, 3, 2, 2, 2, 16, 151, 3, 2, 2,
+	2, 18, 162, 3, 2, 2, 2, 20, 179, 3, 2, 2, 2, 22, 199, 3, 2, 2, 2, 24, 202,
+	3, 2, 2, 2, 26, 212, 3, 2, 2, 2, 28, 214, 3, 2, 2, 2, 30, 219, 3, 2, 2,
+	2, 32, 227, 3, 2, 2, 2, 34, 246, 3, 2, 2, 2, 36, 253, 3, 2, 2, 2, 38, 265,
+	3, 2, 2, 2, 40, 274, 3, 2, 2, 2, 42, 281, 3, 2, 2, 2, 44, 283, 3, 2, 2,
+	2, 46, 299, 3, 2, 2, 2, 48, 305, 3, 2, 2, 2, 50, 311, 3, 2, 2, 2, 52, 313,
+	3, 2, 2, 2, 54, 315, 3, 2, 2, 2, 56, 318, 3, 2, 2, 2, 58, 329, 3, 2, 2,
+	2, 60, 332, 3, 2, 2, 2, 62, 334, 3, 2, 2, 2, 64, 82, 7, 2, 2, 3, 65, 67,
 	5, 56, 29, 2, 66, 65, 3, 2, 2, 2, 66, 67, 3, 2, 2, 2, 67, 71, 3, 2, 2,
 	2, 68, 70, 5, 4, 3, 2, 69, 68, 3, 2, 2, 2, 70, 73, 3, 2, 2, 2, 71, 69,
 	3, 2, 2, 2, 71, 72, 3, 2, 2, 2, 72, 77, 3, 2, 2, 2, 73, 71, 3, 2, 2, 2,
@@ -103,66 +103,67 @@ var parserATN = []uint16{
 	3, 2, 2, 2, 167, 168, 7, 7, 2, 2, 168, 170, 7, 69, 2, 2, 169, 171, 5, 46,
 	24, 2, 170, 169, 3, 2, 2, 2, 170, 171, 3, 2, 2, 2, 171, 173, 3, 2, 2, 2,
 	172, 174, 5, 30, 16, 2, 173, 172, 3, 2, 2, 2, 173, 174, 3, 2, 2, 2, 174,
-	175, 3, 2, 2, 2, 175, 176, 5, 8, 5, 2, 176, 19, 3, 2, 2, 2, 177, 179, 5,
-	58, 30, 2, 178, 177, 3, 2, 2, 2, 178, 179, 3, 2, 2, 2, 179, 181, 3, 2,
-	2, 2, 180, 182, 5, 32, 17, 2, 181, 180, 3, 2, 2, 2, 181, 182, 3, 2, 2,
-	2, 182, 183, 3, 2, 2, 2, 183, 184, 7, 5, 2, 2, 184, 186, 7, 69, 2, 2, 185,
-	187, 5, 46, 24, 2, 186, 185, 3, 2, 2, 2, 186, 187, 3, 2, 2, 2, 187, 188,
-	3, 2, 2, 2, 188, 189, 7, 4, 2, 2, 189, 191, 7, 69, 2, 2, 190, 192, 5, 22,
-	12, 2, 191, 190, 3, 2, 2, 2, 191, 192, 3, 2, 2, 2, 192, 194, 3, 2, 2, 2,
-	193, 195, 5, 24, 13, 2, 194, 193, 3, 2, 2, 2, 194, 195, 3, 2, 2, 2, 195,
-	196, 3, 2, 2, 2, 196, 197, 7, 24, 2, 2, 197, 21, 3, 2, 2, 2, 198, 199,
-	7, 11, 2, 2, 199, 200, 7, 69, 2, 2, 200, 23, 3, 2, 2, 2, 201, 202, 7, 15,
-	2, 2, 202, 203, 7, 20, 2, 2, 203, 204, 5, 26, 14, 2, 204, 205, 7, 21, 2,
-	2, 205, 25, 3, 2, 2, 2, 206, 212, 5, 28, 15, 2, 207, 208, 5, 28, 15, 2,
-	208, 209, 5, 62, 32, 2, 209, 210, 5, 26, 14, 2, 210, 212, 3, 2, 2, 2, 211,
-	206, 3, 2, 2, 2, 211, 207, 3, 2, 2, 2, 212, 27, 3, 2, 2, 2, 213, 214, 7,
-	69, 2, 2, 214, 215, 5, 60, 31, 2, 215, 216, 5, 54, 28, 2, 216, 29, 3, 2,
-	2, 2, 217, 219, 7, 10, 2, 2, 218, 217, 3, 2, 2, 2, 218, 219, 3, 2, 2, 2,
-	219, 221, 3, 2, 2, 2, 220, 222, 5, 50, 26, 2, 221, 220, 3, 2, 2, 2, 221,
-	222, 3, 2, 2, 2, 222, 31, 3, 2, 2, 2, 223, 225, 5, 34, 18, 2, 224, 223,
-	3, 2, 2, 2, 225, 228, 3, 2, 2, 2, 226, 224, 3, 2, 2, 2, 226, 227, 3, 2,
-	2, 2, 227, 33, 3, 2, 2, 2, 228, 226, 3, 2, 2, 2, 229, 230, 7, 18, 2, 2,
-	230, 231, 7, 69, 2, 2, 231, 246, 7, 19, 2, 2, 232, 233, 7, 18, 2, 2, 233,
-	234, 7, 69, 2, 2, 234, 235, 7, 20, 2, 2, 235, 236, 7, 69, 2, 2, 236, 237,
-	7, 21, 2, 2, 237, 246, 7, 19, 2, 2, 238, 239, 7, 18, 2, 2, 239, 240, 7,
-	69, 2, 2, 240, 241, 7, 20, 2, 2, 241, 242, 5, 54, 28, 2, 242, 243, 7, 21,
-	2, 2, 243, 244, 7, 19, 2, 2, 244, 246, 3, 2, 2, 2, 245, 229, 3, 2, 2, 2,
-	245, 232, 3, 2, 2, 2, 245, 238, 3, 2, 2, 2, 246, 35, 3, 2, 2, 2, 247, 253,
-	5, 38, 20, 2, 248, 249, 5, 38, 20, 2, 249, 250, 7, 25, 2, 2, 250, 251,
-	5, 36, 19, 2, 251, 253, 3, 2, 2, 2, 252, 247, 3, 2, 2, 2, 252, 248, 3,
-	2, 2, 2, 253, 37, 3, 2, 2, 2, 254, 256, 7, 69, 2, 2, 255, 257, 5, 40, 21,
-	2, 256, 255, 3, 2, 2, 2, 256, 257, 3, 2, 2, 2, 257, 265, 3, 2, 2, 2, 258,
-	259, 5, 48, 25, 2, 259, 260, 7, 28, 2, 2, 260, 262, 7, 69, 2, 2, 261, 263,
-	5, 40, 21, 2, 262, 261, 3, 2, 2, 2, 262, 263, 3, 2, 2, 2, 263, 265, 3,
-	2, 2, 2, 264, 254, 3, 2, 2, 2, 264, 258, 3, 2, 2, 2, 265, 39, 3, 2, 2,
-	2, 266, 267, 7, 26, 2, 2, 267, 274, 5, 54, 28, 2, 268, 269, 7, 26, 2, 2,
-	269, 270, 7, 22, 2, 2, 270, 271, 5, 42, 22, 2, 271, 272, 7, 23, 2, 2, 272,
-	274, 3, 2, 2, 2, 273, 266, 3, 2, 2, 2, 273, 268, 3, 2, 2, 2, 274, 41, 3,
-	2, 2, 2, 275, 281, 5, 44, 23, 2, 276, 277, 5, 44, 23, 2, 277, 278, 7, 25,
-	2, 2, 278, 279, 5, 42, 22, 2, 279, 281, 3, 2, 2, 2, 280, 275, 3, 2, 2,
-	2, 280, 276, 3, 2, 2, 2, 281, 43, 3, 2, 2, 2, 282, 283, 7, 69, 2, 2, 283,
-	284, 7, 26, 2, 2, 284, 285, 5, 54, 28, 2, 285, 45, 3, 2, 2, 2, 286, 287,
-	7, 18, 2, 2, 287, 288, 5, 54, 28, 2, 288, 289, 7, 25, 2, 2, 289, 290, 5,
-	54, 28, 2, 290, 291, 7, 19, 2, 2, 291, 299, 3, 2, 2, 2, 292, 293, 7, 18,
-	2, 2, 293, 294, 5, 54, 28, 2, 294, 295, 7, 25, 2, 2, 295, 296, 7, 68, 2,
-	2, 296, 297, 7, 19, 2, 2, 297, 299, 3, 2, 2, 2, 298, 286, 3, 2, 2, 2, 298,
-	292, 3, 2, 2, 2, 299, 47, 3, 2, 2, 2, 300, 305, 7, 69, 2, 2, 301, 302,
-	7, 69, 2, 2, 302, 303, 7, 30, 2, 2, 303, 305, 5, 48, 25, 2, 304, 300, 3,
-	2, 2, 2, 304, 301, 3, 2, 2, 2, 305, 49, 3, 2, 2, 2, 306, 311, 7, 69, 2,
-	2, 307, 308, 7, 69, 2, 2, 308, 309, 7, 25, 2, 2, 309, 311, 5, 50, 26, 2,
-	310, 306, 3, 2, 2, 2, 310, 307, 3, 2, 2, 2, 311, 51, 3, 2, 2, 2, 312, 313,
-	9, 2, 2, 2, 313, 53, 3, 2, 2, 2, 314, 315, 9, 3, 2, 2, 315, 55, 3, 2, 2,
-	2, 316, 318, 7, 16, 2, 2, 317, 316, 3, 2, 2, 2, 317, 318, 3, 2, 2, 2, 318,
-	322, 3, 2, 2, 2, 319, 321, 7, 17, 2, 2, 320, 319, 3, 2, 2, 2, 321, 324,
-	3, 2, 2, 2, 322, 320, 3, 2, 2, 2, 322, 323, 3, 2, 2, 2, 323, 57, 3, 2,
-	2, 2, 324, 322, 3, 2, 2, 2, 325, 327, 9, 4, 2, 2, 326, 325, 3, 2, 2, 2,
-	327, 330, 3, 2, 2, 2, 328, 326, 3, 2, 2, 2, 328, 329, 3, 2, 2, 2, 329,
-	59, 3, 2, 2, 2, 330, 328, 3, 2, 2, 2, 331, 332, 9, 5, 2, 2, 332, 61, 3,
-	2, 2, 2, 333, 334, 9, 6, 2, 2, 334, 63, 3, 2, 2, 2, 45, 66, 71, 77, 81,
-	84, 91, 99, 102, 107, 110, 123, 125, 129, 132, 141, 146, 151, 162, 165,
-	170, 173, 178, 181, 186, 191, 194, 211, 218, 221, 226, 245, 252, 256, 262,
-	264, 273, 280, 298, 304, 310, 317, 322, 328,
+	176, 3, 2, 2, 2, 175, 177, 5, 8, 5, 2, 176, 175, 3, 2, 2, 2, 176, 177,
+	3, 2, 2, 2, 177, 19, 3, 2, 2, 2, 178, 180, 5, 58, 30, 2, 179, 178, 3, 2,
+	2, 2, 179, 180, 3, 2, 2, 2, 180, 182, 3, 2, 2, 2, 181, 183, 5, 32, 17,
+	2, 182, 181, 3, 2, 2, 2, 182, 183, 3, 2, 2, 2, 183, 184, 3, 2, 2, 2, 184,
+	185, 7, 5, 2, 2, 185, 187, 7, 69, 2, 2, 186, 188, 5, 46, 24, 2, 187, 186,
+	3, 2, 2, 2, 187, 188, 3, 2, 2, 2, 188, 189, 3, 2, 2, 2, 189, 190, 7, 4,
+	2, 2, 190, 192, 7, 69, 2, 2, 191, 193, 5, 22, 12, 2, 192, 191, 3, 2, 2,
+	2, 192, 193, 3, 2, 2, 2, 193, 195, 3, 2, 2, 2, 194, 196, 5, 24, 13, 2,
+	195, 194, 3, 2, 2, 2, 195, 196, 3, 2, 2, 2, 196, 197, 3, 2, 2, 2, 197,
+	198, 7, 24, 2, 2, 198, 21, 3, 2, 2, 2, 199, 200, 7, 11, 2, 2, 200, 201,
+	7, 69, 2, 2, 201, 23, 3, 2, 2, 2, 202, 203, 7, 15, 2, 2, 203, 204, 7, 20,
+	2, 2, 204, 205, 5, 26, 14, 2, 205, 206, 7, 21, 2, 2, 206, 25, 3, 2, 2,
+	2, 207, 213, 5, 28, 15, 2, 208, 209, 5, 28, 15, 2, 209, 210, 5, 62, 32,
+	2, 210, 211, 5, 26, 14, 2, 211, 213, 3, 2, 2, 2, 212, 207, 3, 2, 2, 2,
+	212, 208, 3, 2, 2, 2, 213, 27, 3, 2, 2, 2, 214, 215, 7, 69, 2, 2, 215,
+	216, 5, 60, 31, 2, 216, 217, 5, 54, 28, 2, 217, 29, 3, 2, 2, 2, 218, 220,
+	7, 10, 2, 2, 219, 218, 3, 2, 2, 2, 219, 220, 3, 2, 2, 2, 220, 222, 3, 2,
+	2, 2, 221, 223, 5, 50, 26, 2, 222, 221, 3, 2, 2, 2, 222, 223, 3, 2, 2,
+	2, 223, 31, 3, 2, 2, 2, 224, 226, 5, 34, 18, 2, 225, 224, 3, 2, 2, 2, 226,
+	229, 3, 2, 2, 2, 227, 225, 3, 2, 2, 2, 227, 228, 3, 2, 2, 2, 228, 33, 3,
+	2, 2, 2, 229, 227, 3, 2, 2, 2, 230, 231, 7, 18, 2, 2, 231, 232, 7, 69,
+	2, 2, 232, 247, 7, 19, 2, 2, 233, 234, 7, 18, 2, 2, 234, 235, 7, 69, 2,
+	2, 235, 236, 7, 20, 2, 2, 236, 237, 7, 69, 2, 2, 237, 238, 7, 21, 2, 2,
+	238, 247, 7, 19, 2, 2, 239, 240, 7, 18, 2, 2, 240, 241, 7, 69, 2, 2, 241,
+	242, 7, 20, 2, 2, 242, 243, 5, 54, 28, 2, 243, 244, 7, 21, 2, 2, 244, 245,
+	7, 19, 2, 2, 245, 247, 3, 2, 2, 2, 246, 230, 3, 2, 2, 2, 246, 233, 3, 2,
+	2, 2, 246, 239, 3, 2, 2, 2, 247, 35, 3, 2, 2, 2, 248, 254, 5, 38, 20, 2,
+	249, 250, 5, 38, 20, 2, 250, 251, 7, 25, 2, 2, 251, 252, 5, 36, 19, 2,
+	252, 254, 3, 2, 2, 2, 253, 248, 3, 2, 2, 2, 253, 249, 3, 2, 2, 2, 254,
+	37, 3, 2, 2, 2, 255, 257, 7, 69, 2, 2, 256, 258, 5, 40, 21, 2, 257, 256,
+	3, 2, 2, 2, 257, 258, 3, 2, 2, 2, 258, 266, 3, 2, 2, 2, 259, 260, 5, 48,
+	25, 2, 260, 261, 7, 28, 2, 2, 261, 263, 7, 69, 2, 2, 262, 264, 5, 40, 21,
+	2, 263, 262, 3, 2, 2, 2, 263, 264, 3, 2, 2, 2, 264, 266, 3, 2, 2, 2, 265,
+	255, 3, 2, 2, 2, 265, 259, 3, 2, 2, 2, 266, 39, 3, 2, 2, 2, 267, 268, 7,
+	26, 2, 2, 268, 275, 5, 54, 28, 2, 269, 270, 7, 26, 2, 2, 270, 271, 7, 22,
+	2, 2, 271, 272, 5, 42, 22, 2, 272, 273, 7, 23, 2, 2, 273, 275, 3, 2, 2,
+	2, 274, 267, 3, 2, 2, 2, 274, 269, 3, 2, 2, 2, 275, 41, 3, 2, 2, 2, 276,
+	282, 5, 44, 23, 2, 277, 278, 5, 44, 23, 2, 278, 279, 7, 25, 2, 2, 279,
+	280, 5, 42, 22, 2, 280, 282, 3, 2, 2, 2, 281, 276, 3, 2, 2, 2, 281, 277,
+	3, 2, 2, 2, 282, 43, 3, 2, 2, 2, 283, 284, 7, 69, 2, 2, 284, 285, 7, 26,
+	2, 2, 285, 286, 5, 54, 28, 2, 286, 45, 3, 2, 2, 2, 287, 288, 7, 18, 2,
+	2, 288, 289, 5, 54, 28, 2, 289, 290, 7, 25, 2, 2, 290, 291, 5, 54, 28,
+	2, 291, 292, 7, 19, 2, 2, 292, 300, 3, 2, 2, 2, 293, 294, 7, 18, 2, 2,
+	294, 295, 5, 54, 28, 2, 295, 296, 7, 25, 2, 2, 296, 297, 7, 68, 2, 2, 297,
+	298, 7, 19, 2, 2, 298, 300, 3, 2, 2, 2, 299, 287, 3, 2, 2, 2, 299, 293,
+	3, 2, 2, 2, 300, 47, 3, 2, 2, 2, 301, 306, 7, 69, 2, 2, 302, 303, 7, 69,
+	2, 2, 303, 304, 7, 30, 2, 2, 304, 306, 5, 48, 25, 2, 305, 301, 3, 2, 2,
+	2, 305, 302, 3, 2, 2, 2, 306, 49, 3, 2, 2, 2, 307, 312, 7, 69, 2, 2, 308,
+	309, 7, 69, 2, 2, 309, 310, 7, 25, 2, 2, 310, 312, 5, 50, 26, 2, 311, 307,
+	3, 2, 2, 2, 311, 308, 3, 2, 2, 2, 312, 51, 3, 2, 2, 2, 313, 314, 9, 2,
+	2, 2, 314, 53, 3, 2, 2, 2, 315, 316, 9, 3, 2, 2, 316, 55, 3, 2, 2, 2, 317,
+	319, 7, 16, 2, 2, 318, 317, 3, 2, 2, 2, 318, 319, 3, 2, 2, 2, 319, 323,
+	3, 2, 2, 2, 320, 322, 7, 17, 2, 2, 321, 320, 3, 2, 2, 2, 322, 325, 3, 2,
+	2, 2, 323, 321, 3, 2, 2, 2, 323, 324, 3, 2, 2, 2, 324, 57, 3, 2, 2, 2,
+	325, 323, 3, 2, 2, 2, 326, 328, 9, 4, 2, 2, 327, 326, 3, 2, 2, 2, 328,
+	331, 3, 2, 2, 2, 329, 327, 3, 2, 2, 2, 329, 330, 3, 2, 2, 2, 330, 59, 3,
+	2, 2, 2, 331, 329, 3, 2, 2, 2, 332, 333, 9, 5, 2, 2, 333, 61, 3, 2, 2,
+	2, 334, 335, 9, 6, 2, 2, 335, 63, 3, 2, 2, 2, 46, 66, 71, 77, 81, 84, 91,
+	99, 102, 107, 110, 123, 125, 129, 132, 141, 146, 151, 162, 165, 170, 173,
+	176, 179, 182, 187, 192, 195, 212, 219, 222, 227, 246, 253, 257, 263, 265,
+	274, 281, 299, 305, 311, 318, 323, 329,
 }
 var deserializer = antlr.NewATNDeserializer(nil)
 var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
@@ -1783,16 +1784,6 @@ func (s *NodeContext) Identifier() antlr.TerminalNode {
 	return s.GetToken(BODLParserIdentifier, 0)
 }
 
-func (s *NodeContext) Block() IBlockContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IBlockContext)(nil)).Elem(), 0)
-
-	if t == nil {
-		return nil
-	}
-
-	return t.(IBlockContext)
-}
-
 func (s *NodeContext) Comments() ICommentsContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*ICommentsContext)(nil)).Elem(), 0)
 
@@ -1831,6 +1822,16 @@ func (s *NodeContext) RaiseMessage() IRaiseMessageContext {
 	}
 
 	return t.(IRaiseMessageContext)
+}
+
+func (s *NodeContext) Block() IBlockContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IBlockContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IBlockContext)
 }
 
 func (s *NodeContext) GetRuleContext() antlr.RuleContext {
@@ -1905,9 +1906,8 @@ func (p *BODLParser) Node() (localctx INodeContext) {
 	}
 	p.SetState(168)
 	p.GetErrorHandler().Sync(p)
-	_la = p.GetTokenStream().LA(1)
 
-	if _la == BODLParserOpenBracket {
+	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 19, p.GetParserRuleContext()) == 1 {
 		{
 			p.SetState(167)
 			p.Multiplicity()
@@ -1924,9 +1924,16 @@ func (p *BODLParser) Node() (localctx INodeContext) {
 		}
 
 	}
-	{
-		p.SetState(173)
-		p.Block()
+	p.SetState(174)
+	p.GetErrorHandler().Sync(p)
+	_la = p.GetTokenStream().LA(1)
+
+	if _la == BODLParserOpenBrace {
+		{
+			p.SetState(173)
+			p.Block()
+		}
+
 	}
 
 	return localctx
@@ -2082,77 +2089,77 @@ func (p *BODLParser) Association() (localctx IAssociationContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(176)
-	p.GetErrorHandler().Sync(p)
-
-	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 21, p.GetParserRuleContext()) == 1 {
-		{
-			p.SetState(175)
-			p.Comments()
-		}
-
-	}
-	p.SetState(179)
+	p.SetState(177)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 22, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(178)
+			p.SetState(176)
+			p.Comments()
+		}
+
+	}
+	p.SetState(180)
+	p.GetErrorHandler().Sync(p)
+
+	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 23, p.GetParserRuleContext()) == 1 {
+		{
+			p.SetState(179)
 			p.AnnotationList()
 		}
 
 	}
 	{
-		p.SetState(181)
+		p.SetState(182)
 		p.Match(BODLParserASSOCIATION)
 	}
 	{
-		p.SetState(182)
+		p.SetState(183)
 		p.Match(BODLParserIdentifier)
 	}
-	p.SetState(184)
+	p.SetState(185)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserOpenBracket {
 		{
-			p.SetState(183)
+			p.SetState(184)
 			p.Multiplicity()
 		}
 
 	}
 	{
-		p.SetState(186)
+		p.SetState(187)
 		p.Match(BODLParserTO)
 	}
 	{
-		p.SetState(187)
+		p.SetState(188)
 		p.Match(BODLParserIdentifier)
 	}
-	p.SetState(189)
+	p.SetState(190)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserUSING {
 		{
-			p.SetState(188)
+			p.SetState(189)
 			p.AssociationUsingDefinition()
 		}
 
 	}
-	p.SetState(192)
+	p.SetState(193)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserVALUATION {
 		{
-			p.SetState(191)
+			p.SetState(192)
 			p.ValuationDefinition()
 		}
 
 	}
 	{
-		p.SetState(194)
+		p.SetState(195)
 		p.Match(BODLParserSemiColon)
 	}
 
@@ -2247,11 +2254,11 @@ func (p *BODLParser) AssociationUsingDefinition() (localctx IAssociationUsingDef
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(196)
+		p.SetState(197)
 		p.Match(BODLParserUSING)
 	}
 	{
-		p.SetState(197)
+		p.SetState(198)
 		p.Match(BODLParserIdentifier)
 	}
 
@@ -2360,19 +2367,19 @@ func (p *BODLParser) ValuationDefinition() (localctx IValuationDefinitionContext
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(199)
+		p.SetState(200)
 		p.Match(BODLParserVALUATION)
 	}
 	{
-		p.SetState(200)
+		p.SetState(201)
 		p.Match(BODLParserOpenParen)
 	}
 	{
-		p.SetState(201)
+		p.SetState(202)
 		p.ValutaionExpressionList()
 	}
 	{
-		p.SetState(202)
+		p.SetState(203)
 		p.Match(BODLParserCloseParen)
 	}
 
@@ -2487,28 +2494,28 @@ func (p *BODLParser) ValutaionExpressionList() (localctx IValutaionExpressionLis
 		}
 	}()
 
-	p.SetState(209)
+	p.SetState(210)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 26, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 27, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(204)
+			p.SetState(205)
 			p.ValutaionExpression()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(205)
+			p.SetState(206)
 			p.ValutaionExpression()
 		}
 		{
-			p.SetState(206)
+			p.SetState(207)
 			p.LogicOperator()
 		}
 		{
-			p.SetState(207)
+			p.SetState(208)
 			p.ValutaionExpressionList()
 		}
 
@@ -2621,15 +2628,15 @@ func (p *BODLParser) ValutaionExpression() (localctx IValutaionExpressionContext
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(211)
+		p.SetState(212)
 		p.Match(BODLParserIdentifier)
 	}
 	{
-		p.SetState(212)
+		p.SetState(213)
 		p.CompareOperator()
 	}
 	{
-		p.SetState(213)
+		p.SetState(214)
 		p.Literal()
 	}
 
@@ -2730,24 +2737,24 @@ func (p *BODLParser) RaiseMessage() (localctx IRaiseMessageContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(216)
+	p.SetState(217)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserRAISES {
 		{
-			p.SetState(215)
+			p.SetState(216)
 			p.Match(BODLParserRAISES)
 		}
 
 	}
-	p.SetState(219)
+	p.SetState(220)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserIdentifier {
 		{
-			p.SetState(218)
+			p.SetState(219)
 			p.IdentifierList()
 		}
 
@@ -2859,17 +2866,17 @@ func (p *BODLParser) AnnotationList() (localctx IAnnotationListContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(224)
+	p.SetState(225)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	for _la == BODLParserOpenBracket {
 		{
-			p.SetState(221)
+			p.SetState(222)
 			p.Annotation()
 		}
 
-		p.SetState(226)
+		p.SetState(227)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
@@ -2989,75 +2996,75 @@ func (p *BODLParser) Annotation() (localctx IAnnotationContext) {
 		}
 	}()
 
-	p.SetState(243)
+	p.SetState(244)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 30, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 31, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(227)
+			p.SetState(228)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(228)
+			p.SetState(229)
 			p.Match(BODLParserIdentifier)
 		}
 		{
-			p.SetState(229)
+			p.SetState(230)
 			p.Match(BODLParserCloseBracket)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(230)
+			p.SetState(231)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(231)
-			p.Match(BODLParserIdentifier)
-		}
-		{
 			p.SetState(232)
-			p.Match(BODLParserOpenParen)
+			p.Match(BODLParserIdentifier)
 		}
 		{
 			p.SetState(233)
-			p.Match(BODLParserIdentifier)
+			p.Match(BODLParserOpenParen)
 		}
 		{
 			p.SetState(234)
-			p.Match(BODLParserCloseParen)
+			p.Match(BODLParserIdentifier)
 		}
 		{
 			p.SetState(235)
+			p.Match(BODLParserCloseParen)
+		}
+		{
+			p.SetState(236)
 			p.Match(BODLParserCloseBracket)
 		}
 
 	case 3:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(236)
+			p.SetState(237)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(237)
+			p.SetState(238)
 			p.Match(BODLParserIdentifier)
 		}
 		{
-			p.SetState(238)
+			p.SetState(239)
 			p.Match(BODLParserOpenParen)
 		}
 		{
-			p.SetState(239)
+			p.SetState(240)
 			p.Literal()
 		}
 		{
-			p.SetState(240)
+			p.SetState(241)
 			p.Match(BODLParserCloseParen)
 		}
 		{
-			p.SetState(241)
+			p.SetState(242)
 			p.Match(BODLParserCloseBracket)
 		}
 
@@ -3168,28 +3175,28 @@ func (p *BODLParser) TypeList() (localctx ITypeListContext) {
 		}
 	}()
 
-	p.SetState(250)
+	p.SetState(251)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 31, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 32, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(245)
+			p.SetState(246)
 			p.Type()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(246)
+			p.SetState(247)
 			p.Type()
 		}
 		{
-			p.SetState(247)
+			p.SetState(248)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(248)
+			p.SetState(249)
 			p.TypeList()
 		}
 
@@ -3305,22 +3312,22 @@ func (p *BODLParser) Type() (localctx ITypeContext) {
 		}
 	}()
 
-	p.SetState(262)
+	p.SetState(263)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 34, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 35, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(252)
+			p.SetState(253)
 			p.Match(BODLParserIdentifier)
 		}
-		p.SetState(254)
+		p.SetState(255)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		if _la == BODLParserAssign {
 			{
-				p.SetState(253)
+				p.SetState(254)
 				p.TypeDefaultValue()
 			}
 
@@ -3329,24 +3336,24 @@ func (p *BODLParser) Type() (localctx ITypeContext) {
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(256)
+			p.SetState(257)
 			p.MemberExpression()
 		}
 		{
-			p.SetState(257)
+			p.SetState(258)
 			p.Match(BODLParserColon)
 		}
 		{
-			p.SetState(258)
+			p.SetState(259)
 			p.Match(BODLParserIdentifier)
 		}
-		p.SetState(260)
+		p.SetState(261)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		if _la == BODLParserAssign {
 			{
-				p.SetState(259)
+				p.SetState(260)
 				p.TypeDefaultValue()
 			}
 
@@ -3467,36 +3474,36 @@ func (p *BODLParser) TypeDefaultValue() (localctx ITypeDefaultValueContext) {
 		}
 	}()
 
-	p.SetState(271)
+	p.SetState(272)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 35, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 36, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(264)
+			p.SetState(265)
 			p.Match(BODLParserAssign)
 		}
 		{
-			p.SetState(265)
+			p.SetState(266)
 			p.Literal()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(266)
+			p.SetState(267)
 			p.Match(BODLParserAssign)
 		}
 		{
-			p.SetState(267)
+			p.SetState(268)
 			p.Match(BODLParserOpenBrace)
 		}
 		{
-			p.SetState(268)
+			p.SetState(269)
 			p.ValueAssignList()
 		}
 		{
-			p.SetState(269)
+			p.SetState(270)
 			p.Match(BODLParserCloseBrace)
 		}
 
@@ -3607,28 +3614,28 @@ func (p *BODLParser) ValueAssignList() (localctx IValueAssignListContext) {
 		}
 	}()
 
-	p.SetState(278)
+	p.SetState(279)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 36, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 37, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(273)
+			p.SetState(274)
 			p.ValueAssign()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(274)
+			p.SetState(275)
 			p.ValueAssign()
 		}
 		{
-			p.SetState(275)
+			p.SetState(276)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(276)
+			p.SetState(277)
 			p.ValueAssignList()
 		}
 
@@ -3735,15 +3742,15 @@ func (p *BODLParser) ValueAssign() (localctx IValueAssignContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(280)
+		p.SetState(281)
 		p.Match(BODLParserIdentifier)
 	}
 	{
-		p.SetState(281)
+		p.SetState(282)
 		p.Match(BODLParserAssign)
 	}
 	{
-		p.SetState(282)
+		p.SetState(283)
 		p.Literal()
 	}
 
@@ -3867,52 +3874,52 @@ func (p *BODLParser) Multiplicity() (localctx IMultiplicityContext) {
 		}
 	}()
 
-	p.SetState(296)
+	p.SetState(297)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 37, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 38, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(284)
+			p.SetState(285)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(285)
-			p.Literal()
-		}
-		{
 			p.SetState(286)
-			p.Match(BODLParserComma)
+			p.Literal()
 		}
 		{
 			p.SetState(287)
-			p.Literal()
+			p.Match(BODLParserComma)
 		}
 		{
 			p.SetState(288)
+			p.Literal()
+		}
+		{
+			p.SetState(289)
 			p.Match(BODLParserCloseBracket)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(290)
+			p.SetState(291)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(291)
+			p.SetState(292)
 			p.Literal()
 		}
 		{
-			p.SetState(292)
+			p.SetState(293)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(293)
+			p.SetState(294)
 			p.Match(BODLParserN)
 		}
 		{
-			p.SetState(294)
+			p.SetState(295)
 			p.Match(BODLParserCloseBracket)
 		}
 
@@ -4017,28 +4024,28 @@ func (p *BODLParser) MemberExpression() (localctx IMemberExpressionContext) {
 		}
 	}()
 
-	p.SetState(302)
+	p.SetState(303)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 38, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 39, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(298)
+			p.SetState(299)
 			p.Match(BODLParserIdentifier)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(299)
+			p.SetState(300)
 			p.Match(BODLParserIdentifier)
 		}
 		{
-			p.SetState(300)
+			p.SetState(301)
 			p.Match(BODLParserDot)
 		}
 		{
-			p.SetState(301)
+			p.SetState(302)
 			p.MemberExpression()
 		}
 
@@ -4143,28 +4150,28 @@ func (p *BODLParser) IdentifierList() (localctx IIdentifierListContext) {
 		}
 	}()
 
-	p.SetState(308)
+	p.SetState(309)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 39, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 40, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(304)
+			p.SetState(305)
 			p.Match(BODLParserIdentifier)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(305)
+			p.SetState(306)
 			p.Match(BODLParserIdentifier)
 		}
 		{
-			p.SetState(306)
+			p.SetState(307)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(307)
+			p.SetState(308)
 			p.IdentifierList()
 		}
 
@@ -4302,7 +4309,7 @@ func (p *BODLParser) Keyword() (localctx IKeywordContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(310)
+		p.SetState(311)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BODLParserBUSINESSOBJECT)|(1<<BODLParserTO)|(1<<BODLParserASSOCIATION)|(1<<BODLParserELEMENT)|(1<<BODLParserNODE)|(1<<BODLParserACTION)|(1<<BODLParserMESSAGE)|(1<<BODLParserRAISES)|(1<<BODLParserUSING)|(1<<BODLParserIMPORT)|(1<<BODLParserAS)|(1<<BODLParserTEXT))) != 0) {
@@ -4409,7 +4416,7 @@ func (p *BODLParser) Literal() (localctx ILiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(312)
+		p.SetState(313)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((_la-68)&-(0x1f+1)) == 0 && ((1<<uint((_la-68)))&((1<<(BODLParserStringLiteral-68))|(1<<(BODLParserBooleanLiteral-68))|(1<<(BODLParserDecimalLiteral-68)))) != 0) {
@@ -4516,31 +4523,31 @@ func (p *BODLParser) Copyright() (localctx ICopyrightContext) {
 	var _alt int
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(315)
+	p.SetState(316)
 	p.GetErrorHandler().Sync(p)
 
-	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 40, p.GetParserRuleContext()) == 1 {
+	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 41, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(314)
+			p.SetState(315)
 			p.Match(BODLParserMultiLineComment)
 		}
 
 	}
-	p.SetState(320)
+	p.SetState(321)
 	p.GetErrorHandler().Sync(p)
-	_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 41, p.GetParserRuleContext())
+	_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 42, p.GetParserRuleContext())
 
 	for _alt != 2 && _alt != antlr.ATNInvalidAltNumber {
 		if _alt == 1 {
 			{
-				p.SetState(317)
+				p.SetState(318)
 				p.Match(BODLParserSingleLineComment)
 			}
 
 		}
-		p.SetState(322)
+		p.SetState(323)
 		p.GetErrorHandler().Sync(p)
-		_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 41, p.GetParserRuleContext())
+		_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 42, p.GetParserRuleContext())
 	}
 
 	return localctx
@@ -4642,13 +4649,13 @@ func (p *BODLParser) Comments() (localctx ICommentsContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(326)
+	p.SetState(327)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	for _la == BODLParserMultiLineComment || _la == BODLParserSingleLineComment {
 		{
-			p.SetState(323)
+			p.SetState(324)
 			_la = p.GetTokenStream().LA(1)
 
 			if !(_la == BODLParserMultiLineComment || _la == BODLParserSingleLineComment) {
@@ -4659,7 +4666,7 @@ func (p *BODLParser) Comments() (localctx ICommentsContext) {
 			}
 		}
 
-		p.SetState(328)
+		p.SetState(329)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
@@ -4772,7 +4779,7 @@ func (p *BODLParser) CompareOperator() (localctx ICompareOperatorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(329)
+		p.SetState(330)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((_la-41)&-(0x1f+1)) == 0 && ((1<<uint((_la-41)))&((1<<(BODLParserLessThan-41))|(1<<(BODLParserMoreThan-41))|(1<<(BODLParserLessThanEquals-41))|(1<<(BODLParserGreaterThanEquals-41))|(1<<(BODLParserEquals_-41))|(1<<(BODLParserNotEquals-41)))) != 0) {
@@ -4875,7 +4882,7 @@ func (p *BODLParser) LogicOperator() (localctx ILogicOperatorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(331)
+		p.SetState(332)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(_la == BODLParserAnd || _la == BODLParserOr) {
