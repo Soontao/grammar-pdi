@@ -5,7 +5,7 @@
 
 Provide the AST parser for BODL (Business Object Definition Language) and ABSL (ABAP Script Language)
 
-**VSCode Plugin have some issue, sometimes developers need delete the `.antlr` to re-generate the token/interp files**
+**VSCode Plugin have some issues, sometimes developers need to delete the `.antlr` and re-generate the token/interp files**
 
 Antlr Version: 4.7.2
 
