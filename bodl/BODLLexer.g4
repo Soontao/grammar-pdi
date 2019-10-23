@@ -17,13 +17,13 @@ TEXT: 'text';
 VALUATION: 'valuation';
 
 // Comments
-MultiLineComment: '/*' .*? '*/';
+MultiLineComment:
+	'/*' .*? '*/' LineTerminator -> channel(HIDDEN);
 
 SingleLineComment:
-	SingleCommentStart ' '? ~[\u002B] CommentTextContent;
+	SingleCommentStart CommentTextContent -> channel(HIDDEN);
 
 fragment SingleCommentStart: '//';
-
 fragment CommentTextContent: ~[\r\n\u2028\u2029]*;
 
 OpenBracket: '[';
@@ -37,10 +37,7 @@ Comma: ',';
 Assign: '=';
 QuestionMark: '?';
 Colon: ':';
-Ellipsis: '...';
 Dot: '.';
-PlusPlus: '++';
-MinusMinus: '--';
 Plus: '+';
 Minus: '-';
 BitNot: '~';
@@ -50,31 +47,14 @@ Divide: '/';
 Modulus: '%';
 RightShiftArithmetic: '>>';
 LeftShiftArithmetic: '<<';
-RightShiftLogical: '>>>';
 LessThan: '<';
 MoreThan: '>';
 LessThanEquals: '<=';
 GreaterThanEquals: '>=';
 Equals_: '==';
 NotEquals: '!=';
-IdentityEquals: '===';
-IdentityNotEquals: '!==';
-BitAnd: '&';
-BitXOr: '^';
-BitOr: '|';
 And: '&&';
 Or: '||';
-MultiplyAssign: '*=';
-DivideAssign: '/=';
-ModulusAssign: '%=';
-PlusAssign: '+=';
-MinusAssign: '-=';
-LeftShiftArithmeticAssign: '<<=';
-RightShiftArithmeticAssign: '>>=';
-RightShiftLogicalAssign: '>>>=';
-BitAndAssign: '&=';
-BitXorAssign: '^=';
-BitOrAssign: '|=';
 ARROW: '=>';
 N: 'n';
 
@@ -101,8 +81,6 @@ HexIntegerLiteral: '0' [xX] HexDigit+;
 OctalIntegerLiteral: '0' [0-7]+;
 OctalIntegerLiteral2: '0' [oO] [0-7]+;
 BinaryIntegerLiteral: '0' [bB] [01]+;
-
-TemplateStringLiteral: '`' ('\\`' | ~'`')* '`';
 
 WhiteSpaces: [\t\u000B\u000C\u0020\u00A0]+ -> channel(HIDDEN);
 

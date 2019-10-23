@@ -15,7 +15,7 @@ var _ = reflect.Copy
 var _ = strconv.Itoa
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 79, 337,
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 58, 337,
 	4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7,
 	4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13,
 	9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 4, 16, 9, 16, 4, 17, 9, 17, 4, 18, 9,
@@ -53,7 +53,7 @@ var parserATN = []uint16{
 	12, 30, 14, 30, 331, 11, 30, 3, 31, 3, 31, 3, 32, 3, 32, 3, 32, 2, 2, 33,
 	2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38,
 	40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 2, 7, 3, 2, 3, 14, 3, 2,
-	70, 72, 3, 2, 16, 17, 3, 2, 43, 48, 3, 2, 54, 55, 2, 353, 2, 81, 3, 2,
+	50, 52, 3, 2, 16, 17, 3, 2, 39, 44, 3, 2, 45, 46, 2, 353, 2, 81, 3, 2,
 	2, 2, 4, 99, 3, 2, 2, 2, 6, 102, 3, 2, 2, 2, 8, 114, 3, 2, 2, 2, 10, 125,
 	3, 2, 2, 2, 12, 129, 3, 2, 2, 2, 14, 141, 3, 2, 2, 2, 16, 151, 3, 2, 2,
 	2, 18, 162, 3, 2, 2, 2, 20, 179, 3, 2, 2, 2, 22, 199, 3, 2, 2, 2, 24, 202,
@@ -73,10 +73,10 @@ var parserATN = []uint16{
 	3, 2, 2, 2, 86, 87, 7, 12, 2, 2, 87, 88, 5, 48, 25, 2, 88, 89, 7, 24, 2,
 	2, 89, 100, 3, 2, 2, 2, 90, 92, 5, 58, 30, 2, 91, 90, 3, 2, 2, 2, 91, 92,
 	3, 2, 2, 2, 92, 93, 3, 2, 2, 2, 93, 94, 7, 12, 2, 2, 94, 95, 5, 48, 25,
-	2, 95, 96, 7, 13, 2, 2, 96, 97, 7, 69, 2, 2, 97, 98, 7, 24, 2, 2, 98, 100,
+	2, 95, 96, 7, 13, 2, 2, 96, 97, 7, 49, 2, 2, 97, 98, 7, 24, 2, 2, 98, 100,
 	3, 2, 2, 2, 99, 84, 3, 2, 2, 2, 99, 91, 3, 2, 2, 2, 100, 5, 3, 2, 2, 2,
 	101, 103, 5, 32, 17, 2, 102, 101, 3, 2, 2, 2, 102, 103, 3, 2, 2, 2, 103,
-	104, 3, 2, 2, 2, 104, 107, 7, 3, 2, 2, 105, 108, 7, 69, 2, 2, 106, 108,
+	104, 3, 2, 2, 2, 104, 107, 7, 3, 2, 2, 105, 108, 7, 49, 2, 2, 106, 108,
 	5, 38, 20, 2, 107, 105, 3, 2, 2, 2, 107, 106, 3, 2, 2, 2, 108, 110, 3,
 	2, 2, 2, 109, 111, 5, 30, 16, 2, 110, 109, 3, 2, 2, 2, 110, 111, 3, 2,
 	2, 2, 111, 112, 3, 2, 2, 2, 112, 113, 5, 8, 5, 2, 113, 7, 3, 2, 2, 2, 114,
@@ -88,53 +88,53 @@ var parserATN = []uint16{
 	126, 3, 2, 2, 2, 126, 11, 3, 2, 2, 2, 127, 125, 3, 2, 2, 2, 128, 130, 5,
 	58, 30, 2, 129, 128, 3, 2, 2, 2, 129, 130, 3, 2, 2, 2, 130, 132, 3, 2,
 	2, 2, 131, 133, 5, 32, 17, 2, 132, 131, 3, 2, 2, 2, 132, 133, 3, 2, 2,
-	2, 133, 134, 3, 2, 2, 2, 134, 135, 7, 6, 2, 2, 135, 136, 7, 69, 2, 2, 136,
+	2, 133, 134, 3, 2, 2, 2, 134, 135, 7, 6, 2, 2, 135, 136, 7, 49, 2, 2, 136,
 	137, 7, 28, 2, 2, 137, 138, 5, 38, 20, 2, 138, 139, 7, 24, 2, 2, 139, 13,
 	3, 2, 2, 2, 140, 142, 5, 58, 30, 2, 141, 140, 3, 2, 2, 2, 141, 142, 3,
-	2, 2, 2, 142, 143, 3, 2, 2, 2, 143, 144, 7, 8, 2, 2, 144, 146, 7, 69, 2,
+	2, 2, 2, 142, 143, 3, 2, 2, 2, 143, 144, 7, 8, 2, 2, 144, 146, 7, 49, 2,
 	2, 145, 147, 5, 30, 16, 2, 146, 145, 3, 2, 2, 2, 146, 147, 3, 2, 2, 2,
 	147, 148, 3, 2, 2, 2, 148, 149, 7, 24, 2, 2, 149, 15, 3, 2, 2, 2, 150,
 	152, 5, 58, 30, 2, 151, 150, 3, 2, 2, 2, 151, 152, 3, 2, 2, 2, 152, 153,
-	3, 2, 2, 2, 153, 154, 7, 9, 2, 2, 154, 155, 7, 69, 2, 2, 155, 156, 7, 14,
-	2, 2, 156, 157, 7, 70, 2, 2, 157, 158, 7, 28, 2, 2, 158, 159, 5, 36, 19,
+	3, 2, 2, 2, 153, 154, 7, 9, 2, 2, 154, 155, 7, 49, 2, 2, 155, 156, 7, 14,
+	2, 2, 156, 157, 7, 50, 2, 2, 157, 158, 7, 28, 2, 2, 158, 159, 5, 36, 19,
 	2, 159, 160, 7, 24, 2, 2, 160, 17, 3, 2, 2, 2, 161, 163, 5, 58, 30, 2,
 	162, 161, 3, 2, 2, 2, 162, 163, 3, 2, 2, 2, 163, 165, 3, 2, 2, 2, 164,
 	166, 5, 32, 17, 2, 165, 164, 3, 2, 2, 2, 165, 166, 3, 2, 2, 2, 166, 167,
-	3, 2, 2, 2, 167, 168, 7, 7, 2, 2, 168, 170, 7, 69, 2, 2, 169, 171, 5, 46,
+	3, 2, 2, 2, 167, 168, 7, 7, 2, 2, 168, 170, 7, 49, 2, 2, 169, 171, 5, 46,
 	24, 2, 170, 169, 3, 2, 2, 2, 170, 171, 3, 2, 2, 2, 171, 173, 3, 2, 2, 2,
 	172, 174, 5, 30, 16, 2, 173, 172, 3, 2, 2, 2, 173, 174, 3, 2, 2, 2, 174,
 	176, 3, 2, 2, 2, 175, 177, 5, 8, 5, 2, 176, 175, 3, 2, 2, 2, 176, 177,
 	3, 2, 2, 2, 177, 19, 3, 2, 2, 2, 178, 180, 5, 58, 30, 2, 179, 178, 3, 2,
 	2, 2, 179, 180, 3, 2, 2, 2, 180, 182, 3, 2, 2, 2, 181, 183, 5, 32, 17,
 	2, 182, 181, 3, 2, 2, 2, 182, 183, 3, 2, 2, 2, 183, 184, 3, 2, 2, 2, 184,
-	185, 7, 5, 2, 2, 185, 187, 7, 69, 2, 2, 186, 188, 5, 46, 24, 2, 187, 186,
+	185, 7, 5, 2, 2, 185, 187, 7, 49, 2, 2, 186, 188, 5, 46, 24, 2, 187, 186,
 	3, 2, 2, 2, 187, 188, 3, 2, 2, 2, 188, 189, 3, 2, 2, 2, 189, 190, 7, 4,
-	2, 2, 190, 192, 7, 69, 2, 2, 191, 193, 5, 22, 12, 2, 192, 191, 3, 2, 2,
+	2, 2, 190, 192, 7, 49, 2, 2, 191, 193, 5, 22, 12, 2, 192, 191, 3, 2, 2,
 	2, 192, 193, 3, 2, 2, 2, 193, 195, 3, 2, 2, 2, 194, 196, 5, 24, 13, 2,
 	195, 194, 3, 2, 2, 2, 195, 196, 3, 2, 2, 2, 196, 197, 3, 2, 2, 2, 197,
 	198, 7, 24, 2, 2, 198, 21, 3, 2, 2, 2, 199, 200, 7, 11, 2, 2, 200, 201,
-	7, 69, 2, 2, 201, 23, 3, 2, 2, 2, 202, 203, 7, 15, 2, 2, 203, 204, 7, 20,
+	7, 49, 2, 2, 201, 23, 3, 2, 2, 2, 202, 203, 7, 15, 2, 2, 203, 204, 7, 20,
 	2, 2, 204, 205, 5, 26, 14, 2, 205, 206, 7, 21, 2, 2, 206, 25, 3, 2, 2,
 	2, 207, 213, 5, 28, 15, 2, 208, 209, 5, 28, 15, 2, 209, 210, 5, 62, 32,
 	2, 210, 211, 5, 26, 14, 2, 211, 213, 3, 2, 2, 2, 212, 207, 3, 2, 2, 2,
-	212, 208, 3, 2, 2, 2, 213, 27, 3, 2, 2, 2, 214, 215, 7, 69, 2, 2, 215,
+	212, 208, 3, 2, 2, 2, 213, 27, 3, 2, 2, 2, 214, 215, 7, 49, 2, 2, 215,
 	216, 5, 60, 31, 2, 216, 217, 5, 54, 28, 2, 217, 29, 3, 2, 2, 2, 218, 220,
 	7, 10, 2, 2, 219, 218, 3, 2, 2, 2, 219, 220, 3, 2, 2, 2, 220, 222, 3, 2,
 	2, 2, 221, 223, 5, 50, 26, 2, 222, 221, 3, 2, 2, 2, 222, 223, 3, 2, 2,
 	2, 223, 31, 3, 2, 2, 2, 224, 226, 5, 34, 18, 2, 225, 224, 3, 2, 2, 2, 226,
 	229, 3, 2, 2, 2, 227, 225, 3, 2, 2, 2, 227, 228, 3, 2, 2, 2, 228, 33, 3,
-	2, 2, 2, 229, 227, 3, 2, 2, 2, 230, 231, 7, 18, 2, 2, 231, 232, 7, 69,
-	2, 2, 232, 247, 7, 19, 2, 2, 233, 234, 7, 18, 2, 2, 234, 235, 7, 69, 2,
-	2, 235, 236, 7, 20, 2, 2, 236, 237, 7, 69, 2, 2, 237, 238, 7, 21, 2, 2,
-	238, 247, 7, 19, 2, 2, 239, 240, 7, 18, 2, 2, 240, 241, 7, 69, 2, 2, 241,
+	2, 2, 2, 229, 227, 3, 2, 2, 2, 230, 231, 7, 18, 2, 2, 231, 232, 7, 49,
+	2, 2, 232, 247, 7, 19, 2, 2, 233, 234, 7, 18, 2, 2, 234, 235, 7, 49, 2,
+	2, 235, 236, 7, 20, 2, 2, 236, 237, 7, 49, 2, 2, 237, 238, 7, 21, 2, 2,
+	238, 247, 7, 19, 2, 2, 239, 240, 7, 18, 2, 2, 240, 241, 7, 49, 2, 2, 241,
 	242, 7, 20, 2, 2, 242, 243, 5, 54, 28, 2, 243, 244, 7, 21, 2, 2, 244, 245,
 	7, 19, 2, 2, 245, 247, 3, 2, 2, 2, 246, 230, 3, 2, 2, 2, 246, 233, 3, 2,
 	2, 2, 246, 239, 3, 2, 2, 2, 247, 35, 3, 2, 2, 2, 248, 254, 5, 38, 20, 2,
 	249, 250, 5, 38, 20, 2, 250, 251, 7, 25, 2, 2, 251, 252, 5, 36, 19, 2,
 	252, 254, 3, 2, 2, 2, 253, 248, 3, 2, 2, 2, 253, 249, 3, 2, 2, 2, 254,
-	37, 3, 2, 2, 2, 255, 257, 7, 69, 2, 2, 256, 258, 5, 40, 21, 2, 257, 256,
+	37, 3, 2, 2, 2, 255, 257, 7, 49, 2, 2, 256, 258, 5, 40, 21, 2, 257, 256,
 	3, 2, 2, 2, 257, 258, 3, 2, 2, 2, 258, 266, 3, 2, 2, 2, 259, 260, 5, 48,
-	25, 2, 260, 261, 7, 28, 2, 2, 261, 263, 7, 69, 2, 2, 262, 264, 5, 40, 21,
+	25, 2, 260, 261, 7, 28, 2, 2, 261, 263, 7, 49, 2, 2, 262, 264, 5, 40, 21,
 	2, 263, 262, 3, 2, 2, 2, 263, 264, 3, 2, 2, 2, 264, 266, 3, 2, 2, 2, 265,
 	255, 3, 2, 2, 2, 265, 259, 3, 2, 2, 2, 266, 39, 3, 2, 2, 2, 267, 268, 7,
 	26, 2, 2, 268, 275, 5, 54, 28, 2, 269, 270, 7, 26, 2, 2, 270, 271, 7, 22,
@@ -142,16 +142,16 @@ var parserATN = []uint16{
 	2, 274, 267, 3, 2, 2, 2, 274, 269, 3, 2, 2, 2, 275, 41, 3, 2, 2, 2, 276,
 	282, 5, 44, 23, 2, 277, 278, 5, 44, 23, 2, 278, 279, 7, 25, 2, 2, 279,
 	280, 5, 42, 22, 2, 280, 282, 3, 2, 2, 2, 281, 276, 3, 2, 2, 2, 281, 277,
-	3, 2, 2, 2, 282, 43, 3, 2, 2, 2, 283, 284, 7, 69, 2, 2, 284, 285, 7, 26,
+	3, 2, 2, 2, 282, 43, 3, 2, 2, 2, 283, 284, 7, 49, 2, 2, 284, 285, 7, 26,
 	2, 2, 285, 286, 5, 54, 28, 2, 286, 45, 3, 2, 2, 2, 287, 288, 7, 18, 2,
 	2, 288, 289, 5, 54, 28, 2, 289, 290, 7, 25, 2, 2, 290, 291, 5, 54, 28,
 	2, 291, 292, 7, 19, 2, 2, 292, 300, 3, 2, 2, 2, 293, 294, 7, 18, 2, 2,
-	294, 295, 5, 54, 28, 2, 295, 296, 7, 25, 2, 2, 296, 297, 7, 68, 2, 2, 297,
+	294, 295, 5, 54, 28, 2, 295, 296, 7, 25, 2, 2, 296, 297, 7, 48, 2, 2, 297,
 	298, 7, 19, 2, 2, 298, 300, 3, 2, 2, 2, 299, 287, 3, 2, 2, 2, 299, 293,
-	3, 2, 2, 2, 300, 47, 3, 2, 2, 2, 301, 306, 7, 69, 2, 2, 302, 303, 7, 69,
-	2, 2, 303, 304, 7, 30, 2, 2, 304, 306, 5, 48, 25, 2, 305, 301, 3, 2, 2,
-	2, 305, 302, 3, 2, 2, 2, 306, 49, 3, 2, 2, 2, 307, 312, 7, 69, 2, 2, 308,
-	309, 7, 69, 2, 2, 309, 310, 7, 25, 2, 2, 310, 312, 5, 50, 26, 2, 311, 307,
+	3, 2, 2, 2, 300, 47, 3, 2, 2, 2, 301, 306, 7, 49, 2, 2, 302, 303, 7, 49,
+	2, 2, 303, 304, 7, 29, 2, 2, 304, 306, 5, 48, 25, 2, 305, 301, 3, 2, 2,
+	2, 305, 302, 3, 2, 2, 2, 306, 49, 3, 2, 2, 2, 307, 312, 7, 49, 2, 2, 308,
+	309, 7, 49, 2, 2, 309, 310, 7, 25, 2, 2, 310, 312, 5, 50, 26, 2, 311, 307,
 	3, 2, 2, 2, 311, 308, 3, 2, 2, 2, 312, 51, 3, 2, 2, 2, 313, 314, 9, 2,
 	2, 2, 314, 53, 3, 2, 2, 2, 315, 316, 9, 3, 2, 2, 316, 55, 3, 2, 2, 2, 317,
 	319, 7, 16, 2, 2, 318, 317, 3, 2, 2, 2, 318, 319, 3, 2, 2, 2, 319, 323,
@@ -172,27 +172,20 @@ var literalNames = []string{
 	"", "'businessobject'", "'to'", "'association'", "'element'", "'node'",
 	"'action'", "'message'", "'raises'", "'using'", "'import'", "'as'", "'text'",
 	"'valuation'", "", "", "'['", "']'", "'('", "')'", "'{'", "'}'", "';'",
-	"','", "'='", "'?'", "':'", "'...'", "'.'", "'++'", "'--'", "'+'", "'-'",
-	"'~'", "'!'", "'*'", "'/'", "'%'", "'>>'", "'<<'", "'>>>'", "'<'", "'>'",
-	"'<='", "'>='", "'=='", "'!='", "'==='", "'!=='", "'&'", "'^'", "'|'",
-	"'&&'", "'||'", "'*='", "'/='", "'%='", "'+='", "'-='", "'<<='", "'>>='",
-	"'>>>='", "'&='", "'^='", "'|='", "'=>'", "'n'",
+	"','", "'='", "'?'", "':'", "'.'", "'+'", "'-'", "'~'", "'!'", "'*'", "'/'",
+	"'%'", "'>>'", "'<<'", "'<'", "'>'", "'<='", "'>='", "'=='", "'!='", "'&&'",
+	"'||'", "'=>'", "'n'",
 }
 var symbolicNames = []string{
 	"", "BUSINESSOBJECT", "TO", "ASSOCIATION", "ELEMENT", "NODE", "ACTION",
 	"MESSAGE", "RAISES", "USING", "IMPORT", "AS", "TEXT", "VALUATION", "MultiLineComment",
 	"SingleLineComment", "OpenBracket", "CloseBracket", "OpenParen", "CloseParen",
 	"OpenBrace", "CloseBrace", "SemiColon", "Comma", "Assign", "QuestionMark",
-	"Colon", "Ellipsis", "Dot", "PlusPlus", "MinusMinus", "Plus", "Minus",
-	"BitNot", "Not", "Multiply", "Divide", "Modulus", "RightShiftArithmetic",
-	"LeftShiftArithmetic", "RightShiftLogical", "LessThan", "MoreThan", "LessThanEquals",
-	"GreaterThanEquals", "Equals_", "NotEquals", "IdentityEquals", "IdentityNotEquals",
-	"BitAnd", "BitXOr", "BitOr", "And", "Or", "MultiplyAssign", "DivideAssign",
-	"ModulusAssign", "PlusAssign", "MinusAssign", "LeftShiftArithmeticAssign",
-	"RightShiftArithmeticAssign", "RightShiftLogicalAssign", "BitAndAssign",
-	"BitXorAssign", "BitOrAssign", "ARROW", "N", "Identifier", "StringLiteral",
-	"BooleanLiteral", "DecimalLiteral", "HexIntegerLiteral", "OctalIntegerLiteral",
-	"OctalIntegerLiteral2", "BinaryIntegerLiteral", "TemplateStringLiteral",
+	"Colon", "Dot", "Plus", "Minus", "BitNot", "Not", "Multiply", "Divide",
+	"Modulus", "RightShiftArithmetic", "LeftShiftArithmetic", "LessThan", "MoreThan",
+	"LessThanEquals", "GreaterThanEquals", "Equals_", "NotEquals", "And", "Or",
+	"ARROW", "N", "Identifier", "StringLiteral", "BooleanLiteral", "DecimalLiteral",
+	"HexIntegerLiteral", "OctalIntegerLiteral", "OctalIntegerLiteral2", "BinaryIntegerLiteral",
 	"WhiteSpaces", "LineTerminator",
 }
 
@@ -232,84 +225,63 @@ func NewBODLParser(input antlr.TokenStream) *BODLParser {
 
 // BODLParser tokens.
 const (
-	BODLParserEOF                        = antlr.TokenEOF
-	BODLParserBUSINESSOBJECT             = 1
-	BODLParserTO                         = 2
-	BODLParserASSOCIATION                = 3
-	BODLParserELEMENT                    = 4
-	BODLParserNODE                       = 5
-	BODLParserACTION                     = 6
-	BODLParserMESSAGE                    = 7
-	BODLParserRAISES                     = 8
-	BODLParserUSING                      = 9
-	BODLParserIMPORT                     = 10
-	BODLParserAS                         = 11
-	BODLParserTEXT                       = 12
-	BODLParserVALUATION                  = 13
-	BODLParserMultiLineComment           = 14
-	BODLParserSingleLineComment          = 15
-	BODLParserOpenBracket                = 16
-	BODLParserCloseBracket               = 17
-	BODLParserOpenParen                  = 18
-	BODLParserCloseParen                 = 19
-	BODLParserOpenBrace                  = 20
-	BODLParserCloseBrace                 = 21
-	BODLParserSemiColon                  = 22
-	BODLParserComma                      = 23
-	BODLParserAssign                     = 24
-	BODLParserQuestionMark               = 25
-	BODLParserColon                      = 26
-	BODLParserEllipsis                   = 27
-	BODLParserDot                        = 28
-	BODLParserPlusPlus                   = 29
-	BODLParserMinusMinus                 = 30
-	BODLParserPlus                       = 31
-	BODLParserMinus                      = 32
-	BODLParserBitNot                     = 33
-	BODLParserNot                        = 34
-	BODLParserMultiply                   = 35
-	BODLParserDivide                     = 36
-	BODLParserModulus                    = 37
-	BODLParserRightShiftArithmetic       = 38
-	BODLParserLeftShiftArithmetic        = 39
-	BODLParserRightShiftLogical          = 40
-	BODLParserLessThan                   = 41
-	BODLParserMoreThan                   = 42
-	BODLParserLessThanEquals             = 43
-	BODLParserGreaterThanEquals          = 44
-	BODLParserEquals_                    = 45
-	BODLParserNotEquals                  = 46
-	BODLParserIdentityEquals             = 47
-	BODLParserIdentityNotEquals          = 48
-	BODLParserBitAnd                     = 49
-	BODLParserBitXOr                     = 50
-	BODLParserBitOr                      = 51
-	BODLParserAnd                        = 52
-	BODLParserOr                         = 53
-	BODLParserMultiplyAssign             = 54
-	BODLParserDivideAssign               = 55
-	BODLParserModulusAssign              = 56
-	BODLParserPlusAssign                 = 57
-	BODLParserMinusAssign                = 58
-	BODLParserLeftShiftArithmeticAssign  = 59
-	BODLParserRightShiftArithmeticAssign = 60
-	BODLParserRightShiftLogicalAssign    = 61
-	BODLParserBitAndAssign               = 62
-	BODLParserBitXorAssign               = 63
-	BODLParserBitOrAssign                = 64
-	BODLParserARROW                      = 65
-	BODLParserN                          = 66
-	BODLParserIdentifier                 = 67
-	BODLParserStringLiteral              = 68
-	BODLParserBooleanLiteral             = 69
-	BODLParserDecimalLiteral             = 70
-	BODLParserHexIntegerLiteral          = 71
-	BODLParserOctalIntegerLiteral        = 72
-	BODLParserOctalIntegerLiteral2       = 73
-	BODLParserBinaryIntegerLiteral       = 74
-	BODLParserTemplateStringLiteral      = 75
-	BODLParserWhiteSpaces                = 76
-	BODLParserLineTerminator             = 77
+	BODLParserEOF                  = antlr.TokenEOF
+	BODLParserBUSINESSOBJECT       = 1
+	BODLParserTO                   = 2
+	BODLParserASSOCIATION          = 3
+	BODLParserELEMENT              = 4
+	BODLParserNODE                 = 5
+	BODLParserACTION               = 6
+	BODLParserMESSAGE              = 7
+	BODLParserRAISES               = 8
+	BODLParserUSING                = 9
+	BODLParserIMPORT               = 10
+	BODLParserAS                   = 11
+	BODLParserTEXT                 = 12
+	BODLParserVALUATION            = 13
+	BODLParserMultiLineComment     = 14
+	BODLParserSingleLineComment    = 15
+	BODLParserOpenBracket          = 16
+	BODLParserCloseBracket         = 17
+	BODLParserOpenParen            = 18
+	BODLParserCloseParen           = 19
+	BODLParserOpenBrace            = 20
+	BODLParserCloseBrace           = 21
+	BODLParserSemiColon            = 22
+	BODLParserComma                = 23
+	BODLParserAssign               = 24
+	BODLParserQuestionMark         = 25
+	BODLParserColon                = 26
+	BODLParserDot                  = 27
+	BODLParserPlus                 = 28
+	BODLParserMinus                = 29
+	BODLParserBitNot               = 30
+	BODLParserNot                  = 31
+	BODLParserMultiply             = 32
+	BODLParserDivide               = 33
+	BODLParserModulus              = 34
+	BODLParserRightShiftArithmetic = 35
+	BODLParserLeftShiftArithmetic  = 36
+	BODLParserLessThan             = 37
+	BODLParserMoreThan             = 38
+	BODLParserLessThanEquals       = 39
+	BODLParserGreaterThanEquals    = 40
+	BODLParserEquals_              = 41
+	BODLParserNotEquals            = 42
+	BODLParserAnd                  = 43
+	BODLParserOr                   = 44
+	BODLParserARROW                = 45
+	BODLParserN                    = 46
+	BODLParserIdentifier           = 47
+	BODLParserStringLiteral        = 48
+	BODLParserBooleanLiteral       = 49
+	BODLParserDecimalLiteral       = 50
+	BODLParserHexIntegerLiteral    = 51
+	BODLParserOctalIntegerLiteral  = 52
+	BODLParserOctalIntegerLiteral2 = 53
+	BODLParserBinaryIntegerLiteral = 54
+	BODLParserWhiteSpaces          = 55
+	BODLParserLineTerminator       = 56
 )
 
 // BODLParser rules.
@@ -4419,7 +4391,7 @@ func (p *BODLParser) Literal() (localctx ILiteralContext) {
 		p.SetState(313)
 		_la = p.GetTokenStream().LA(1)
 
-		if !(((_la-68)&-(0x1f+1)) == 0 && ((1<<uint((_la-68)))&((1<<(BODLParserStringLiteral-68))|(1<<(BODLParserBooleanLiteral-68))|(1<<(BODLParserDecimalLiteral-68)))) != 0) {
+		if !(((_la-48)&-(0x1f+1)) == 0 && ((1<<uint((_la-48)))&((1<<(BODLParserStringLiteral-48))|(1<<(BODLParserBooleanLiteral-48))|(1<<(BODLParserDecimalLiteral-48)))) != 0) {
 			p.GetErrorHandler().RecoverInline(p)
 		} else {
 			p.GetErrorHandler().ReportMatch(p)
@@ -4782,7 +4754,7 @@ func (p *BODLParser) CompareOperator() (localctx ICompareOperatorContext) {
 		p.SetState(330)
 		_la = p.GetTokenStream().LA(1)
 
-		if !(((_la-41)&-(0x1f+1)) == 0 && ((1<<uint((_la-41)))&((1<<(BODLParserLessThan-41))|(1<<(BODLParserMoreThan-41))|(1<<(BODLParserLessThanEquals-41))|(1<<(BODLParserGreaterThanEquals-41))|(1<<(BODLParserEquals_-41))|(1<<(BODLParserNotEquals-41)))) != 0) {
+		if !(((_la-37)&-(0x1f+1)) == 0 && ((1<<uint((_la-37)))&((1<<(BODLParserLessThan-37))|(1<<(BODLParserMoreThan-37))|(1<<(BODLParserLessThanEquals-37))|(1<<(BODLParserGreaterThanEquals-37))|(1<<(BODLParserEquals_-37))|(1<<(BODLParserNotEquals-37)))) != 0) {
 			p.GetErrorHandler().RecoverInline(p)
 		} else {
 			p.GetErrorHandler().ReportMatch(p)

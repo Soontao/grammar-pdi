@@ -1,11 +1,8 @@
-
-// hello
 import ABSL;
 
-
-businessobject Hello {
+businessobject Hello:B {
   
   // [Text]
-  element a : String;
+  element a : String; // test
 
 }
