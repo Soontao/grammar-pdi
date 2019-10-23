@@ -5,6 +5,7 @@
     "BODL",
     "antlr",
     "businessobject",
+    "interp",
     "stretchr"
   ]
 }

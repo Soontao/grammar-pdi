@@ -1,8 +1,20 @@
+
+
+// import absl
 import ABSL;
 
+// business object Hello
+/// [BO("Hello")]
+/// [Reference("https://stackoverflow.com")]
+[Value(A)]
 businessobject Hello:B {
   
-  // [Text]
-  element a : String; // test
+  /// [Text]
+  element a : String;  // hello a after
+
+  // hello b before
+  element b : String;  // hello b after
+ 
+  // something else
 
 }

@@ -13,7 +13,7 @@ func TestParserBasicBODL(t *testing.T) {
 	parser := NewBODLParser(input)
 	program := parser.Program()
 	children := program.GetChildren()
-	assert.True(t, len(children) == 4)
+	assert.Equal(t, 3, len(children))
 }
 
 func TestParserComplexBODL(t *testing.T) {
@@ -22,6 +22,15 @@ func TestParserComplexBODL(t *testing.T) {
 	parser := NewBODLParser(input)
 	program := parser.Program()
 	children := program.GetChildren()
-	assert.True(t, len(children) == 5)
+	assert.Equal(t, 4, len(children))
+}
 
+func TestParserCustomAnnotation(t *testing.T) {
+	complexBOStream, _ := antlr.NewFileStream("./examples/custom_annotation.bo")
+	input := antlr.NewCommonTokenStream(NewBODLLexer(complexBOStream), 0)
+	parser := NewBODLParser(input)
+	parser.BuildParseTrees = true
+	program := parser.Program()
+	children := program.GetChildren()
+	assert.Equal(t, 3, len(children))
 }

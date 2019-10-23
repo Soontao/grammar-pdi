@@ -88,9 +88,6 @@ type BODLParserListener interface {
 	// EnterLiteral is called when entering the literal production.
 	EnterLiteral(c *LiteralContext)
 
-	// EnterCopyright is called when entering the copyright production.
-	EnterCopyright(c *CopyrightContext)
-
 	// EnterComments is called when entering the comments production.
 	EnterComments(c *CommentsContext)
 
@@ -180,9 +177,6 @@ type BODLParserListener interface {
 
 	// ExitLiteral is called when exiting the literal production.
 	ExitLiteral(c *LiteralContext)
-
-	// ExitCopyright is called when exiting the copyright production.
-	ExitCopyright(c *CopyrightContext)
 
 	// ExitComments is called when exiting the comments production.
 	ExitComments(c *CommentsContext)

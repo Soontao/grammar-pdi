@@ -184,12 +184,6 @@ func (s *BaseBODLParserListener) EnterLiteral(ctx *LiteralContext) {}
 // ExitLiteral is called when production literal is exited.
 func (s *BaseBODLParserListener) ExitLiteral(ctx *LiteralContext) {}
 
-// EnterCopyright is called when production copyright is entered.
-func (s *BaseBODLParserListener) EnterCopyright(ctx *CopyrightContext) {}
-
-// ExitCopyright is called when production copyright is exited.
-func (s *BaseBODLParserListener) ExitCopyright(ctx *CopyrightContext) {}
-
 // EnterComments is called when production comments is entered.
 func (s *BaseBODLParserListener) EnterComments(ctx *CommentsContext) {}
 

@@ -4,16 +4,16 @@ options {
 	tokenVocab = BODLLexer;
 }
 
-program: EOF | copyright? (importStatment)* definition* EOF;
+program: EOF | (importStatment)* definition* EOF;
 
 importStatment:
 	comments? IMPORT memberExpression SemiColon
 	| comments? IMPORT memberExpression AS Identifier SemiColon;
 
 definition:
-	annotationList? BUSINESSOBJECT (Identifier | type) raiseMessage? block;
+	comments? annotationList? BUSINESSOBJECT (Identifier | type) raiseMessage? block;
 
-block: OpenBrace itemList CloseBrace;
+block: OpenBrace itemList comments CloseBrace;
 
 itemList: (element | message | node | boAction | association)*;
 
@@ -48,9 +48,9 @@ raiseMessage: RAISES? identifierList?;
 annotationList: annotation*;
 
 annotation:
-	OpenBracket Identifier CloseBracket
-	| OpenBracket Identifier OpenParen Identifier CloseParen CloseBracket
-	| OpenBracket Identifier OpenParen literal CloseParen CloseBracket;
+	CustomAnnotationStart? OpenBracket Identifier CloseBracket
+	| CustomAnnotationStart? OpenBracket Identifier OpenParen Identifier CloseParen CloseBracket
+	| CustomAnnotationStart? OpenBracket Identifier OpenParen literal CloseParen CloseBracket;
 
 typeList: type | type Comma typeList;
 
@@ -91,8 +91,6 @@ keyword:
 	| AS;
 
 literal: DecimalLiteral | BooleanLiteral | StringLiteral;
-
-copyright: MultiLineComment? SingleLineComment*;
 
 comments: ( SingleLineComment | MultiLineComment)*;
 

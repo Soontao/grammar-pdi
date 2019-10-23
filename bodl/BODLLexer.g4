@@ -17,13 +17,13 @@ TEXT: 'text';
 VALUATION: 'valuation';
 
 // Comments
-MultiLineComment:
-	'/*' .*? '*/' LineTerminator -> channel(HIDDEN);
+MultiLineComment: '/*' .*? '*/';
 
-SingleLineComment:
-	SingleCommentStart CommentTextContent -> channel(HIDDEN);
+SingleLineComment: SingleCommentStart CommentTextContent;
 
-fragment SingleCommentStart: '//';
+CustomAnnotationStart: '///';
+
+fragment SingleCommentStart: '//' ~[\\/];
 fragment CommentTextContent: ~[\r\n\u2028\u2029]*;
 
 OpenBracket: '[';
