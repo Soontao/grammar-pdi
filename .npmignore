@@ -1,0 +1,6 @@
+vendor
+bodl/bodlgo
+go.sum
+go.mod
+.vscode
+.circleci
