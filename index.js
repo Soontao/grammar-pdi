@@ -1,3 +1,3 @@
-var { parseSource: parseBODL } = require("./bodl/js");
+var { parseSource: parseBODLSource } = require("./bodl/js");
 
-module.exports = { parseBODL };
+module.exports = { parseBODLSource };
