@@ -22,7 +22,7 @@ func TestParserComplexBODL(t *testing.T) {
 	parser := NewBODLParser(input)
 	program := parser.Program()
 	children := program.GetChildren()
-	assert.Equal(t, 4, len(children))
+	assert.Equal(t, 3, len(children))
 }
 
 func TestParserCustomAnnotation(t *testing.T) {
