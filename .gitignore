@@ -30,3 +30,4 @@ coverage.txt
 # node
 
 node_modules
+dist/*.js
