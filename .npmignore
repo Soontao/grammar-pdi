@@ -7,3 +7,4 @@ go.sum
 go.mod
 .vscode
 .circleci
+coverage.txt
