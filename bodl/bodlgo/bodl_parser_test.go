@@ -1,4 +1,4 @@
-package bodl
+package bodlgo
 
 import (
 	"testing"
@@ -8,7 +8,7 @@ import (
 )
 
 func TestParserBasicBODL(t *testing.T) {
-	basicBOStream, _ := antlr.NewFileStream("./examples/basic.bo")
+	basicBOStream, _ := antlr.NewFileStream("../examples/basic.bo")
 	input := antlr.NewCommonTokenStream(NewBODLLexer(basicBOStream), 0)
 	parser := NewBODLParser(input)
 	program := parser.Program()
@@ -17,7 +17,7 @@ func TestParserBasicBODL(t *testing.T) {
 }
 
 func TestParserComplexBODL(t *testing.T) {
-	complexBOStream, _ := antlr.NewFileStream("./examples/complex.bo")
+	complexBOStream, _ := antlr.NewFileStream("../examples/complex.bo")
 	input := antlr.NewCommonTokenStream(NewBODLLexer(complexBOStream), 0)
 	parser := NewBODLParser(input)
 	program := parser.Program()
@@ -26,7 +26,7 @@ func TestParserComplexBODL(t *testing.T) {
 }
 
 func TestParserCustomAnnotation(t *testing.T) {
-	complexBOStream, _ := antlr.NewFileStream("./examples/custom_annotation.bo")
+	complexBOStream, _ := antlr.NewFileStream("../examples/custom_annotation.bo")
 	input := antlr.NewCommonTokenStream(NewBODLLexer(complexBOStream), 0)
 	parser := NewBODLParser(input)
 	parser.BuildParseTrees = true

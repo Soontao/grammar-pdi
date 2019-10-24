@@ -1,6 +1,6 @@
-// Code generated from ../BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
+// Code generated from ./BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
 
-package bodl // BODLParser
+package bodlgo // BODLParser
 import "github.com/antlr/antlr4/runtime/Go/antlr"
 
 // BaseBODLParserListener is a complete listener for a parse tree produced by BODLParser.
@@ -26,11 +26,23 @@ func (s *BaseBODLParserListener) EnterProgram(ctx *ProgramContext) {}
 // ExitProgram is called when production program is exited.
 func (s *BaseBODLParserListener) ExitProgram(ctx *ProgramContext) {}
 
-// EnterImportStatment is called when production importStatment is entered.
-func (s *BaseBODLParserListener) EnterImportStatment(ctx *ImportStatmentContext) {}
+// EnterStatements is called when production statements is entered.
+func (s *BaseBODLParserListener) EnterStatements(ctx *StatementsContext) {}
 
-// ExitImportStatment is called when production importStatment is exited.
-func (s *BaseBODLParserListener) ExitImportStatment(ctx *ImportStatmentContext) {}
+// ExitStatements is called when production statements is exited.
+func (s *BaseBODLParserListener) ExitStatements(ctx *StatementsContext) {}
+
+// EnterImportStatement is called when production importStatement is entered.
+func (s *BaseBODLParserListener) EnterImportStatement(ctx *ImportStatementContext) {}
+
+// ExitImportStatement is called when production importStatement is exited.
+func (s *BaseBODLParserListener) ExitImportStatement(ctx *ImportStatementContext) {}
+
+// EnterDefinitions is called when production definitions is entered.
+func (s *BaseBODLParserListener) EnterDefinitions(ctx *DefinitionsContext) {}
+
+// ExitDefinitions is called when production definitions is exited.
+func (s *BaseBODLParserListener) ExitDefinitions(ctx *DefinitionsContext) {}
 
 // EnterDefinition is called when production definition is entered.
 func (s *BaseBODLParserListener) EnterDefinition(ctx *DefinitionContext) {}
@@ -112,11 +124,11 @@ func (s *BaseBODLParserListener) EnterRaiseMessage(ctx *RaiseMessageContext) {}
 // ExitRaiseMessage is called when production raiseMessage is exited.
 func (s *BaseBODLParserListener) ExitRaiseMessage(ctx *RaiseMessageContext) {}
 
-// EnterAnnotationList is called when production annotationList is entered.
-func (s *BaseBODLParserListener) EnterAnnotationList(ctx *AnnotationListContext) {}
+// EnterAnnotations is called when production annotations is entered.
+func (s *BaseBODLParserListener) EnterAnnotations(ctx *AnnotationsContext) {}
 
-// ExitAnnotationList is called when production annotationList is exited.
-func (s *BaseBODLParserListener) ExitAnnotationList(ctx *AnnotationListContext) {}
+// ExitAnnotations is called when production annotations is exited.
+func (s *BaseBODLParserListener) ExitAnnotations(ctx *AnnotationsContext) {}
 
 // EnterAnnotation is called when production annotation is entered.
 func (s *BaseBODLParserListener) EnterAnnotation(ctx *AnnotationContext) {}
@@ -130,11 +142,11 @@ func (s *BaseBODLParserListener) EnterTypeList(ctx *TypeListContext) {}
 // ExitTypeList is called when production typeList is exited.
 func (s *BaseBODLParserListener) ExitTypeList(ctx *TypeListContext) {}
 
-// EnterType is called when production type is entered.
-func (s *BaseBODLParserListener) EnterType(ctx *TypeContext) {}
+// EnterTypeDeclaration is called when production typeDeclaration is entered.
+func (s *BaseBODLParserListener) EnterTypeDeclaration(ctx *TypeDeclarationContext) {}
 
-// ExitType is called when production type is exited.
-func (s *BaseBODLParserListener) ExitType(ctx *TypeContext) {}
+// ExitTypeDeclaration is called when production typeDeclaration is exited.
+func (s *BaseBODLParserListener) ExitTypeDeclaration(ctx *TypeDeclarationContext) {}
 
 // EnterTypeDefaultValue is called when production typeDefaultValue is entered.
 func (s *BaseBODLParserListener) EnterTypeDefaultValue(ctx *TypeDefaultValueContext) {}
@@ -201,3 +213,9 @@ func (s *BaseBODLParserListener) EnterLogicOperator(ctx *LogicOperatorContext) {
 
 // ExitLogicOperator is called when production logicOperator is exited.
 func (s *BaseBODLParserListener) ExitLogicOperator(ctx *LogicOperatorContext) {}
+
+// EnterIdentifier is called when production identifier is entered.
+func (s *BaseBODLParserListener) EnterIdentifier(ctx *IdentifierContext) {}
+
+// ExitIdentifier is called when production identifier is exited.
+func (s *BaseBODLParserListener) ExitIdentifier(ctx *IdentifierContext) {}

@@ -1,0 +1,29 @@
+{
+  "name": "grammar-pdi",
+  "version": "1.0.0",
+  "description": "Grammar parser for PDI BODL/ABSL",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd bodl && ./make_lib.sh && npm run lint",
+    "lint": "eslint --fix .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soontao/grammar-pdi.git"
+  },
+  "author": "Theo Sun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Soontao/grammar-pdi/issues"
+  },
+  "homepage": "https://github.com/Soontao/grammar-pdi#readme",
+  "dependencies": {
+    "antlr4": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
+  }
+}

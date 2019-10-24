@@ -4,35 +4,42 @@ options {
 	tokenVocab = BODLLexer;
 }
 
-program: EOF | (importStatment)* definition* EOF;
+program: EOF | statements definitions EOF;
 
-importStatment:
+statements: (importStatement)*;
+
+importStatement:
 	comments? IMPORT memberExpression SemiColon
-	| comments? IMPORT memberExpression AS Identifier SemiColon;
+	| comments? IMPORT memberExpression AS identifier SemiColon;
+
+definitions: definition*;
 
 definition:
-	comments? annotationList? BUSINESSOBJECT (Identifier | type) raiseMessage? block;
+	comments? annotations? BUSINESSOBJECT (
+		identifier
+		| typeDeclaration
+	) raiseMessage? block;
 
 block: OpenBrace itemList comments CloseBrace;
 
 itemList: (element | message | node | boAction | association)*;
 
 element:
-	comments? annotationList? ELEMENT Identifier Colon type SemiColon;
+	comments? annotations? ELEMENT identifier Colon typeDeclaration SemiColon;
 
-boAction: comments? ACTION Identifier raiseMessage? SemiColon;
+boAction: comments? ACTION identifier raiseMessage? SemiColon;
 
 message:
-	comments? MESSAGE Identifier TEXT StringLiteral Colon typeList SemiColon;
+	comments? MESSAGE identifier TEXT StringLiteral Colon typeList SemiColon;
 
 node:
-	comments? annotationList? NODE Identifier multiplicity? raiseMessage? block?;
+	comments? annotations? NODE identifier multiplicity? raiseMessage? block?;
 
 association:
-	comments? annotationList? ASSOCIATION Identifier multiplicity? TO Identifier
+	comments? annotations? ASSOCIATION identifier multiplicity? TO identifier
 		associationUsingDefinition? valuationDefinition? SemiColon;
 
-associationUsingDefinition: USING Identifier;
+associationUsingDefinition: USING identifier;
 
 valuationDefinition:
 	VALUATION OpenParen valutaionExpressionList CloseParen;
@@ -41,22 +48,22 @@ valutaionExpressionList:
 	valutaionExpression
 	| valutaionExpression logicOperator valutaionExpressionList;
 
-valutaionExpression: Identifier compareOperator literal;
+valutaionExpression: identifier compareOperator literal;
 
 raiseMessage: RAISES? identifierList?;
 
-annotationList: annotation*;
+annotations: annotation*;
 
 annotation:
-	CustomAnnotationStart? OpenBracket Identifier CloseBracket
-	| CustomAnnotationStart? OpenBracket Identifier OpenParen Identifier CloseParen CloseBracket
-	| CustomAnnotationStart? OpenBracket Identifier OpenParen literal CloseParen CloseBracket;
+	CustomAnnotationStart? OpenBracket identifier CloseBracket
+	| CustomAnnotationStart? OpenBracket identifier OpenParen identifier CloseParen CloseBracket
+	| CustomAnnotationStart? OpenBracket identifier OpenParen literal CloseParen CloseBracket;
 
-typeList: type | type Comma typeList;
+typeList: typeDeclaration | typeDeclaration Comma typeList;
 
-type:
-	Identifier typeDefaultValue?
-	| memberExpression Colon Identifier typeDefaultValue?;
+typeDeclaration:
+	identifier typeDefaultValue?
+	| memberExpression Colon identifier typeDefaultValue?;
 
 typeDefaultValue:
 	Assign literal
@@ -66,15 +73,15 @@ valueAssignList:
 	valueAssign
 	| valueAssign Comma valueAssignList;
 
-valueAssign: Identifier Assign literal;
+valueAssign: identifier Assign literal;
 
 multiplicity:
 	OpenBracket literal Comma literal CloseBracket
 	| OpenBracket literal Comma N CloseBracket;
 
-memberExpression: Identifier | Identifier Dot memberExpression;
+memberExpression: identifier ( Dot memberExpression)*;
 
-identifierList: Identifier | Identifier Comma identifierList;
+identifierList: identifier (Comma identifier)*;
 
 keyword:
 	IMPORT
@@ -103,3 +110,5 @@ compareOperator:
 	| LessThanEquals;
 
 logicOperator: And | Or;
+
+identifier: Identifier;

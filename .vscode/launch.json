@@ -2,6 +2,19 @@
   "version": "2.0.0",
   "configurations": [
     {
+      "type": "node",
+      "name": "jest-tests",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--runInBand"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true
+    },
+    {
       "name": "antlr4-bodl-basic",
       "type": "antlr-debug",
       "request": "launch",
@@ -30,6 +43,6 @@
       "startRule": "program",
       "printParseTree": true,
       "visualParseTree": true
-    }
+    },
   ]
 }

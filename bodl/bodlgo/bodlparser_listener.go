@@ -1,6 +1,6 @@
-// Code generated from ../BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
+// Code generated from ./BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
 
-package bodl // BODLParser
+package bodlgo // BODLParser
 import "github.com/antlr/antlr4/runtime/Go/antlr"
 
 // BODLParserListener is a complete listener for a parse tree produced by BODLParser.
@@ -10,8 +10,14 @@ type BODLParserListener interface {
 	// EnterProgram is called when entering the program production.
 	EnterProgram(c *ProgramContext)
 
-	// EnterImportStatment is called when entering the importStatment production.
-	EnterImportStatment(c *ImportStatmentContext)
+	// EnterStatements is called when entering the statements production.
+	EnterStatements(c *StatementsContext)
+
+	// EnterImportStatement is called when entering the importStatement production.
+	EnterImportStatement(c *ImportStatementContext)
+
+	// EnterDefinitions is called when entering the definitions production.
+	EnterDefinitions(c *DefinitionsContext)
 
 	// EnterDefinition is called when entering the definition production.
 	EnterDefinition(c *DefinitionContext)
@@ -52,8 +58,8 @@ type BODLParserListener interface {
 	// EnterRaiseMessage is called when entering the raiseMessage production.
 	EnterRaiseMessage(c *RaiseMessageContext)
 
-	// EnterAnnotationList is called when entering the annotationList production.
-	EnterAnnotationList(c *AnnotationListContext)
+	// EnterAnnotations is called when entering the annotations production.
+	EnterAnnotations(c *AnnotationsContext)
 
 	// EnterAnnotation is called when entering the annotation production.
 	EnterAnnotation(c *AnnotationContext)
@@ -61,8 +67,8 @@ type BODLParserListener interface {
 	// EnterTypeList is called when entering the typeList production.
 	EnterTypeList(c *TypeListContext)
 
-	// EnterType is called when entering the type production.
-	EnterType(c *TypeContext)
+	// EnterTypeDeclaration is called when entering the typeDeclaration production.
+	EnterTypeDeclaration(c *TypeDeclarationContext)
 
 	// EnterTypeDefaultValue is called when entering the typeDefaultValue production.
 	EnterTypeDefaultValue(c *TypeDefaultValueContext)
@@ -97,11 +103,20 @@ type BODLParserListener interface {
 	// EnterLogicOperator is called when entering the logicOperator production.
 	EnterLogicOperator(c *LogicOperatorContext)
 
+	// EnterIdentifier is called when entering the identifier production.
+	EnterIdentifier(c *IdentifierContext)
+
 	// ExitProgram is called when exiting the program production.
 	ExitProgram(c *ProgramContext)
 
-	// ExitImportStatment is called when exiting the importStatment production.
-	ExitImportStatment(c *ImportStatmentContext)
+	// ExitStatements is called when exiting the statements production.
+	ExitStatements(c *StatementsContext)
+
+	// ExitImportStatement is called when exiting the importStatement production.
+	ExitImportStatement(c *ImportStatementContext)
+
+	// ExitDefinitions is called when exiting the definitions production.
+	ExitDefinitions(c *DefinitionsContext)
 
 	// ExitDefinition is called when exiting the definition production.
 	ExitDefinition(c *DefinitionContext)
@@ -142,8 +157,8 @@ type BODLParserListener interface {
 	// ExitRaiseMessage is called when exiting the raiseMessage production.
 	ExitRaiseMessage(c *RaiseMessageContext)
 
-	// ExitAnnotationList is called when exiting the annotationList production.
-	ExitAnnotationList(c *AnnotationListContext)
+	// ExitAnnotations is called when exiting the annotations production.
+	ExitAnnotations(c *AnnotationsContext)
 
 	// ExitAnnotation is called when exiting the annotation production.
 	ExitAnnotation(c *AnnotationContext)
@@ -151,8 +166,8 @@ type BODLParserListener interface {
 	// ExitTypeList is called when exiting the typeList production.
 	ExitTypeList(c *TypeListContext)
 
-	// ExitType is called when exiting the type production.
-	ExitType(c *TypeContext)
+	// ExitTypeDeclaration is called when exiting the typeDeclaration production.
+	ExitTypeDeclaration(c *TypeDeclarationContext)
 
 	// ExitTypeDefaultValue is called when exiting the typeDefaultValue production.
 	ExitTypeDefaultValue(c *TypeDefaultValueContext)
@@ -186,4 +201,7 @@ type BODLParserListener interface {
 
 	// ExitLogicOperator is called when exiting the logicOperator production.
 	ExitLogicOperator(c *LogicOperatorContext)
+
+	// ExitIdentifier is called when exiting the identifier production.
+	ExitIdentifier(c *IdentifierContext)
 }

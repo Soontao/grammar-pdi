@@ -1,6 +1,6 @@
-// Code generated from ../BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
+// Code generated from ./BODLParser.g4 by ANTLR 4.7.2. DO NOT EDIT.
 
-package bodl // BODLParser
+package bodlgo // BODLParser
 import (
 	"fmt"
 	"reflect"
@@ -15,155 +15,162 @@ var _ = reflect.Copy
 var _ = strconv.Itoa
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 59, 336,
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 59, 353,
 	4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7,
 	4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13,
 	9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 4, 16, 9, 16, 4, 17, 9, 17, 4, 18, 9,
 	18, 4, 19, 9, 19, 4, 20, 9, 20, 4, 21, 9, 21, 4, 22, 9, 22, 4, 23, 9, 23,
 	4, 24, 9, 24, 4, 25, 9, 25, 4, 26, 9, 26, 4, 27, 9, 27, 4, 28, 9, 28, 4,
-	29, 9, 29, 4, 30, 9, 30, 4, 31, 9, 31, 3, 2, 3, 2, 7, 2, 65, 10, 2, 12,
-	2, 14, 2, 68, 11, 2, 3, 2, 7, 2, 71, 10, 2, 12, 2, 14, 2, 74, 11, 2, 3,
-	2, 5, 2, 77, 10, 2, 3, 3, 5, 3, 80, 10, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
-	5, 3, 87, 10, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 3, 95, 10, 3, 3,
-	4, 5, 4, 98, 10, 4, 3, 4, 5, 4, 101, 10, 4, 3, 4, 3, 4, 3, 4, 5, 4, 106,
-	10, 4, 3, 4, 5, 4, 109, 10, 4, 3, 4, 3, 4, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5,
-	3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 7, 6, 123, 10, 6, 12, 6, 14, 6, 126, 11,
-	6, 3, 7, 5, 7, 129, 10, 7, 3, 7, 5, 7, 132, 10, 7, 3, 7, 3, 7, 3, 7, 3,
-	7, 3, 7, 3, 7, 3, 8, 5, 8, 141, 10, 8, 3, 8, 3, 8, 3, 8, 5, 8, 146, 10,
-	8, 3, 8, 3, 8, 3, 9, 5, 9, 151, 10, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3,
-	9, 3, 9, 3, 9, 3, 10, 5, 10, 162, 10, 10, 3, 10, 5, 10, 165, 10, 10, 3,
-	10, 3, 10, 3, 10, 5, 10, 170, 10, 10, 3, 10, 5, 10, 173, 10, 10, 3, 10,
-	5, 10, 176, 10, 10, 3, 11, 5, 11, 179, 10, 11, 3, 11, 5, 11, 182, 10, 11,
-	3, 11, 3, 11, 3, 11, 5, 11, 187, 10, 11, 3, 11, 3, 11, 3, 11, 5, 11, 192,
-	10, 11, 3, 11, 5, 11, 195, 10, 11, 3, 11, 3, 11, 3, 12, 3, 12, 3, 12, 3,
-	13, 3, 13, 3, 13, 3, 13, 3, 13, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 5, 14,
-	212, 10, 14, 3, 15, 3, 15, 3, 15, 3, 15, 3, 16, 5, 16, 219, 10, 16, 3,
-	16, 5, 16, 222, 10, 16, 3, 17, 7, 17, 225, 10, 17, 12, 17, 14, 17, 228,
-	11, 17, 3, 18, 5, 18, 231, 10, 18, 3, 18, 3, 18, 3, 18, 3, 18, 5, 18, 237,
-	10, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 5, 18, 246, 10,
-	18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 3, 18, 5, 18, 255, 10, 18,
-	3, 19, 3, 19, 3, 19, 3, 19, 3, 19, 5, 19, 262, 10, 19, 3, 20, 3, 20, 5,
-	20, 266, 10, 20, 3, 20, 3, 20, 3, 20, 3, 20, 5, 20, 272, 10, 20, 5, 20,
-	274, 10, 20, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 5, 21, 283,
-	10, 21, 3, 22, 3, 22, 3, 22, 3, 22, 3, 22, 5, 22, 290, 10, 22, 3, 23, 3,
-	23, 3, 23, 3, 23, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24, 3, 24,
-	3, 24, 3, 24, 3, 24, 3, 24, 5, 24, 308, 10, 24, 3, 25, 3, 25, 3, 25, 3,
-	25, 5, 25, 314, 10, 25, 3, 26, 3, 26, 3, 26, 3, 26, 5, 26, 320, 10, 26,
-	3, 27, 3, 27, 3, 28, 3, 28, 3, 29, 7, 29, 327, 10, 29, 12, 29, 14, 29,
-	330, 11, 29, 3, 30, 3, 30, 3, 31, 3, 31, 3, 31, 2, 2, 32, 2, 4, 6, 8, 10,
-	12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46,
-	48, 50, 52, 54, 56, 58, 60, 2, 7, 3, 2, 3, 14, 3, 2, 51, 53, 3, 2, 16,
-	17, 3, 2, 40, 45, 3, 2, 46, 47, 2, 354, 2, 76, 3, 2, 2, 2, 4, 94, 3, 2,
-	2, 2, 6, 97, 3, 2, 2, 2, 8, 112, 3, 2, 2, 2, 10, 124, 3, 2, 2, 2, 12, 128,
-	3, 2, 2, 2, 14, 140, 3, 2, 2, 2, 16, 150, 3, 2, 2, 2, 18, 161, 3, 2, 2,
-	2, 20, 178, 3, 2, 2, 2, 22, 198, 3, 2, 2, 2, 24, 201, 3, 2, 2, 2, 26, 211,
-	3, 2, 2, 2, 28, 213, 3, 2, 2, 2, 30, 218, 3, 2, 2, 2, 32, 226, 3, 2, 2,
-	2, 34, 254, 3, 2, 2, 2, 36, 261, 3, 2, 2, 2, 38, 273, 3, 2, 2, 2, 40, 282,
-	3, 2, 2, 2, 42, 289, 3, 2, 2, 2, 44, 291, 3, 2, 2, 2, 46, 307, 3, 2, 2,
-	2, 48, 313, 3, 2, 2, 2, 50, 319, 3, 2, 2, 2, 52, 321, 3, 2, 2, 2, 54, 323,
-	3, 2, 2, 2, 56, 328, 3, 2, 2, 2, 58, 331, 3, 2, 2, 2, 60, 333, 3, 2, 2,
-	2, 62, 77, 7, 2, 2, 3, 63, 65, 5, 4, 3, 2, 64, 63, 3, 2, 2, 2, 65, 68,
-	3, 2, 2, 2, 66, 64, 3, 2, 2, 2, 66, 67, 3, 2, 2, 2, 67, 72, 3, 2, 2, 2,
-	68, 66, 3, 2, 2, 2, 69, 71, 5, 6, 4, 2, 70, 69, 3, 2, 2, 2, 71, 74, 3,
-	2, 2, 2, 72, 70, 3, 2, 2, 2, 72, 73, 3, 2, 2, 2, 73, 75, 3, 2, 2, 2, 74,
-	72, 3, 2, 2, 2, 75, 77, 7, 2, 2, 3, 76, 62, 3, 2, 2, 2, 76, 66, 3, 2, 2,
-	2, 77, 3, 3, 2, 2, 2, 78, 80, 5, 56, 29, 2, 79, 78, 3, 2, 2, 2, 79, 80,
-	3, 2, 2, 2, 80, 81, 3, 2, 2, 2, 81, 82, 7, 12, 2, 2, 82, 83, 5, 48, 25,
-	2, 83, 84, 7, 25, 2, 2, 84, 95, 3, 2, 2, 2, 85, 87, 5, 56, 29, 2, 86, 85,
-	3, 2, 2, 2, 86, 87, 3, 2, 2, 2, 87, 88, 3, 2, 2, 2, 88, 89, 7, 12, 2, 2,
-	89, 90, 5, 48, 25, 2, 90, 91, 7, 13, 2, 2, 91, 92, 7, 50, 2, 2, 92, 93,
-	7, 25, 2, 2, 93, 95, 3, 2, 2, 2, 94, 79, 3, 2, 2, 2, 94, 86, 3, 2, 2, 2,
-	95, 5, 3, 2, 2, 2, 96, 98, 5, 56, 29, 2, 97, 96, 3, 2, 2, 2, 97, 98, 3,
-	2, 2, 2, 98, 100, 3, 2, 2, 2, 99, 101, 5, 32, 17, 2, 100, 99, 3, 2, 2,
-	2, 100, 101, 3, 2, 2, 2, 101, 102, 3, 2, 2, 2, 102, 105, 7, 3, 2, 2, 103,
-	106, 7, 50, 2, 2, 104, 106, 5, 38, 20, 2, 105, 103, 3, 2, 2, 2, 105, 104,
-	3, 2, 2, 2, 106, 108, 3, 2, 2, 2, 107, 109, 5, 30, 16, 2, 108, 107, 3,
-	2, 2, 2, 108, 109, 3, 2, 2, 2, 109, 110, 3, 2, 2, 2, 110, 111, 5, 8, 5,
-	2, 111, 7, 3, 2, 2, 2, 112, 113, 7, 23, 2, 2, 113, 114, 5, 10, 6, 2, 114,
-	115, 5, 56, 29, 2, 115, 116, 7, 24, 2, 2, 116, 9, 3, 2, 2, 2, 117, 123,
-	5, 12, 7, 2, 118, 123, 5, 16, 9, 2, 119, 123, 5, 18, 10, 2, 120, 123, 5,
-	14, 8, 2, 121, 123, 5, 20, 11, 2, 122, 117, 3, 2, 2, 2, 122, 118, 3, 2,
-	2, 2, 122, 119, 3, 2, 2, 2, 122, 120, 3, 2, 2, 2, 122, 121, 3, 2, 2, 2,
-	123, 126, 3, 2, 2, 2, 124, 122, 3, 2, 2, 2, 124, 125, 3, 2, 2, 2, 125,
-	11, 3, 2, 2, 2, 126, 124, 3, 2, 2, 2, 127, 129, 5, 56, 29, 2, 128, 127,
-	3, 2, 2, 2, 128, 129, 3, 2, 2, 2, 129, 131, 3, 2, 2, 2, 130, 132, 5, 32,
-	17, 2, 131, 130, 3, 2, 2, 2, 131, 132, 3, 2, 2, 2, 132, 133, 3, 2, 2, 2,
-	133, 134, 7, 6, 2, 2, 134, 135, 7, 50, 2, 2, 135, 136, 7, 29, 2, 2, 136,
-	137, 5, 38, 20, 2, 137, 138, 7, 25, 2, 2, 138, 13, 3, 2, 2, 2, 139, 141,
-	5, 56, 29, 2, 140, 139, 3, 2, 2, 2, 140, 141, 3, 2, 2, 2, 141, 142, 3,
-	2, 2, 2, 142, 143, 7, 8, 2, 2, 143, 145, 7, 50, 2, 2, 144, 146, 5, 30,
-	16, 2, 145, 144, 3, 2, 2, 2, 145, 146, 3, 2, 2, 2, 146, 147, 3, 2, 2, 2,
-	147, 148, 7, 25, 2, 2, 148, 15, 3, 2, 2, 2, 149, 151, 5, 56, 29, 2, 150,
-	149, 3, 2, 2, 2, 150, 151, 3, 2, 2, 2, 151, 152, 3, 2, 2, 2, 152, 153,
-	7, 9, 2, 2, 153, 154, 7, 50, 2, 2, 154, 155, 7, 14, 2, 2, 155, 156, 7,
-	51, 2, 2, 156, 157, 7, 29, 2, 2, 157, 158, 5, 36, 19, 2, 158, 159, 7, 25,
-	2, 2, 159, 17, 3, 2, 2, 2, 160, 162, 5, 56, 29, 2, 161, 160, 3, 2, 2, 2,
-	161, 162, 3, 2, 2, 2, 162, 164, 3, 2, 2, 2, 163, 165, 5, 32, 17, 2, 164,
-	163, 3, 2, 2, 2, 164, 165, 3, 2, 2, 2, 165, 166, 3, 2, 2, 2, 166, 167,
-	7, 7, 2, 2, 167, 169, 7, 50, 2, 2, 168, 170, 5, 46, 24, 2, 169, 168, 3,
-	2, 2, 2, 169, 170, 3, 2, 2, 2, 170, 172, 3, 2, 2, 2, 171, 173, 5, 30, 16,
-	2, 172, 171, 3, 2, 2, 2, 172, 173, 3, 2, 2, 2, 173, 175, 3, 2, 2, 2, 174,
-	176, 5, 8, 5, 2, 175, 174, 3, 2, 2, 2, 175, 176, 3, 2, 2, 2, 176, 19, 3,
-	2, 2, 2, 177, 179, 5, 56, 29, 2, 178, 177, 3, 2, 2, 2, 178, 179, 3, 2,
-	2, 2, 179, 181, 3, 2, 2, 2, 180, 182, 5, 32, 17, 2, 181, 180, 3, 2, 2,
-	2, 181, 182, 3, 2, 2, 2, 182, 183, 3, 2, 2, 2, 183, 184, 7, 5, 2, 2, 184,
-	186, 7, 50, 2, 2, 185, 187, 5, 46, 24, 2, 186, 185, 3, 2, 2, 2, 186, 187,
-	3, 2, 2, 2, 187, 188, 3, 2, 2, 2, 188, 189, 7, 4, 2, 2, 189, 191, 7, 50,
-	2, 2, 190, 192, 5, 22, 12, 2, 191, 190, 3, 2, 2, 2, 191, 192, 3, 2, 2,
-	2, 192, 194, 3, 2, 2, 2, 193, 195, 5, 24, 13, 2, 194, 193, 3, 2, 2, 2,
-	194, 195, 3, 2, 2, 2, 195, 196, 3, 2, 2, 2, 196, 197, 7, 25, 2, 2, 197,
-	21, 3, 2, 2, 2, 198, 199, 7, 11, 2, 2, 199, 200, 7, 50, 2, 2, 200, 23,
-	3, 2, 2, 2, 201, 202, 7, 15, 2, 2, 202, 203, 7, 21, 2, 2, 203, 204, 5,
-	26, 14, 2, 204, 205, 7, 22, 2, 2, 205, 25, 3, 2, 2, 2, 206, 212, 5, 28,
-	15, 2, 207, 208, 5, 28, 15, 2, 208, 209, 5, 60, 31, 2, 209, 210, 5, 26,
-	14, 2, 210, 212, 3, 2, 2, 2, 211, 206, 3, 2, 2, 2, 211, 207, 3, 2, 2, 2,
-	212, 27, 3, 2, 2, 2, 213, 214, 7, 50, 2, 2, 214, 215, 5, 58, 30, 2, 215,
-	216, 5, 54, 28, 2, 216, 29, 3, 2, 2, 2, 217, 219, 7, 10, 2, 2, 218, 217,
-	3, 2, 2, 2, 218, 219, 3, 2, 2, 2, 219, 221, 3, 2, 2, 2, 220, 222, 5, 50,
-	26, 2, 221, 220, 3, 2, 2, 2, 221, 222, 3, 2, 2, 2, 222, 31, 3, 2, 2, 2,
-	223, 225, 5, 34, 18, 2, 224, 223, 3, 2, 2, 2, 225, 228, 3, 2, 2, 2, 226,
-	224, 3, 2, 2, 2, 226, 227, 3, 2, 2, 2, 227, 33, 3, 2, 2, 2, 228, 226, 3,
-	2, 2, 2, 229, 231, 7, 18, 2, 2, 230, 229, 3, 2, 2, 2, 230, 231, 3, 2, 2,
-	2, 231, 232, 3, 2, 2, 2, 232, 233, 7, 19, 2, 2, 233, 234, 7, 50, 2, 2,
-	234, 255, 7, 20, 2, 2, 235, 237, 7, 18, 2, 2, 236, 235, 3, 2, 2, 2, 236,
-	237, 3, 2, 2, 2, 237, 238, 3, 2, 2, 2, 238, 239, 7, 19, 2, 2, 239, 240,
-	7, 50, 2, 2, 240, 241, 7, 21, 2, 2, 241, 242, 7, 50, 2, 2, 242, 243, 7,
-	22, 2, 2, 243, 255, 7, 20, 2, 2, 244, 246, 7, 18, 2, 2, 245, 244, 3, 2,
-	2, 2, 245, 246, 3, 2, 2, 2, 246, 247, 3, 2, 2, 2, 247, 248, 7, 19, 2, 2,
-	248, 249, 7, 50, 2, 2, 249, 250, 7, 21, 2, 2, 250, 251, 5, 54, 28, 2, 251,
-	252, 7, 22, 2, 2, 252, 253, 7, 20, 2, 2, 253, 255, 3, 2, 2, 2, 254, 230,
-	3, 2, 2, 2, 254, 236, 3, 2, 2, 2, 254, 245, 3, 2, 2, 2, 255, 35, 3, 2,
-	2, 2, 256, 262, 5, 38, 20, 2, 257, 258, 5, 38, 20, 2, 258, 259, 7, 26,
-	2, 2, 259, 260, 5, 36, 19, 2, 260, 262, 3, 2, 2, 2, 261, 256, 3, 2, 2,
-	2, 261, 257, 3, 2, 2, 2, 262, 37, 3, 2, 2, 2, 263, 265, 7, 50, 2, 2, 264,
-	266, 5, 40, 21, 2, 265, 264, 3, 2, 2, 2, 265, 266, 3, 2, 2, 2, 266, 274,
-	3, 2, 2, 2, 267, 268, 5, 48, 25, 2, 268, 269, 7, 29, 2, 2, 269, 271, 7,
-	50, 2, 2, 270, 272, 5, 40, 21, 2, 271, 270, 3, 2, 2, 2, 271, 272, 3, 2,
-	2, 2, 272, 274, 3, 2, 2, 2, 273, 263, 3, 2, 2, 2, 273, 267, 3, 2, 2, 2,
-	274, 39, 3, 2, 2, 2, 275, 276, 7, 27, 2, 2, 276, 283, 5, 54, 28, 2, 277,
-	278, 7, 27, 2, 2, 278, 279, 7, 23, 2, 2, 279, 280, 5, 42, 22, 2, 280, 281,
-	7, 24, 2, 2, 281, 283, 3, 2, 2, 2, 282, 275, 3, 2, 2, 2, 282, 277, 3, 2,
-	2, 2, 283, 41, 3, 2, 2, 2, 284, 290, 5, 44, 23, 2, 285, 286, 5, 44, 23,
-	2, 286, 287, 7, 26, 2, 2, 287, 288, 5, 42, 22, 2, 288, 290, 3, 2, 2, 2,
-	289, 284, 3, 2, 2, 2, 289, 285, 3, 2, 2, 2, 290, 43, 3, 2, 2, 2, 291, 292,
-	7, 50, 2, 2, 292, 293, 7, 27, 2, 2, 293, 294, 5, 54, 28, 2, 294, 45, 3,
-	2, 2, 2, 295, 296, 7, 19, 2, 2, 296, 297, 5, 54, 28, 2, 297, 298, 7, 26,
-	2, 2, 298, 299, 5, 54, 28, 2, 299, 300, 7, 20, 2, 2, 300, 308, 3, 2, 2,
-	2, 301, 302, 7, 19, 2, 2, 302, 303, 5, 54, 28, 2, 303, 304, 7, 26, 2, 2,
-	304, 305, 7, 49, 2, 2, 305, 306, 7, 20, 2, 2, 306, 308, 3, 2, 2, 2, 307,
-	295, 3, 2, 2, 2, 307, 301, 3, 2, 2, 2, 308, 47, 3, 2, 2, 2, 309, 314, 7,
-	50, 2, 2, 310, 311, 7, 50, 2, 2, 311, 312, 7, 30, 2, 2, 312, 314, 5, 48,
-	25, 2, 313, 309, 3, 2, 2, 2, 313, 310, 3, 2, 2, 2, 314, 49, 3, 2, 2, 2,
-	315, 320, 7, 50, 2, 2, 316, 317, 7, 50, 2, 2, 317, 318, 7, 26, 2, 2, 318,
-	320, 5, 50, 26, 2, 319, 315, 3, 2, 2, 2, 319, 316, 3, 2, 2, 2, 320, 51,
-	3, 2, 2, 2, 321, 322, 9, 2, 2, 2, 322, 53, 3, 2, 2, 2, 323, 324, 9, 3,
-	2, 2, 324, 55, 3, 2, 2, 2, 325, 327, 9, 4, 2, 2, 326, 325, 3, 2, 2, 2,
-	327, 330, 3, 2, 2, 2, 328, 326, 3, 2, 2, 2, 328, 329, 3, 2, 2, 2, 329,
-	57, 3, 2, 2, 2, 330, 328, 3, 2, 2, 2, 331, 332, 9, 5, 2, 2, 332, 59, 3,
-	2, 2, 2, 333, 334, 9, 6, 2, 2, 334, 61, 3, 2, 2, 2, 47, 66, 72, 76, 79,
-	86, 94, 97, 100, 105, 108, 122, 124, 128, 131, 140, 145, 150, 161, 164,
-	169, 172, 175, 178, 181, 186, 191, 194, 211, 218, 221, 226, 230, 236, 245,
-	254, 261, 265, 271, 273, 282, 289, 307, 313, 319, 328,
+	29, 9, 29, 4, 30, 9, 30, 4, 31, 9, 31, 4, 32, 9, 32, 4, 33, 9, 33, 4, 34,
+	9, 34, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 5, 2, 74, 10, 2, 3, 3, 7, 3, 77, 10,
+	3, 12, 3, 14, 3, 80, 11, 3, 3, 4, 5, 4, 83, 10, 4, 3, 4, 3, 4, 3, 4, 3,
+	4, 3, 4, 5, 4, 90, 10, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 5, 4, 98,
+	10, 4, 3, 5, 7, 5, 101, 10, 5, 12, 5, 14, 5, 104, 11, 5, 3, 6, 5, 6, 107,
+	10, 6, 3, 6, 5, 6, 110, 10, 6, 3, 6, 3, 6, 3, 6, 5, 6, 115, 10, 6, 3, 6,
+	5, 6, 118, 10, 6, 3, 6, 3, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 8, 3, 8,
+	3, 8, 3, 8, 3, 8, 7, 8, 132, 10, 8, 12, 8, 14, 8, 135, 11, 8, 3, 9, 5,
+	9, 138, 10, 9, 3, 9, 5, 9, 141, 10, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3,
+	9, 3, 10, 5, 10, 150, 10, 10, 3, 10, 3, 10, 3, 10, 5, 10, 155, 10, 10,
+	3, 10, 3, 10, 3, 11, 5, 11, 160, 10, 11, 3, 11, 3, 11, 3, 11, 3, 11, 3,
+	11, 3, 11, 3, 11, 3, 11, 3, 12, 5, 12, 171, 10, 12, 3, 12, 5, 12, 174,
+	10, 12, 3, 12, 3, 12, 3, 12, 5, 12, 179, 10, 12, 3, 12, 5, 12, 182, 10,
+	12, 3, 12, 5, 12, 185, 10, 12, 3, 13, 5, 13, 188, 10, 13, 3, 13, 5, 13,
+	191, 10, 13, 3, 13, 3, 13, 3, 13, 5, 13, 196, 10, 13, 3, 13, 3, 13, 3,
+	13, 5, 13, 201, 10, 13, 3, 13, 5, 13, 204, 10, 13, 3, 13, 3, 13, 3, 14,
+	3, 14, 3, 14, 3, 15, 3, 15, 3, 15, 3, 15, 3, 15, 3, 16, 3, 16, 3, 16, 3,
+	16, 3, 16, 5, 16, 221, 10, 16, 3, 17, 3, 17, 3, 17, 3, 17, 3, 18, 5, 18,
+	228, 10, 18, 3, 18, 5, 18, 231, 10, 18, 3, 19, 7, 19, 234, 10, 19, 12,
+	19, 14, 19, 237, 11, 19, 3, 20, 5, 20, 240, 10, 20, 3, 20, 3, 20, 3, 20,
+	3, 20, 3, 20, 5, 20, 247, 10, 20, 3, 20, 3, 20, 3, 20, 3, 20, 3, 20, 3,
+	20, 3, 20, 3, 20, 5, 20, 257, 10, 20, 3, 20, 3, 20, 3, 20, 3, 20, 3, 20,
+	3, 20, 3, 20, 5, 20, 266, 10, 20, 3, 21, 3, 21, 3, 21, 3, 21, 3, 21, 5,
+	21, 273, 10, 21, 3, 22, 3, 22, 5, 22, 277, 10, 22, 3, 22, 3, 22, 3, 22,
+	3, 22, 5, 22, 283, 10, 22, 5, 22, 285, 10, 22, 3, 23, 3, 23, 3, 23, 3,
+	23, 3, 23, 3, 23, 3, 23, 5, 23, 294, 10, 23, 3, 24, 3, 24, 3, 24, 3, 24,
+	3, 24, 5, 24, 301, 10, 24, 3, 25, 3, 25, 3, 25, 3, 25, 3, 26, 3, 26, 3,
+	26, 3, 26, 3, 26, 3, 26, 3, 26, 3, 26, 3, 26, 3, 26, 3, 26, 3, 26, 5, 26,
+	319, 10, 26, 3, 27, 3, 27, 3, 27, 7, 27, 324, 10, 27, 12, 27, 14, 27, 327,
+	11, 27, 3, 28, 3, 28, 3, 28, 7, 28, 332, 10, 28, 12, 28, 14, 28, 335, 11,
+	28, 3, 29, 3, 29, 3, 30, 3, 30, 3, 31, 7, 31, 342, 10, 31, 12, 31, 14,
+	31, 345, 11, 31, 3, 32, 3, 32, 3, 33, 3, 33, 3, 34, 3, 34, 3, 34, 2, 2,
+	35, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36,
+	38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 2, 7, 3, 2,
+	3, 14, 3, 2, 51, 53, 3, 2, 16, 17, 3, 2, 40, 45, 3, 2, 46, 47, 2, 368,
+	2, 73, 3, 2, 2, 2, 4, 78, 3, 2, 2, 2, 6, 97, 3, 2, 2, 2, 8, 102, 3, 2,
+	2, 2, 10, 106, 3, 2, 2, 2, 12, 121, 3, 2, 2, 2, 14, 133, 3, 2, 2, 2, 16,
+	137, 3, 2, 2, 2, 18, 149, 3, 2, 2, 2, 20, 159, 3, 2, 2, 2, 22, 170, 3,
+	2, 2, 2, 24, 187, 3, 2, 2, 2, 26, 207, 3, 2, 2, 2, 28, 210, 3, 2, 2, 2,
+	30, 220, 3, 2, 2, 2, 32, 222, 3, 2, 2, 2, 34, 227, 3, 2, 2, 2, 36, 235,
+	3, 2, 2, 2, 38, 265, 3, 2, 2, 2, 40, 272, 3, 2, 2, 2, 42, 284, 3, 2, 2,
+	2, 44, 293, 3, 2, 2, 2, 46, 300, 3, 2, 2, 2, 48, 302, 3, 2, 2, 2, 50, 318,
+	3, 2, 2, 2, 52, 320, 3, 2, 2, 2, 54, 328, 3, 2, 2, 2, 56, 336, 3, 2, 2,
+	2, 58, 338, 3, 2, 2, 2, 60, 343, 3, 2, 2, 2, 62, 346, 3, 2, 2, 2, 64, 348,
+	3, 2, 2, 2, 66, 350, 3, 2, 2, 2, 68, 74, 7, 2, 2, 3, 69, 70, 5, 4, 3, 2,
+	70, 71, 5, 8, 5, 2, 71, 72, 7, 2, 2, 3, 72, 74, 3, 2, 2, 2, 73, 68, 3,
+	2, 2, 2, 73, 69, 3, 2, 2, 2, 74, 3, 3, 2, 2, 2, 75, 77, 5, 6, 4, 2, 76,
+	75, 3, 2, 2, 2, 77, 80, 3, 2, 2, 2, 78, 76, 3, 2, 2, 2, 78, 79, 3, 2, 2,
+	2, 79, 5, 3, 2, 2, 2, 80, 78, 3, 2, 2, 2, 81, 83, 5, 60, 31, 2, 82, 81,
+	3, 2, 2, 2, 82, 83, 3, 2, 2, 2, 83, 84, 3, 2, 2, 2, 84, 85, 7, 12, 2, 2,
+	85, 86, 5, 52, 27, 2, 86, 87, 7, 25, 2, 2, 87, 98, 3, 2, 2, 2, 88, 90,
+	5, 60, 31, 2, 89, 88, 3, 2, 2, 2, 89, 90, 3, 2, 2, 2, 90, 91, 3, 2, 2,
+	2, 91, 92, 7, 12, 2, 2, 92, 93, 5, 52, 27, 2, 93, 94, 7, 13, 2, 2, 94,
+	95, 5, 66, 34, 2, 95, 96, 7, 25, 2, 2, 96, 98, 3, 2, 2, 2, 97, 82, 3, 2,
+	2, 2, 97, 89, 3, 2, 2, 2, 98, 7, 3, 2, 2, 2, 99, 101, 5, 10, 6, 2, 100,
+	99, 3, 2, 2, 2, 101, 104, 3, 2, 2, 2, 102, 100, 3, 2, 2, 2, 102, 103, 3,
+	2, 2, 2, 103, 9, 3, 2, 2, 2, 104, 102, 3, 2, 2, 2, 105, 107, 5, 60, 31,
+	2, 106, 105, 3, 2, 2, 2, 106, 107, 3, 2, 2, 2, 107, 109, 3, 2, 2, 2, 108,
+	110, 5, 36, 19, 2, 109, 108, 3, 2, 2, 2, 109, 110, 3, 2, 2, 2, 110, 111,
+	3, 2, 2, 2, 111, 114, 7, 3, 2, 2, 112, 115, 5, 66, 34, 2, 113, 115, 5,
+	42, 22, 2, 114, 112, 3, 2, 2, 2, 114, 113, 3, 2, 2, 2, 115, 117, 3, 2,
+	2, 2, 116, 118, 5, 34, 18, 2, 117, 116, 3, 2, 2, 2, 117, 118, 3, 2, 2,
+	2, 118, 119, 3, 2, 2, 2, 119, 120, 5, 12, 7, 2, 120, 11, 3, 2, 2, 2, 121,
+	122, 7, 23, 2, 2, 122, 123, 5, 14, 8, 2, 123, 124, 5, 60, 31, 2, 124, 125,
+	7, 24, 2, 2, 125, 13, 3, 2, 2, 2, 126, 132, 5, 16, 9, 2, 127, 132, 5, 20,
+	11, 2, 128, 132, 5, 22, 12, 2, 129, 132, 5, 18, 10, 2, 130, 132, 5, 24,
+	13, 2, 131, 126, 3, 2, 2, 2, 131, 127, 3, 2, 2, 2, 131, 128, 3, 2, 2, 2,
+	131, 129, 3, 2, 2, 2, 131, 130, 3, 2, 2, 2, 132, 135, 3, 2, 2, 2, 133,
+	131, 3, 2, 2, 2, 133, 134, 3, 2, 2, 2, 134, 15, 3, 2, 2, 2, 135, 133, 3,
+	2, 2, 2, 136, 138, 5, 60, 31, 2, 137, 136, 3, 2, 2, 2, 137, 138, 3, 2,
+	2, 2, 138, 140, 3, 2, 2, 2, 139, 141, 5, 36, 19, 2, 140, 139, 3, 2, 2,
+	2, 140, 141, 3, 2, 2, 2, 141, 142, 3, 2, 2, 2, 142, 143, 7, 6, 2, 2, 143,
+	144, 5, 66, 34, 2, 144, 145, 7, 29, 2, 2, 145, 146, 5, 42, 22, 2, 146,
+	147, 7, 25, 2, 2, 147, 17, 3, 2, 2, 2, 148, 150, 5, 60, 31, 2, 149, 148,
+	3, 2, 2, 2, 149, 150, 3, 2, 2, 2, 150, 151, 3, 2, 2, 2, 151, 152, 7, 8,
+	2, 2, 152, 154, 5, 66, 34, 2, 153, 155, 5, 34, 18, 2, 154, 153, 3, 2, 2,
+	2, 154, 155, 3, 2, 2, 2, 155, 156, 3, 2, 2, 2, 156, 157, 7, 25, 2, 2, 157,
+	19, 3, 2, 2, 2, 158, 160, 5, 60, 31, 2, 159, 158, 3, 2, 2, 2, 159, 160,
+	3, 2, 2, 2, 160, 161, 3, 2, 2, 2, 161, 162, 7, 9, 2, 2, 162, 163, 5, 66,
+	34, 2, 163, 164, 7, 14, 2, 2, 164, 165, 7, 51, 2, 2, 165, 166, 7, 29, 2,
+	2, 166, 167, 5, 40, 21, 2, 167, 168, 7, 25, 2, 2, 168, 21, 3, 2, 2, 2,
+	169, 171, 5, 60, 31, 2, 170, 169, 3, 2, 2, 2, 170, 171, 3, 2, 2, 2, 171,
+	173, 3, 2, 2, 2, 172, 174, 5, 36, 19, 2, 173, 172, 3, 2, 2, 2, 173, 174,
+	3, 2, 2, 2, 174, 175, 3, 2, 2, 2, 175, 176, 7, 7, 2, 2, 176, 178, 5, 66,
+	34, 2, 177, 179, 5, 50, 26, 2, 178, 177, 3, 2, 2, 2, 178, 179, 3, 2, 2,
+	2, 179, 181, 3, 2, 2, 2, 180, 182, 5, 34, 18, 2, 181, 180, 3, 2, 2, 2,
+	181, 182, 3, 2, 2, 2, 182, 184, 3, 2, 2, 2, 183, 185, 5, 12, 7, 2, 184,
+	183, 3, 2, 2, 2, 184, 185, 3, 2, 2, 2, 185, 23, 3, 2, 2, 2, 186, 188, 5,
+	60, 31, 2, 187, 186, 3, 2, 2, 2, 187, 188, 3, 2, 2, 2, 188, 190, 3, 2,
+	2, 2, 189, 191, 5, 36, 19, 2, 190, 189, 3, 2, 2, 2, 190, 191, 3, 2, 2,
+	2, 191, 192, 3, 2, 2, 2, 192, 193, 7, 5, 2, 2, 193, 195, 5, 66, 34, 2,
+	194, 196, 5, 50, 26, 2, 195, 194, 3, 2, 2, 2, 195, 196, 3, 2, 2, 2, 196,
+	197, 3, 2, 2, 2, 197, 198, 7, 4, 2, 2, 198, 200, 5, 66, 34, 2, 199, 201,
+	5, 26, 14, 2, 200, 199, 3, 2, 2, 2, 200, 201, 3, 2, 2, 2, 201, 203, 3,
+	2, 2, 2, 202, 204, 5, 28, 15, 2, 203, 202, 3, 2, 2, 2, 203, 204, 3, 2,
+	2, 2, 204, 205, 3, 2, 2, 2, 205, 206, 7, 25, 2, 2, 206, 25, 3, 2, 2, 2,
+	207, 208, 7, 11, 2, 2, 208, 209, 5, 66, 34, 2, 209, 27, 3, 2, 2, 2, 210,
+	211, 7, 15, 2, 2, 211, 212, 7, 21, 2, 2, 212, 213, 5, 30, 16, 2, 213, 214,
+	7, 22, 2, 2, 214, 29, 3, 2, 2, 2, 215, 221, 5, 32, 17, 2, 216, 217, 5,
+	32, 17, 2, 217, 218, 5, 64, 33, 2, 218, 219, 5, 30, 16, 2, 219, 221, 3,
+	2, 2, 2, 220, 215, 3, 2, 2, 2, 220, 216, 3, 2, 2, 2, 221, 31, 3, 2, 2,
+	2, 222, 223, 5, 66, 34, 2, 223, 224, 5, 62, 32, 2, 224, 225, 5, 58, 30,
+	2, 225, 33, 3, 2, 2, 2, 226, 228, 7, 10, 2, 2, 227, 226, 3, 2, 2, 2, 227,
+	228, 3, 2, 2, 2, 228, 230, 3, 2, 2, 2, 229, 231, 5, 54, 28, 2, 230, 229,
+	3, 2, 2, 2, 230, 231, 3, 2, 2, 2, 231, 35, 3, 2, 2, 2, 232, 234, 5, 38,
+	20, 2, 233, 232, 3, 2, 2, 2, 234, 237, 3, 2, 2, 2, 235, 233, 3, 2, 2, 2,
+	235, 236, 3, 2, 2, 2, 236, 37, 3, 2, 2, 2, 237, 235, 3, 2, 2, 2, 238, 240,
+	7, 18, 2, 2, 239, 238, 3, 2, 2, 2, 239, 240, 3, 2, 2, 2, 240, 241, 3, 2,
+	2, 2, 241, 242, 7, 19, 2, 2, 242, 243, 5, 66, 34, 2, 243, 244, 7, 20, 2,
+	2, 244, 266, 3, 2, 2, 2, 245, 247, 7, 18, 2, 2, 246, 245, 3, 2, 2, 2, 246,
+	247, 3, 2, 2, 2, 247, 248, 3, 2, 2, 2, 248, 249, 7, 19, 2, 2, 249, 250,
+	5, 66, 34, 2, 250, 251, 7, 21, 2, 2, 251, 252, 5, 66, 34, 2, 252, 253,
+	7, 22, 2, 2, 253, 254, 7, 20, 2, 2, 254, 266, 3, 2, 2, 2, 255, 257, 7,
+	18, 2, 2, 256, 255, 3, 2, 2, 2, 256, 257, 3, 2, 2, 2, 257, 258, 3, 2, 2,
+	2, 258, 259, 7, 19, 2, 2, 259, 260, 5, 66, 34, 2, 260, 261, 7, 21, 2, 2,
+	261, 262, 5, 58, 30, 2, 262, 263, 7, 22, 2, 2, 263, 264, 7, 20, 2, 2, 264,
+	266, 3, 2, 2, 2, 265, 239, 3, 2, 2, 2, 265, 246, 3, 2, 2, 2, 265, 256,
+	3, 2, 2, 2, 266, 39, 3, 2, 2, 2, 267, 273, 5, 42, 22, 2, 268, 269, 5, 42,
+	22, 2, 269, 270, 7, 26, 2, 2, 270, 271, 5, 40, 21, 2, 271, 273, 3, 2, 2,
+	2, 272, 267, 3, 2, 2, 2, 272, 268, 3, 2, 2, 2, 273, 41, 3, 2, 2, 2, 274,
+	276, 5, 66, 34, 2, 275, 277, 5, 44, 23, 2, 276, 275, 3, 2, 2, 2, 276, 277,
+	3, 2, 2, 2, 277, 285, 3, 2, 2, 2, 278, 279, 5, 52, 27, 2, 279, 280, 7,
+	29, 2, 2, 280, 282, 5, 66, 34, 2, 281, 283, 5, 44, 23, 2, 282, 281, 3,
+	2, 2, 2, 282, 283, 3, 2, 2, 2, 283, 285, 3, 2, 2, 2, 284, 274, 3, 2, 2,
+	2, 284, 278, 3, 2, 2, 2, 285, 43, 3, 2, 2, 2, 286, 287, 7, 27, 2, 2, 287,
+	294, 5, 58, 30, 2, 288, 289, 7, 27, 2, 2, 289, 290, 7, 23, 2, 2, 290, 291,
+	5, 46, 24, 2, 291, 292, 7, 24, 2, 2, 292, 294, 3, 2, 2, 2, 293, 286, 3,
+	2, 2, 2, 293, 288, 3, 2, 2, 2, 294, 45, 3, 2, 2, 2, 295, 301, 5, 48, 25,
+	2, 296, 297, 5, 48, 25, 2, 297, 298, 7, 26, 2, 2, 298, 299, 5, 46, 24,
+	2, 299, 301, 3, 2, 2, 2, 300, 295, 3, 2, 2, 2, 300, 296, 3, 2, 2, 2, 301,
+	47, 3, 2, 2, 2, 302, 303, 5, 66, 34, 2, 303, 304, 7, 27, 2, 2, 304, 305,
+	5, 58, 30, 2, 305, 49, 3, 2, 2, 2, 306, 307, 7, 19, 2, 2, 307, 308, 5,
+	58, 30, 2, 308, 309, 7, 26, 2, 2, 309, 310, 5, 58, 30, 2, 310, 311, 7,
+	20, 2, 2, 311, 319, 3, 2, 2, 2, 312, 313, 7, 19, 2, 2, 313, 314, 5, 58,
+	30, 2, 314, 315, 7, 26, 2, 2, 315, 316, 7, 49, 2, 2, 316, 317, 7, 20, 2,
+	2, 317, 319, 3, 2, 2, 2, 318, 306, 3, 2, 2, 2, 318, 312, 3, 2, 2, 2, 319,
+	51, 3, 2, 2, 2, 320, 325, 5, 66, 34, 2, 321, 322, 7, 30, 2, 2, 322, 324,
+	5, 52, 27, 2, 323, 321, 3, 2, 2, 2, 324, 327, 3, 2, 2, 2, 325, 323, 3,
+	2, 2, 2, 325, 326, 3, 2, 2, 2, 326, 53, 3, 2, 2, 2, 327, 325, 3, 2, 2,
+	2, 328, 333, 5, 66, 34, 2, 329, 330, 7, 26, 2, 2, 330, 332, 5, 66, 34,
+	2, 331, 329, 3, 2, 2, 2, 332, 335, 3, 2, 2, 2, 333, 331, 3, 2, 2, 2, 333,
+	334, 3, 2, 2, 2, 334, 55, 3, 2, 2, 2, 335, 333, 3, 2, 2, 2, 336, 337, 9,
+	2, 2, 2, 337, 57, 3, 2, 2, 2, 338, 339, 9, 3, 2, 2, 339, 59, 3, 2, 2, 2,
+	340, 342, 9, 4, 2, 2, 341, 340, 3, 2, 2, 2, 342, 345, 3, 2, 2, 2, 343,
+	341, 3, 2, 2, 2, 343, 344, 3, 2, 2, 2, 344, 61, 3, 2, 2, 2, 345, 343, 3,
+	2, 2, 2, 346, 347, 9, 5, 2, 2, 347, 63, 3, 2, 2, 2, 348, 349, 9, 6, 2,
+	2, 349, 65, 3, 2, 2, 2, 350, 351, 7, 50, 2, 2, 351, 67, 3, 2, 2, 2, 47,
+	73, 78, 82, 89, 97, 102, 106, 109, 114, 117, 131, 133, 137, 140, 149, 154,
+	159, 170, 173, 178, 181, 184, 187, 190, 195, 200, 203, 220, 227, 230, 235,
+	239, 246, 256, 265, 272, 276, 282, 284, 293, 300, 318, 325, 333, 343,
 }
 var deserializer = antlr.NewATNDeserializer(nil)
 var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
@@ -190,12 +197,13 @@ var symbolicNames = []string{
 }
 
 var ruleNames = []string{
-	"program", "importStatment", "definition", "block", "itemList", "element",
-	"boAction", "message", "node", "association", "associationUsingDefinition",
-	"valuationDefinition", "valutaionExpressionList", "valutaionExpression",
-	"raiseMessage", "annotationList", "annotation", "typeList", "type", "typeDefaultValue",
-	"valueAssignList", "valueAssign", "multiplicity", "memberExpression", "identifierList",
-	"keyword", "literal", "comments", "compareOperator", "logicOperator",
+	"program", "statements", "importStatement", "definitions", "definition",
+	"block", "itemList", "element", "boAction", "message", "node", "association",
+	"associationUsingDefinition", "valuationDefinition", "valutaionExpressionList",
+	"valutaionExpression", "raiseMessage", "annotations", "annotation", "typeList",
+	"typeDeclaration", "typeDefaultValue", "valueAssignList", "valueAssign",
+	"multiplicity", "memberExpression", "identifierList", "keyword", "literal",
+	"comments", "compareOperator", "logicOperator", "identifier",
 }
 var decisionToDFA = make([]*antlr.DFA, len(deserializedATN.DecisionToState))
 
@@ -288,35 +296,38 @@ const (
 // BODLParser rules.
 const (
 	BODLParserRULE_program                    = 0
-	BODLParserRULE_importStatment             = 1
-	BODLParserRULE_definition                 = 2
-	BODLParserRULE_block                      = 3
-	BODLParserRULE_itemList                   = 4
-	BODLParserRULE_element                    = 5
-	BODLParserRULE_boAction                   = 6
-	BODLParserRULE_message                    = 7
-	BODLParserRULE_node                       = 8
-	BODLParserRULE_association                = 9
-	BODLParserRULE_associationUsingDefinition = 10
-	BODLParserRULE_valuationDefinition        = 11
-	BODLParserRULE_valutaionExpressionList    = 12
-	BODLParserRULE_valutaionExpression        = 13
-	BODLParserRULE_raiseMessage               = 14
-	BODLParserRULE_annotationList             = 15
-	BODLParserRULE_annotation                 = 16
-	BODLParserRULE_typeList                   = 17
-	BODLParserRULE_type                       = 18
-	BODLParserRULE_typeDefaultValue           = 19
-	BODLParserRULE_valueAssignList            = 20
-	BODLParserRULE_valueAssign                = 21
-	BODLParserRULE_multiplicity               = 22
-	BODLParserRULE_memberExpression           = 23
-	BODLParserRULE_identifierList             = 24
-	BODLParserRULE_keyword                    = 25
-	BODLParserRULE_literal                    = 26
-	BODLParserRULE_comments                   = 27
-	BODLParserRULE_compareOperator            = 28
-	BODLParserRULE_logicOperator              = 29
+	BODLParserRULE_statements                 = 1
+	BODLParserRULE_importStatement            = 2
+	BODLParserRULE_definitions                = 3
+	BODLParserRULE_definition                 = 4
+	BODLParserRULE_block                      = 5
+	BODLParserRULE_itemList                   = 6
+	BODLParserRULE_element                    = 7
+	BODLParserRULE_boAction                   = 8
+	BODLParserRULE_message                    = 9
+	BODLParserRULE_node                       = 10
+	BODLParserRULE_association                = 11
+	BODLParserRULE_associationUsingDefinition = 12
+	BODLParserRULE_valuationDefinition        = 13
+	BODLParserRULE_valutaionExpressionList    = 14
+	BODLParserRULE_valutaionExpression        = 15
+	BODLParserRULE_raiseMessage               = 16
+	BODLParserRULE_annotations                = 17
+	BODLParserRULE_annotation                 = 18
+	BODLParserRULE_typeList                   = 19
+	BODLParserRULE_typeDeclaration            = 20
+	BODLParserRULE_typeDefaultValue           = 21
+	BODLParserRULE_valueAssignList            = 22
+	BODLParserRULE_valueAssign                = 23
+	BODLParserRULE_multiplicity               = 24
+	BODLParserRULE_memberExpression           = 25
+	BODLParserRULE_identifierList             = 26
+	BODLParserRULE_keyword                    = 27
+	BODLParserRULE_literal                    = 28
+	BODLParserRULE_comments                   = 29
+	BODLParserRULE_compareOperator            = 30
+	BODLParserRULE_logicOperator              = 31
+	BODLParserRULE_identifier                 = 32
 )
 
 // IProgramContext is an interface to support dynamic dispatch.
@@ -361,50 +372,24 @@ func (s *ProgramContext) EOF() antlr.TerminalNode {
 	return s.GetToken(BODLParserEOF, 0)
 }
 
-func (s *ProgramContext) AllImportStatment() []IImportStatmentContext {
-	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IImportStatmentContext)(nil)).Elem())
-	var tst = make([]IImportStatmentContext, len(ts))
-
-	for i, t := range ts {
-		if t != nil {
-			tst[i] = t.(IImportStatmentContext)
-		}
-	}
-
-	return tst
-}
-
-func (s *ProgramContext) ImportStatment(i int) IImportStatmentContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IImportStatmentContext)(nil)).Elem(), i)
+func (s *ProgramContext) Statements() IStatementsContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IStatementsContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IImportStatmentContext)
+	return t.(IStatementsContext)
 }
 
-func (s *ProgramContext) AllDefinition() []IDefinitionContext {
-	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IDefinitionContext)(nil)).Elem())
-	var tst = make([]IDefinitionContext, len(ts))
-
-	for i, t := range ts {
-		if t != nil {
-			tst[i] = t.(IDefinitionContext)
-		}
-	}
-
-	return tst
-}
-
-func (s *ProgramContext) Definition(i int) IDefinitionContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IDefinitionContext)(nil)).Elem(), i)
+func (s *ProgramContext) Definitions() IDefinitionsContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IDefinitionsContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IDefinitionContext)
+	return t.(IDefinitionsContext)
 }
 
 func (s *ProgramContext) GetRuleContext() antlr.RuleContext {
@@ -427,10 +412,160 @@ func (s *ProgramContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *ProgramContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitProgram(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Program() (localctx IProgramContext) {
 	localctx = NewProgramContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 0, BODLParserRULE_program)
-	var _la int
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.SetState(71)
+	p.GetErrorHandler().Sync(p)
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 0, p.GetParserRuleContext()) {
+	case 1:
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(66)
+			p.Match(BODLParserEOF)
+		}
+
+	case 2:
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(67)
+			p.Statements()
+		}
+		{
+			p.SetState(68)
+			p.Definitions()
+		}
+		{
+			p.SetState(69)
+			p.Match(BODLParserEOF)
+		}
+
+	}
+
+	return localctx
+}
+
+// IStatementsContext is an interface to support dynamic dispatch.
+type IStatementsContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsStatementsContext differentiates from other interfaces.
+	IsStatementsContext()
+}
+
+type StatementsContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyStatementsContext() *StatementsContext {
+	var p = new(StatementsContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = BODLParserRULE_statements
+	return p
+}
+
+func (*StatementsContext) IsStatementsContext() {}
+
+func NewStatementsContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *StatementsContext {
+	var p = new(StatementsContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = BODLParserRULE_statements
+
+	return p
+}
+
+func (s *StatementsContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *StatementsContext) AllImportStatement() []IImportStatementContext {
+	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IImportStatementContext)(nil)).Elem())
+	var tst = make([]IImportStatementContext, len(ts))
+
+	for i, t := range ts {
+		if t != nil {
+			tst[i] = t.(IImportStatementContext)
+		}
+	}
+
+	return tst
+}
+
+func (s *StatementsContext) ImportStatement(i int) IImportStatementContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IImportStatementContext)(nil)).Elem(), i)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IImportStatementContext)
+}
+
+func (s *StatementsContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *StatementsContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+func (s *StatementsContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(BODLParserListener); ok {
+		listenerT.EnterStatements(s)
+	}
+}
+
+func (s *StatementsContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(BODLParserListener); ok {
+		listenerT.ExitStatements(s)
+	}
+}
+
+func (s *StatementsContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitStatements(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+func (p *BODLParser) Statements() (localctx IStatementsContext) {
+	localctx = NewStatementsContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 2, BODLParserRULE_statements)
 
 	defer func() {
 		p.ExitRule()
@@ -450,101 +585,70 @@ func (p *BODLParser) Program() (localctx IProgramContext) {
 
 	var _alt int
 
-	p.SetState(74)
+	p.EnterOuterAlt(localctx, 1)
+	p.SetState(76)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 2, p.GetParserRuleContext()) {
-	case 1:
-		p.EnterOuterAlt(localctx, 1)
-		{
-			p.SetState(60)
-			p.Match(BODLParserEOF)
-		}
+	_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 1, p.GetParserRuleContext())
 
-	case 2:
-		p.EnterOuterAlt(localctx, 2)
-		p.SetState(64)
-		p.GetErrorHandler().Sync(p)
-		_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 0, p.GetParserRuleContext())
-
-		for _alt != 2 && _alt != antlr.ATNInvalidAltNumber {
-			if _alt == 1 {
-				{
-					p.SetState(61)
-					p.ImportStatment()
-				}
-
-			}
-			p.SetState(66)
-			p.GetErrorHandler().Sync(p)
-			_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 0, p.GetParserRuleContext())
-		}
-		p.SetState(70)
-		p.GetErrorHandler().Sync(p)
-		_la = p.GetTokenStream().LA(1)
-
-		for ((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BODLParserBUSINESSOBJECT)|(1<<BODLParserMultiLineComment)|(1<<BODLParserSingleLineComment)|(1<<BODLParserCustomAnnotationStart)|(1<<BODLParserOpenBracket))) != 0 {
+	for _alt != 2 && _alt != antlr.ATNInvalidAltNumber {
+		if _alt == 1 {
 			{
-				p.SetState(67)
-				p.Definition()
+				p.SetState(73)
+				p.ImportStatement()
 			}
 
-			p.SetState(72)
-			p.GetErrorHandler().Sync(p)
-			_la = p.GetTokenStream().LA(1)
 		}
-		{
-			p.SetState(73)
-			p.Match(BODLParserEOF)
-		}
-
+		p.SetState(78)
+		p.GetErrorHandler().Sync(p)
+		_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 1, p.GetParserRuleContext())
 	}
 
 	return localctx
 }
 
-// IImportStatmentContext is an interface to support dynamic dispatch.
-type IImportStatmentContext interface {
+// IImportStatementContext is an interface to support dynamic dispatch.
+type IImportStatementContext interface {
 	antlr.ParserRuleContext
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
 
-	// IsImportStatmentContext differentiates from other interfaces.
-	IsImportStatmentContext()
+	// IsImportStatementContext differentiates from other interfaces.
+	IsImportStatementContext()
 }
 
-type ImportStatmentContext struct {
+type ImportStatementContext struct {
 	*antlr.BaseParserRuleContext
 	parser antlr.Parser
 }
 
-func NewEmptyImportStatmentContext() *ImportStatmentContext {
-	var p = new(ImportStatmentContext)
+func NewEmptyImportStatementContext() *ImportStatementContext {
+	var p = new(ImportStatementContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = BODLParserRULE_importStatment
+	p.RuleIndex = BODLParserRULE_importStatement
 	return p
 }
 
-func (*ImportStatmentContext) IsImportStatmentContext() {}
+func (*ImportStatementContext) IsImportStatementContext() {}
 
-func NewImportStatmentContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ImportStatmentContext {
-	var p = new(ImportStatmentContext)
+func NewImportStatementContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ImportStatementContext {
+	var p = new(ImportStatementContext)
 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = BODLParserRULE_importStatment
+	p.RuleIndex = BODLParserRULE_importStatement
 
 	return p
 }
 
-func (s *ImportStatmentContext) GetParser() antlr.Parser { return s.parser }
+func (s *ImportStatementContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ImportStatmentContext) IMPORT() antlr.TerminalNode {
+func (s *ImportStatementContext) IMPORT() antlr.TerminalNode {
 	return s.GetToken(BODLParserIMPORT, 0)
 }
 
-func (s *ImportStatmentContext) MemberExpression() IMemberExpressionContext {
+func (s *ImportStatementContext) MemberExpression() IMemberExpressionContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*IMemberExpressionContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -554,11 +658,11 @@ func (s *ImportStatmentContext) MemberExpression() IMemberExpressionContext {
 	return t.(IMemberExpressionContext)
 }
 
-func (s *ImportStatmentContext) SemiColon() antlr.TerminalNode {
+func (s *ImportStatementContext) SemiColon() antlr.TerminalNode {
 	return s.GetToken(BODLParserSemiColon, 0)
 }
 
-func (s *ImportStatmentContext) Comments() ICommentsContext {
+func (s *ImportStatementContext) Comments() ICommentsContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*ICommentsContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -568,37 +672,53 @@ func (s *ImportStatmentContext) Comments() ICommentsContext {
 	return t.(ICommentsContext)
 }
 
-func (s *ImportStatmentContext) AS() antlr.TerminalNode {
+func (s *ImportStatementContext) AS() antlr.TerminalNode {
 	return s.GetToken(BODLParserAS, 0)
 }
 
-func (s *ImportStatmentContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *ImportStatementContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
-func (s *ImportStatmentContext) GetRuleContext() antlr.RuleContext {
+func (s *ImportStatementContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *ImportStatmentContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+func (s *ImportStatementContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ImportStatmentContext) EnterRule(listener antlr.ParseTreeListener) {
+func (s *ImportStatementContext) EnterRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(BODLParserListener); ok {
-		listenerT.EnterImportStatment(s)
+		listenerT.EnterImportStatement(s)
 	}
 }
 
-func (s *ImportStatmentContext) ExitRule(listener antlr.ParseTreeListener) {
+func (s *ImportStatementContext) ExitRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(BODLParserListener); ok {
-		listenerT.ExitImportStatment(s)
+		listenerT.ExitImportStatement(s)
 	}
 }
 
-func (p *BODLParser) ImportStatment() (localctx IImportStatmentContext) {
-	localctx = NewImportStatmentContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 2, BODLParserRULE_importStatment)
+func (s *ImportStatementContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitImportStatement(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+func (p *BODLParser) ImportStatement() (localctx IImportStatementContext) {
+	localctx = NewImportStatementContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 4, BODLParserRULE_importStatement)
 
 	defer func() {
 		p.ExitRule()
@@ -616,67 +736,198 @@ func (p *BODLParser) ImportStatment() (localctx IImportStatmentContext) {
 		}
 	}()
 
-	p.SetState(92)
+	p.SetState(95)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 5, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 4, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
-		p.SetState(77)
+		p.SetState(80)
 		p.GetErrorHandler().Sync(p)
 
-		if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 3, p.GetParserRuleContext()) == 1 {
+		if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 2, p.GetParserRuleContext()) == 1 {
 			{
-				p.SetState(76)
+				p.SetState(79)
 				p.Comments()
 			}
 
 		}
 		{
-			p.SetState(79)
+			p.SetState(82)
 			p.Match(BODLParserIMPORT)
 		}
 		{
-			p.SetState(80)
+			p.SetState(83)
 			p.MemberExpression()
 		}
 		{
-			p.SetState(81)
+			p.SetState(84)
 			p.Match(BODLParserSemiColon)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
-		p.SetState(84)
+		p.SetState(87)
 		p.GetErrorHandler().Sync(p)
 
-		if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 4, p.GetParserRuleContext()) == 1 {
+		if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 3, p.GetParserRuleContext()) == 1 {
 			{
-				p.SetState(83)
+				p.SetState(86)
 				p.Comments()
 			}
 
 		}
 		{
-			p.SetState(86)
+			p.SetState(89)
 			p.Match(BODLParserIMPORT)
 		}
 		{
-			p.SetState(87)
+			p.SetState(90)
 			p.MemberExpression()
 		}
 		{
-			p.SetState(88)
+			p.SetState(91)
 			p.Match(BODLParserAS)
 		}
 		{
-			p.SetState(89)
-			p.Match(BODLParserIdentifier)
+			p.SetState(92)
+			p.Identifier()
 		}
 		{
-			p.SetState(90)
+			p.SetState(93)
 			p.Match(BODLParserSemiColon)
 		}
 
+	}
+
+	return localctx
+}
+
+// IDefinitionsContext is an interface to support dynamic dispatch.
+type IDefinitionsContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsDefinitionsContext differentiates from other interfaces.
+	IsDefinitionsContext()
+}
+
+type DefinitionsContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyDefinitionsContext() *DefinitionsContext {
+	var p = new(DefinitionsContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = BODLParserRULE_definitions
+	return p
+}
+
+func (*DefinitionsContext) IsDefinitionsContext() {}
+
+func NewDefinitionsContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *DefinitionsContext {
+	var p = new(DefinitionsContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = BODLParserRULE_definitions
+
+	return p
+}
+
+func (s *DefinitionsContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *DefinitionsContext) AllDefinition() []IDefinitionContext {
+	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IDefinitionContext)(nil)).Elem())
+	var tst = make([]IDefinitionContext, len(ts))
+
+	for i, t := range ts {
+		if t != nil {
+			tst[i] = t.(IDefinitionContext)
+		}
+	}
+
+	return tst
+}
+
+func (s *DefinitionsContext) Definition(i int) IDefinitionContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IDefinitionContext)(nil)).Elem(), i)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IDefinitionContext)
+}
+
+func (s *DefinitionsContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *DefinitionsContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+func (s *DefinitionsContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(BODLParserListener); ok {
+		listenerT.EnterDefinitions(s)
+	}
+}
+
+func (s *DefinitionsContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(BODLParserListener); ok {
+		listenerT.ExitDefinitions(s)
+	}
+}
+
+func (s *DefinitionsContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitDefinitions(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+func (p *BODLParser) Definitions() (localctx IDefinitionsContext) {
+	localctx = NewDefinitionsContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 6, BODLParserRULE_definitions)
+	var _la int
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	p.SetState(100)
+	p.GetErrorHandler().Sync(p)
+	_la = p.GetTokenStream().LA(1)
+
+	for ((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BODLParserBUSINESSOBJECT)|(1<<BODLParserMultiLineComment)|(1<<BODLParserSingleLineComment)|(1<<BODLParserCustomAnnotationStart)|(1<<BODLParserOpenBracket))) != 0 {
+		{
+			p.SetState(97)
+			p.Definition()
+		}
+
+		p.SetState(102)
+		p.GetErrorHandler().Sync(p)
+		_la = p.GetTokenStream().LA(1)
 	}
 
 	return localctx
@@ -734,18 +985,24 @@ func (s *DefinitionContext) Block() IBlockContext {
 	return t.(IBlockContext)
 }
 
-func (s *DefinitionContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
-}
-
-func (s *DefinitionContext) Type() ITypeContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeContext)(nil)).Elem(), 0)
+func (s *DefinitionContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(ITypeContext)
+	return t.(IIdentifierContext)
+}
+
+func (s *DefinitionContext) TypeDeclaration() ITypeDeclarationContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeDeclarationContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ITypeDeclarationContext)
 }
 
 func (s *DefinitionContext) Comments() ICommentsContext {
@@ -758,14 +1015,14 @@ func (s *DefinitionContext) Comments() ICommentsContext {
 	return t.(ICommentsContext)
 }
 
-func (s *DefinitionContext) AnnotationList() IAnnotationListContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationListContext)(nil)).Elem(), 0)
+func (s *DefinitionContext) Annotations() IAnnotationsContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationsContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IAnnotationListContext)
+	return t.(IAnnotationsContext)
 }
 
 func (s *DefinitionContext) RaiseMessage() IRaiseMessageContext {
@@ -798,9 +1055,19 @@ func (s *DefinitionContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *DefinitionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitDefinition(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Definition() (localctx IDefinitionContext) {
 	localctx = NewDefinitionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 4, BODLParserRULE_definition)
+	p.EnterRule(localctx, 8, BODLParserRULE_definition)
 
 	defer func() {
 		p.ExitRule()
@@ -819,58 +1086,58 @@ func (p *BODLParser) Definition() (localctx IDefinitionContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(95)
+	p.SetState(104)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 6, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(94)
+			p.SetState(103)
 			p.Comments()
 		}
 
 	}
-	p.SetState(98)
+	p.SetState(107)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 7, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(97)
-			p.AnnotationList()
+			p.SetState(106)
+			p.Annotations()
 		}
 
 	}
 	{
-		p.SetState(100)
+		p.SetState(109)
 		p.Match(BODLParserBUSINESSOBJECT)
 	}
-	p.SetState(103)
+	p.SetState(112)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 8, p.GetParserRuleContext()) {
 	case 1:
 		{
-			p.SetState(101)
-			p.Match(BODLParserIdentifier)
+			p.SetState(110)
+			p.Identifier()
 		}
 
 	case 2:
 		{
-			p.SetState(102)
-			p.Type()
+			p.SetState(111)
+			p.TypeDeclaration()
 		}
 
 	}
-	p.SetState(106)
+	p.SetState(115)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 9, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(105)
+			p.SetState(114)
 			p.RaiseMessage()
 		}
 
 	}
 	{
-		p.SetState(108)
+		p.SetState(117)
 		p.Block()
 	}
 
@@ -963,9 +1230,19 @@ func (s *BlockContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *BlockContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitBlock(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Block() (localctx IBlockContext) {
 	localctx = NewBlockContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 6, BODLParserRULE_block)
+	p.EnterRule(localctx, 10, BODLParserRULE_block)
 
 	defer func() {
 		p.ExitRule()
@@ -985,19 +1262,19 @@ func (p *BODLParser) Block() (localctx IBlockContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(110)
+		p.SetState(119)
 		p.Match(BODLParserOpenBrace)
 	}
 	{
-		p.SetState(111)
+		p.SetState(120)
 		p.ItemList()
 	}
 	{
-		p.SetState(112)
+		p.SetState(121)
 		p.Comments()
 	}
 	{
-		p.SetState(113)
+		p.SetState(122)
 		p.Match(BODLParserCloseBrace)
 	}
 
@@ -1177,9 +1454,19 @@ func (s *ItemListContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *ItemListContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitItemList(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) ItemList() (localctx IItemListContext) {
 	localctx = NewItemListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 8, BODLParserRULE_itemList)
+	p.EnterRule(localctx, 12, BODLParserRULE_itemList)
 
 	defer func() {
 		p.ExitRule()
@@ -1200,49 +1487,49 @@ func (p *BODLParser) ItemList() (localctx IItemListContext) {
 	var _alt int
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(122)
+	p.SetState(131)
 	p.GetErrorHandler().Sync(p)
 	_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 11, p.GetParserRuleContext())
 
 	for _alt != 2 && _alt != antlr.ATNInvalidAltNumber {
 		if _alt == 1 {
-			p.SetState(120)
+			p.SetState(129)
 			p.GetErrorHandler().Sync(p)
 			switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 10, p.GetParserRuleContext()) {
 			case 1:
 				{
-					p.SetState(115)
+					p.SetState(124)
 					p.Element()
 				}
 
 			case 2:
 				{
-					p.SetState(116)
+					p.SetState(125)
 					p.Message()
 				}
 
 			case 3:
 				{
-					p.SetState(117)
+					p.SetState(126)
 					p.Node()
 				}
 
 			case 4:
 				{
-					p.SetState(118)
+					p.SetState(127)
 					p.BoAction()
 				}
 
 			case 5:
 				{
-					p.SetState(119)
+					p.SetState(128)
 					p.Association()
 				}
 
 			}
 
 		}
-		p.SetState(124)
+		p.SetState(133)
 		p.GetErrorHandler().Sync(p)
 		_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 11, p.GetParserRuleContext())
 	}
@@ -1292,22 +1579,28 @@ func (s *ElementContext) ELEMENT() antlr.TerminalNode {
 	return s.GetToken(BODLParserELEMENT, 0)
 }
 
-func (s *ElementContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *ElementContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *ElementContext) Colon() antlr.TerminalNode {
 	return s.GetToken(BODLParserColon, 0)
 }
 
-func (s *ElementContext) Type() ITypeContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeContext)(nil)).Elem(), 0)
+func (s *ElementContext) TypeDeclaration() ITypeDeclarationContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeDeclarationContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(ITypeContext)
+	return t.(ITypeDeclarationContext)
 }
 
 func (s *ElementContext) SemiColon() antlr.TerminalNode {
@@ -1324,14 +1617,14 @@ func (s *ElementContext) Comments() ICommentsContext {
 	return t.(ICommentsContext)
 }
 
-func (s *ElementContext) AnnotationList() IAnnotationListContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationListContext)(nil)).Elem(), 0)
+func (s *ElementContext) Annotations() IAnnotationsContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationsContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IAnnotationListContext)
+	return t.(IAnnotationsContext)
 }
 
 func (s *ElementContext) GetRuleContext() antlr.RuleContext {
@@ -1354,9 +1647,19 @@ func (s *ElementContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *ElementContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitElement(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Element() (localctx IElementContext) {
 	localctx = NewElementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 10, BODLParserRULE_element)
+	p.EnterRule(localctx, 14, BODLParserRULE_element)
 
 	defer func() {
 		p.ExitRule()
@@ -1375,44 +1678,44 @@ func (p *BODLParser) Element() (localctx IElementContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(126)
+	p.SetState(135)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 12, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(125)
+			p.SetState(134)
 			p.Comments()
 		}
 
 	}
-	p.SetState(129)
+	p.SetState(138)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 13, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(128)
-			p.AnnotationList()
+			p.SetState(137)
+			p.Annotations()
 		}
 
 	}
 	{
-		p.SetState(131)
+		p.SetState(140)
 		p.Match(BODLParserELEMENT)
 	}
 	{
-		p.SetState(132)
-		p.Match(BODLParserIdentifier)
+		p.SetState(141)
+		p.Identifier()
 	}
 	{
-		p.SetState(133)
+		p.SetState(142)
 		p.Match(BODLParserColon)
 	}
 	{
-		p.SetState(134)
-		p.Type()
+		p.SetState(143)
+		p.TypeDeclaration()
 	}
 	{
-		p.SetState(135)
+		p.SetState(144)
 		p.Match(BODLParserSemiColon)
 	}
 
@@ -1461,8 +1764,14 @@ func (s *BoActionContext) ACTION() antlr.TerminalNode {
 	return s.GetToken(BODLParserACTION, 0)
 }
 
-func (s *BoActionContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *BoActionContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *BoActionContext) SemiColon() antlr.TerminalNode {
@@ -1509,9 +1818,19 @@ func (s *BoActionContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *BoActionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitBoAction(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) BoAction() (localctx IBoActionContext) {
 	localctx = NewBoActionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 12, BODLParserRULE_boAction)
+	p.EnterRule(localctx, 16, BODLParserRULE_boAction)
 
 	defer func() {
 		p.ExitRule()
@@ -1530,36 +1849,36 @@ func (p *BODLParser) BoAction() (localctx IBoActionContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(138)
+	p.SetState(147)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 14, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(137)
+			p.SetState(146)
 			p.Comments()
 		}
 
 	}
 	{
-		p.SetState(140)
+		p.SetState(149)
 		p.Match(BODLParserACTION)
 	}
 	{
-		p.SetState(141)
-		p.Match(BODLParserIdentifier)
+		p.SetState(150)
+		p.Identifier()
 	}
-	p.SetState(143)
+	p.SetState(152)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 15, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(142)
+			p.SetState(151)
 			p.RaiseMessage()
 		}
 
 	}
 	{
-		p.SetState(145)
+		p.SetState(154)
 		p.Match(BODLParserSemiColon)
 	}
 
@@ -1608,8 +1927,14 @@ func (s *MessageContext) MESSAGE() antlr.TerminalNode {
 	return s.GetToken(BODLParserMESSAGE, 0)
 }
 
-func (s *MessageContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *MessageContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *MessageContext) TEXT() antlr.TerminalNode {
@@ -1668,9 +1993,19 @@ func (s *MessageContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *MessageContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitMessage(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Message() (localctx IMessageContext) {
 	localctx = NewMessageContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 14, BODLParserRULE_message)
+	p.EnterRule(localctx, 18, BODLParserRULE_message)
 
 	defer func() {
 		p.ExitRule()
@@ -1689,42 +2024,42 @@ func (p *BODLParser) Message() (localctx IMessageContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(148)
+	p.SetState(157)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 16, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(147)
+			p.SetState(156)
 			p.Comments()
 		}
 
 	}
 	{
-		p.SetState(150)
+		p.SetState(159)
 		p.Match(BODLParserMESSAGE)
 	}
 	{
-		p.SetState(151)
-		p.Match(BODLParserIdentifier)
+		p.SetState(160)
+		p.Identifier()
 	}
 	{
-		p.SetState(152)
+		p.SetState(161)
 		p.Match(BODLParserTEXT)
 	}
 	{
-		p.SetState(153)
+		p.SetState(162)
 		p.Match(BODLParserStringLiteral)
 	}
 	{
-		p.SetState(154)
+		p.SetState(163)
 		p.Match(BODLParserColon)
 	}
 	{
-		p.SetState(155)
+		p.SetState(164)
 		p.TypeList()
 	}
 	{
-		p.SetState(156)
+		p.SetState(165)
 		p.Match(BODLParserSemiColon)
 	}
 
@@ -1773,8 +2108,14 @@ func (s *NodeContext) NODE() antlr.TerminalNode {
 	return s.GetToken(BODLParserNODE, 0)
 }
 
-func (s *NodeContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *NodeContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *NodeContext) Comments() ICommentsContext {
@@ -1787,14 +2128,14 @@ func (s *NodeContext) Comments() ICommentsContext {
 	return t.(ICommentsContext)
 }
 
-func (s *NodeContext) AnnotationList() IAnnotationListContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationListContext)(nil)).Elem(), 0)
+func (s *NodeContext) Annotations() IAnnotationsContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationsContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IAnnotationListContext)
+	return t.(IAnnotationsContext)
 }
 
 func (s *NodeContext) Multiplicity() IMultiplicityContext {
@@ -1847,9 +2188,19 @@ func (s *NodeContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *NodeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitNode(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Node() (localctx INodeContext) {
 	localctx = NewNodeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 16, BODLParserRULE_node)
+	p.EnterRule(localctx, 20, BODLParserRULE_node)
 	var _la int
 
 	defer func() {
@@ -1869,61 +2220,61 @@ func (p *BODLParser) Node() (localctx INodeContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(159)
+	p.SetState(168)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 17, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(158)
+			p.SetState(167)
 			p.Comments()
 		}
 
 	}
-	p.SetState(162)
+	p.SetState(171)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 18, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(161)
-			p.AnnotationList()
+			p.SetState(170)
+			p.Annotations()
 		}
 
 	}
 	{
-		p.SetState(164)
+		p.SetState(173)
 		p.Match(BODLParserNODE)
 	}
 	{
-		p.SetState(165)
-		p.Match(BODLParserIdentifier)
+		p.SetState(174)
+		p.Identifier()
 	}
-	p.SetState(167)
+	p.SetState(176)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 19, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(166)
+			p.SetState(175)
 			p.Multiplicity()
 		}
 
 	}
-	p.SetState(170)
+	p.SetState(179)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 20, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(169)
+			p.SetState(178)
 			p.RaiseMessage()
 		}
 
 	}
-	p.SetState(173)
+	p.SetState(182)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserOpenBrace {
 		{
-			p.SetState(172)
+			p.SetState(181)
 			p.Block()
 		}
 
@@ -1974,12 +2325,27 @@ func (s *AssociationContext) ASSOCIATION() antlr.TerminalNode {
 	return s.GetToken(BODLParserASSOCIATION, 0)
 }
 
-func (s *AssociationContext) AllIdentifier() []antlr.TerminalNode {
-	return s.GetTokens(BODLParserIdentifier)
+func (s *AssociationContext) AllIdentifier() []IIdentifierContext {
+	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IIdentifierContext)(nil)).Elem())
+	var tst = make([]IIdentifierContext, len(ts))
+
+	for i, t := range ts {
+		if t != nil {
+			tst[i] = t.(IIdentifierContext)
+		}
+	}
+
+	return tst
 }
 
-func (s *AssociationContext) Identifier(i int) antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, i)
+func (s *AssociationContext) Identifier(i int) IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), i)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *AssociationContext) TO() antlr.TerminalNode {
@@ -2000,14 +2366,14 @@ func (s *AssociationContext) Comments() ICommentsContext {
 	return t.(ICommentsContext)
 }
 
-func (s *AssociationContext) AnnotationList() IAnnotationListContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationListContext)(nil)).Elem(), 0)
+func (s *AssociationContext) Annotations() IAnnotationsContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationsContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IAnnotationListContext)
+	return t.(IAnnotationsContext)
 }
 
 func (s *AssociationContext) Multiplicity() IMultiplicityContext {
@@ -2060,9 +2426,19 @@ func (s *AssociationContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *AssociationContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitAssociation(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Association() (localctx IAssociationContext) {
 	localctx = NewAssociationContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 18, BODLParserRULE_association)
+	p.EnterRule(localctx, 22, BODLParserRULE_association)
 	var _la int
 
 	defer func() {
@@ -2082,77 +2458,77 @@ func (p *BODLParser) Association() (localctx IAssociationContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(176)
+	p.SetState(185)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 22, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(175)
+			p.SetState(184)
 			p.Comments()
 		}
 
 	}
-	p.SetState(179)
+	p.SetState(188)
 	p.GetErrorHandler().Sync(p)
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 23, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(178)
-			p.AnnotationList()
+			p.SetState(187)
+			p.Annotations()
 		}
 
 	}
 	{
-		p.SetState(181)
+		p.SetState(190)
 		p.Match(BODLParserASSOCIATION)
 	}
 	{
-		p.SetState(182)
-		p.Match(BODLParserIdentifier)
+		p.SetState(191)
+		p.Identifier()
 	}
-	p.SetState(184)
+	p.SetState(193)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserOpenBracket {
 		{
-			p.SetState(183)
+			p.SetState(192)
 			p.Multiplicity()
 		}
 
 	}
 	{
-		p.SetState(186)
+		p.SetState(195)
 		p.Match(BODLParserTO)
 	}
 	{
-		p.SetState(187)
-		p.Match(BODLParserIdentifier)
+		p.SetState(196)
+		p.Identifier()
 	}
-	p.SetState(189)
+	p.SetState(198)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserUSING {
 		{
-			p.SetState(188)
+			p.SetState(197)
 			p.AssociationUsingDefinition()
 		}
 
 	}
-	p.SetState(192)
+	p.SetState(201)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserVALUATION {
 		{
-			p.SetState(191)
+			p.SetState(200)
 			p.ValuationDefinition()
 		}
 
 	}
 	{
-		p.SetState(194)
+		p.SetState(203)
 		p.Match(BODLParserSemiColon)
 	}
 
@@ -2201,8 +2577,14 @@ func (s *AssociationUsingDefinitionContext) USING() antlr.TerminalNode {
 	return s.GetToken(BODLParserUSING, 0)
 }
 
-func (s *AssociationUsingDefinitionContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *AssociationUsingDefinitionContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *AssociationUsingDefinitionContext) GetRuleContext() antlr.RuleContext {
@@ -2225,9 +2607,19 @@ func (s *AssociationUsingDefinitionContext) ExitRule(listener antlr.ParseTreeLis
 	}
 }
 
+func (s *AssociationUsingDefinitionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitAssociationUsingDefinition(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) AssociationUsingDefinition() (localctx IAssociationUsingDefinitionContext) {
 	localctx = NewAssociationUsingDefinitionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 20, BODLParserRULE_associationUsingDefinition)
+	p.EnterRule(localctx, 24, BODLParserRULE_associationUsingDefinition)
 
 	defer func() {
 		p.ExitRule()
@@ -2247,12 +2639,12 @@ func (p *BODLParser) AssociationUsingDefinition() (localctx IAssociationUsingDef
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(196)
+		p.SetState(205)
 		p.Match(BODLParserUSING)
 	}
 	{
-		p.SetState(197)
-		p.Match(BODLParserIdentifier)
+		p.SetState(206)
+		p.Identifier()
 	}
 
 	return localctx
@@ -2338,9 +2730,19 @@ func (s *ValuationDefinitionContext) ExitRule(listener antlr.ParseTreeListener) 
 	}
 }
 
+func (s *ValuationDefinitionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitValuationDefinition(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) ValuationDefinition() (localctx IValuationDefinitionContext) {
 	localctx = NewValuationDefinitionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 22, BODLParserRULE_valuationDefinition)
+	p.EnterRule(localctx, 26, BODLParserRULE_valuationDefinition)
 
 	defer func() {
 		p.ExitRule()
@@ -2360,19 +2762,19 @@ func (p *BODLParser) ValuationDefinition() (localctx IValuationDefinitionContext
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(199)
+		p.SetState(208)
 		p.Match(BODLParserVALUATION)
 	}
 	{
-		p.SetState(200)
+		p.SetState(209)
 		p.Match(BODLParserOpenParen)
 	}
 	{
-		p.SetState(201)
+		p.SetState(210)
 		p.ValutaionExpressionList()
 	}
 	{
-		p.SetState(202)
+		p.SetState(211)
 		p.Match(BODLParserCloseParen)
 	}
 
@@ -2467,9 +2869,19 @@ func (s *ValutaionExpressionListContext) ExitRule(listener antlr.ParseTreeListen
 	}
 }
 
+func (s *ValutaionExpressionListContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitValutaionExpressionList(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) ValutaionExpressionList() (localctx IValutaionExpressionListContext) {
 	localctx = NewValutaionExpressionListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 24, BODLParserRULE_valutaionExpressionList)
+	p.EnterRule(localctx, 28, BODLParserRULE_valutaionExpressionList)
 
 	defer func() {
 		p.ExitRule()
@@ -2487,28 +2899,28 @@ func (p *BODLParser) ValutaionExpressionList() (localctx IValutaionExpressionLis
 		}
 	}()
 
-	p.SetState(209)
+	p.SetState(218)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 27, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(204)
+			p.SetState(213)
 			p.ValutaionExpression()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(205)
+			p.SetState(214)
 			p.ValutaionExpression()
 		}
 		{
-			p.SetState(206)
+			p.SetState(215)
 			p.LogicOperator()
 		}
 		{
-			p.SetState(207)
+			p.SetState(216)
 			p.ValutaionExpressionList()
 		}
 
@@ -2555,8 +2967,14 @@ func NewValutaionExpressionContext(parser antlr.Parser, parent antlr.ParserRuleC
 
 func (s *ValutaionExpressionContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ValutaionExpressionContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *ValutaionExpressionContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *ValutaionExpressionContext) CompareOperator() ICompareOperatorContext {
@@ -2599,9 +3017,19 @@ func (s *ValutaionExpressionContext) ExitRule(listener antlr.ParseTreeListener) 
 	}
 }
 
+func (s *ValutaionExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitValutaionExpression(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) ValutaionExpression() (localctx IValutaionExpressionContext) {
 	localctx = NewValutaionExpressionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 26, BODLParserRULE_valutaionExpression)
+	p.EnterRule(localctx, 30, BODLParserRULE_valutaionExpression)
 
 	defer func() {
 		p.ExitRule()
@@ -2621,15 +3049,15 @@ func (p *BODLParser) ValutaionExpression() (localctx IValutaionExpressionContext
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(211)
-		p.Match(BODLParserIdentifier)
+		p.SetState(220)
+		p.Identifier()
 	}
 	{
-		p.SetState(212)
+		p.SetState(221)
 		p.CompareOperator()
 	}
 	{
-		p.SetState(213)
+		p.SetState(222)
 		p.Literal()
 	}
 
@@ -2708,9 +3136,19 @@ func (s *RaiseMessageContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *RaiseMessageContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitRaiseMessage(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) RaiseMessage() (localctx IRaiseMessageContext) {
 	localctx = NewRaiseMessageContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 28, BODLParserRULE_raiseMessage)
+	p.EnterRule(localctx, 32, BODLParserRULE_raiseMessage)
 	var _la int
 
 	defer func() {
@@ -2730,24 +3168,24 @@ func (p *BODLParser) RaiseMessage() (localctx IRaiseMessageContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(216)
+	p.SetState(225)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserRAISES {
 		{
-			p.SetState(215)
+			p.SetState(224)
 			p.Match(BODLParserRAISES)
 		}
 
 	}
-	p.SetState(219)
+	p.SetState(228)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == BODLParserIdentifier {
 		{
-			p.SetState(218)
+			p.SetState(227)
 			p.IdentifierList()
 		}
 
@@ -2756,45 +3194,45 @@ func (p *BODLParser) RaiseMessage() (localctx IRaiseMessageContext) {
 	return localctx
 }
 
-// IAnnotationListContext is an interface to support dynamic dispatch.
-type IAnnotationListContext interface {
+// IAnnotationsContext is an interface to support dynamic dispatch.
+type IAnnotationsContext interface {
 	antlr.ParserRuleContext
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
 
-	// IsAnnotationListContext differentiates from other interfaces.
-	IsAnnotationListContext()
+	// IsAnnotationsContext differentiates from other interfaces.
+	IsAnnotationsContext()
 }
 
-type AnnotationListContext struct {
+type AnnotationsContext struct {
 	*antlr.BaseParserRuleContext
 	parser antlr.Parser
 }
 
-func NewEmptyAnnotationListContext() *AnnotationListContext {
-	var p = new(AnnotationListContext)
+func NewEmptyAnnotationsContext() *AnnotationsContext {
+	var p = new(AnnotationsContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = BODLParserRULE_annotationList
+	p.RuleIndex = BODLParserRULE_annotations
 	return p
 }
 
-func (*AnnotationListContext) IsAnnotationListContext() {}
+func (*AnnotationsContext) IsAnnotationsContext() {}
 
-func NewAnnotationListContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *AnnotationListContext {
-	var p = new(AnnotationListContext)
+func NewAnnotationsContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *AnnotationsContext {
+	var p = new(AnnotationsContext)
 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = BODLParserRULE_annotationList
+	p.RuleIndex = BODLParserRULE_annotations
 
 	return p
 }
 
-func (s *AnnotationListContext) GetParser() antlr.Parser { return s.parser }
+func (s *AnnotationsContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *AnnotationListContext) AllAnnotation() []IAnnotationContext {
+func (s *AnnotationsContext) AllAnnotation() []IAnnotationContext {
 	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IAnnotationContext)(nil)).Elem())
 	var tst = make([]IAnnotationContext, len(ts))
 
@@ -2807,7 +3245,7 @@ func (s *AnnotationListContext) AllAnnotation() []IAnnotationContext {
 	return tst
 }
 
-func (s *AnnotationListContext) Annotation(i int) IAnnotationContext {
+func (s *AnnotationsContext) Annotation(i int) IAnnotationContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAnnotationContext)(nil)).Elem(), i)
 
 	if t == nil {
@@ -2817,29 +3255,39 @@ func (s *AnnotationListContext) Annotation(i int) IAnnotationContext {
 	return t.(IAnnotationContext)
 }
 
-func (s *AnnotationListContext) GetRuleContext() antlr.RuleContext {
+func (s *AnnotationsContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *AnnotationListContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+func (s *AnnotationsContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *AnnotationListContext) EnterRule(listener antlr.ParseTreeListener) {
+func (s *AnnotationsContext) EnterRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(BODLParserListener); ok {
-		listenerT.EnterAnnotationList(s)
+		listenerT.EnterAnnotations(s)
 	}
 }
 
-func (s *AnnotationListContext) ExitRule(listener antlr.ParseTreeListener) {
+func (s *AnnotationsContext) ExitRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(BODLParserListener); ok {
-		listenerT.ExitAnnotationList(s)
+		listenerT.ExitAnnotations(s)
 	}
 }
 
-func (p *BODLParser) AnnotationList() (localctx IAnnotationListContext) {
-	localctx = NewAnnotationListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 30, BODLParserRULE_annotationList)
+func (s *AnnotationsContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitAnnotations(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+func (p *BODLParser) Annotations() (localctx IAnnotationsContext) {
+	localctx = NewAnnotationsContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 34, BODLParserRULE_annotations)
 	var _la int
 
 	defer func() {
@@ -2859,17 +3307,17 @@ func (p *BODLParser) AnnotationList() (localctx IAnnotationListContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(224)
+	p.SetState(233)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	for _la == BODLParserCustomAnnotationStart || _la == BODLParserOpenBracket {
 		{
-			p.SetState(221)
+			p.SetState(230)
 			p.Annotation()
 		}
 
-		p.SetState(226)
+		p.SetState(235)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
@@ -2919,12 +3367,27 @@ func (s *AnnotationContext) OpenBracket() antlr.TerminalNode {
 	return s.GetToken(BODLParserOpenBracket, 0)
 }
 
-func (s *AnnotationContext) AllIdentifier() []antlr.TerminalNode {
-	return s.GetTokens(BODLParserIdentifier)
+func (s *AnnotationContext) AllIdentifier() []IIdentifierContext {
+	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IIdentifierContext)(nil)).Elem())
+	var tst = make([]IIdentifierContext, len(ts))
+
+	for i, t := range ts {
+		if t != nil {
+			tst[i] = t.(IIdentifierContext)
+		}
+	}
+
+	return tst
 }
 
-func (s *AnnotationContext) Identifier(i int) antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, i)
+func (s *AnnotationContext) Identifier(i int) IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), i)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *AnnotationContext) CloseBracket() antlr.TerminalNode {
@@ -2973,9 +3436,19 @@ func (s *AnnotationContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *AnnotationContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitAnnotation(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Annotation() (localctx IAnnotationContext) {
 	localctx = NewAnnotationContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 32, BODLParserRULE_annotation)
+	p.EnterRule(localctx, 36, BODLParserRULE_annotation)
 	var _la int
 
 	defer func() {
@@ -2994,108 +3467,108 @@ func (p *BODLParser) Annotation() (localctx IAnnotationContext) {
 		}
 	}()
 
-	p.SetState(252)
+	p.SetState(263)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 34, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
-		p.SetState(228)
+		p.SetState(237)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		if _la == BODLParserCustomAnnotationStart {
 			{
-				p.SetState(227)
+				p.SetState(236)
 				p.Match(BODLParserCustomAnnotationStart)
 			}
 
-		}
-		{
-			p.SetState(230)
-			p.Match(BODLParserOpenBracket)
-		}
-		{
-			p.SetState(231)
-			p.Match(BODLParserIdentifier)
-		}
-		{
-			p.SetState(232)
-			p.Match(BODLParserCloseBracket)
-		}
-
-	case 2:
-		p.EnterOuterAlt(localctx, 2)
-		p.SetState(234)
-		p.GetErrorHandler().Sync(p)
-		_la = p.GetTokenStream().LA(1)
-
-		if _la == BODLParserCustomAnnotationStart {
-			{
-				p.SetState(233)
-				p.Match(BODLParserCustomAnnotationStart)
-			}
-
-		}
-		{
-			p.SetState(236)
-			p.Match(BODLParserOpenBracket)
-		}
-		{
-			p.SetState(237)
-			p.Match(BODLParserIdentifier)
-		}
-		{
-			p.SetState(238)
-			p.Match(BODLParserOpenParen)
 		}
 		{
 			p.SetState(239)
-			p.Match(BODLParserIdentifier)
+			p.Match(BODLParserOpenBracket)
 		}
 		{
 			p.SetState(240)
-			p.Match(BODLParserCloseParen)
+			p.Identifier()
 		}
 		{
 			p.SetState(241)
 			p.Match(BODLParserCloseBracket)
 		}
 
-	case 3:
-		p.EnterOuterAlt(localctx, 3)
-		p.SetState(243)
+	case 2:
+		p.EnterOuterAlt(localctx, 2)
+		p.SetState(244)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		if _la == BODLParserCustomAnnotationStart {
 			{
-				p.SetState(242)
+				p.SetState(243)
 				p.Match(BODLParserCustomAnnotationStart)
 			}
 
 		}
 		{
-			p.SetState(245)
+			p.SetState(246)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(246)
-			p.Match(BODLParserIdentifier)
-		}
-		{
 			p.SetState(247)
-			p.Match(BODLParserOpenParen)
+			p.Identifier()
 		}
 		{
 			p.SetState(248)
-			p.Literal()
+			p.Match(BODLParserOpenParen)
 		}
 		{
 			p.SetState(249)
-			p.Match(BODLParserCloseParen)
+			p.Identifier()
 		}
 		{
 			p.SetState(250)
+			p.Match(BODLParserCloseParen)
+		}
+		{
+			p.SetState(251)
+			p.Match(BODLParserCloseBracket)
+		}
+
+	case 3:
+		p.EnterOuterAlt(localctx, 3)
+		p.SetState(254)
+		p.GetErrorHandler().Sync(p)
+		_la = p.GetTokenStream().LA(1)
+
+		if _la == BODLParserCustomAnnotationStart {
+			{
+				p.SetState(253)
+				p.Match(BODLParserCustomAnnotationStart)
+			}
+
+		}
+		{
+			p.SetState(256)
+			p.Match(BODLParserOpenBracket)
+		}
+		{
+			p.SetState(257)
+			p.Identifier()
+		}
+		{
+			p.SetState(258)
+			p.Match(BODLParserOpenParen)
+		}
+		{
+			p.SetState(259)
+			p.Literal()
+		}
+		{
+			p.SetState(260)
+			p.Match(BODLParserCloseParen)
+		}
+		{
+			p.SetState(261)
 			p.Match(BODLParserCloseBracket)
 		}
 
@@ -3142,14 +3615,14 @@ func NewTypeListContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 
 func (s *TypeListContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *TypeListContext) Type() ITypeContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeContext)(nil)).Elem(), 0)
+func (s *TypeListContext) TypeDeclaration() ITypeDeclarationContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeDeclarationContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(ITypeContext)
+	return t.(ITypeDeclarationContext)
 }
 
 func (s *TypeListContext) Comma() antlr.TerminalNode {
@@ -3186,9 +3659,19 @@ func (s *TypeListContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *TypeListContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitTypeList(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) TypeList() (localctx ITypeListContext) {
 	localctx = NewTypeListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 34, BODLParserRULE_typeList)
+	p.EnterRule(localctx, 38, BODLParserRULE_typeList)
 
 	defer func() {
 		p.ExitRule()
@@ -3206,28 +3689,28 @@ func (p *BODLParser) TypeList() (localctx ITypeListContext) {
 		}
 	}()
 
-	p.SetState(259)
+	p.SetState(270)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 35, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(254)
-			p.Type()
+			p.SetState(265)
+			p.TypeDeclaration()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(255)
-			p.Type()
+			p.SetState(266)
+			p.TypeDeclaration()
 		}
 		{
-			p.SetState(256)
+			p.SetState(267)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(257)
+			p.SetState(268)
 			p.TypeList()
 		}
 
@@ -3236,49 +3719,55 @@ func (p *BODLParser) TypeList() (localctx ITypeListContext) {
 	return localctx
 }
 
-// ITypeContext is an interface to support dynamic dispatch.
-type ITypeContext interface {
+// ITypeDeclarationContext is an interface to support dynamic dispatch.
+type ITypeDeclarationContext interface {
 	antlr.ParserRuleContext
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
 
-	// IsTypeContext differentiates from other interfaces.
-	IsTypeContext()
+	// IsTypeDeclarationContext differentiates from other interfaces.
+	IsTypeDeclarationContext()
 }
 
-type TypeContext struct {
+type TypeDeclarationContext struct {
 	*antlr.BaseParserRuleContext
 	parser antlr.Parser
 }
 
-func NewEmptyTypeContext() *TypeContext {
-	var p = new(TypeContext)
+func NewEmptyTypeDeclarationContext() *TypeDeclarationContext {
+	var p = new(TypeDeclarationContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = BODLParserRULE_type
+	p.RuleIndex = BODLParserRULE_typeDeclaration
 	return p
 }
 
-func (*TypeContext) IsTypeContext() {}
+func (*TypeDeclarationContext) IsTypeDeclarationContext() {}
 
-func NewTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *TypeContext {
-	var p = new(TypeContext)
+func NewTypeDeclarationContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *TypeDeclarationContext {
+	var p = new(TypeDeclarationContext)
 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = BODLParserRULE_type
+	p.RuleIndex = BODLParserRULE_typeDeclaration
 
 	return p
 }
 
-func (s *TypeContext) GetParser() antlr.Parser { return s.parser }
+func (s *TypeDeclarationContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *TypeContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *TypeDeclarationContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
-func (s *TypeContext) TypeDefaultValue() ITypeDefaultValueContext {
+func (s *TypeDeclarationContext) TypeDefaultValue() ITypeDefaultValueContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*ITypeDefaultValueContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -3288,7 +3777,7 @@ func (s *TypeContext) TypeDefaultValue() ITypeDefaultValueContext {
 	return t.(ITypeDefaultValueContext)
 }
 
-func (s *TypeContext) MemberExpression() IMemberExpressionContext {
+func (s *TypeDeclarationContext) MemberExpression() IMemberExpressionContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*IMemberExpressionContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -3298,33 +3787,43 @@ func (s *TypeContext) MemberExpression() IMemberExpressionContext {
 	return t.(IMemberExpressionContext)
 }
 
-func (s *TypeContext) Colon() antlr.TerminalNode {
+func (s *TypeDeclarationContext) Colon() antlr.TerminalNode {
 	return s.GetToken(BODLParserColon, 0)
 }
 
-func (s *TypeContext) GetRuleContext() antlr.RuleContext {
+func (s *TypeDeclarationContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *TypeContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+func (s *TypeDeclarationContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *TypeContext) EnterRule(listener antlr.ParseTreeListener) {
+func (s *TypeDeclarationContext) EnterRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(BODLParserListener); ok {
-		listenerT.EnterType(s)
+		listenerT.EnterTypeDeclaration(s)
 	}
 }
 
-func (s *TypeContext) ExitRule(listener antlr.ParseTreeListener) {
+func (s *TypeDeclarationContext) ExitRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(BODLParserListener); ok {
-		listenerT.ExitType(s)
+		listenerT.ExitTypeDeclaration(s)
 	}
 }
 
-func (p *BODLParser) Type() (localctx ITypeContext) {
-	localctx = NewTypeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 36, BODLParserRULE_type)
+func (s *TypeDeclarationContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitTypeDeclaration(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+func (p *BODLParser) TypeDeclaration() (localctx ITypeDeclarationContext) {
+	localctx = NewTypeDeclarationContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 40, BODLParserRULE_typeDeclaration)
 	var _la int
 
 	defer func() {
@@ -3343,22 +3842,22 @@ func (p *BODLParser) Type() (localctx ITypeContext) {
 		}
 	}()
 
-	p.SetState(271)
+	p.SetState(282)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 38, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(261)
-			p.Match(BODLParserIdentifier)
+			p.SetState(272)
+			p.Identifier()
 		}
-		p.SetState(263)
+		p.SetState(274)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		if _la == BODLParserAssign {
 			{
-				p.SetState(262)
+				p.SetState(273)
 				p.TypeDefaultValue()
 			}
 
@@ -3367,24 +3866,24 @@ func (p *BODLParser) Type() (localctx ITypeContext) {
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(265)
+			p.SetState(276)
 			p.MemberExpression()
 		}
 		{
-			p.SetState(266)
+			p.SetState(277)
 			p.Match(BODLParserColon)
 		}
 		{
-			p.SetState(267)
-			p.Match(BODLParserIdentifier)
+			p.SetState(278)
+			p.Identifier()
 		}
-		p.SetState(269)
+		p.SetState(280)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		if _la == BODLParserAssign {
 			{
-				p.SetState(268)
+				p.SetState(279)
 				p.TypeDefaultValue()
 			}
 
@@ -3485,9 +3984,19 @@ func (s *TypeDefaultValueContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *TypeDefaultValueContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitTypeDefaultValue(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) TypeDefaultValue() (localctx ITypeDefaultValueContext) {
 	localctx = NewTypeDefaultValueContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 38, BODLParserRULE_typeDefaultValue)
+	p.EnterRule(localctx, 42, BODLParserRULE_typeDefaultValue)
 
 	defer func() {
 		p.ExitRule()
@@ -3505,36 +4014,36 @@ func (p *BODLParser) TypeDefaultValue() (localctx ITypeDefaultValueContext) {
 		}
 	}()
 
-	p.SetState(280)
+	p.SetState(291)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 39, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(273)
+			p.SetState(284)
 			p.Match(BODLParserAssign)
 		}
 		{
-			p.SetState(274)
+			p.SetState(285)
 			p.Literal()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(275)
+			p.SetState(286)
 			p.Match(BODLParserAssign)
 		}
 		{
-			p.SetState(276)
+			p.SetState(287)
 			p.Match(BODLParserOpenBrace)
 		}
 		{
-			p.SetState(277)
+			p.SetState(288)
 			p.ValueAssignList()
 		}
 		{
-			p.SetState(278)
+			p.SetState(289)
 			p.Match(BODLParserCloseBrace)
 		}
 
@@ -3625,9 +4134,19 @@ func (s *ValueAssignListContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *ValueAssignListContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitValueAssignList(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) ValueAssignList() (localctx IValueAssignListContext) {
 	localctx = NewValueAssignListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 40, BODLParserRULE_valueAssignList)
+	p.EnterRule(localctx, 44, BODLParserRULE_valueAssignList)
 
 	defer func() {
 		p.ExitRule()
@@ -3645,28 +4164,28 @@ func (p *BODLParser) ValueAssignList() (localctx IValueAssignListContext) {
 		}
 	}()
 
-	p.SetState(287)
+	p.SetState(298)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 40, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(282)
+			p.SetState(293)
 			p.ValueAssign()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(283)
+			p.SetState(294)
 			p.ValueAssign()
 		}
 		{
-			p.SetState(284)
+			p.SetState(295)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(285)
+			p.SetState(296)
 			p.ValueAssignList()
 		}
 
@@ -3713,8 +4232,14 @@ func NewValueAssignContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 
 func (s *ValueAssignContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ValueAssignContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *ValueAssignContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
 func (s *ValueAssignContext) Assign() antlr.TerminalNode {
@@ -3751,9 +4276,19 @@ func (s *ValueAssignContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *ValueAssignContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitValueAssign(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) ValueAssign() (localctx IValueAssignContext) {
 	localctx = NewValueAssignContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 42, BODLParserRULE_valueAssign)
+	p.EnterRule(localctx, 46, BODLParserRULE_valueAssign)
 
 	defer func() {
 		p.ExitRule()
@@ -3773,15 +4308,15 @@ func (p *BODLParser) ValueAssign() (localctx IValueAssignContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(289)
-		p.Match(BODLParserIdentifier)
+		p.SetState(300)
+		p.Identifier()
 	}
 	{
-		p.SetState(290)
+		p.SetState(301)
 		p.Match(BODLParserAssign)
 	}
 	{
-		p.SetState(291)
+		p.SetState(302)
 		p.Literal()
 	}
 
@@ -3885,9 +4420,19 @@ func (s *MultiplicityContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *MultiplicityContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitMultiplicity(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Multiplicity() (localctx IMultiplicityContext) {
 	localctx = NewMultiplicityContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 44, BODLParserRULE_multiplicity)
+	p.EnterRule(localctx, 48, BODLParserRULE_multiplicity)
 
 	defer func() {
 		p.ExitRule()
@@ -3905,52 +4450,52 @@ func (p *BODLParser) Multiplicity() (localctx IMultiplicityContext) {
 		}
 	}()
 
-	p.SetState(305)
+	p.SetState(316)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 41, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(293)
+			p.SetState(304)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(294)
+			p.SetState(305)
 			p.Literal()
 		}
 		{
-			p.SetState(295)
+			p.SetState(306)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(296)
+			p.SetState(307)
 			p.Literal()
 		}
 		{
-			p.SetState(297)
+			p.SetState(308)
 			p.Match(BODLParserCloseBracket)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(299)
+			p.SetState(310)
 			p.Match(BODLParserOpenBracket)
 		}
 		{
-			p.SetState(300)
+			p.SetState(311)
 			p.Literal()
 		}
 		{
-			p.SetState(301)
+			p.SetState(312)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(302)
+			p.SetState(313)
 			p.Match(BODLParserN)
 		}
 		{
-			p.SetState(303)
+			p.SetState(314)
 			p.Match(BODLParserCloseBracket)
 		}
 
@@ -3997,16 +4542,39 @@ func NewMemberExpressionContext(parser antlr.Parser, parent antlr.ParserRuleCont
 
 func (s *MemberExpressionContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *MemberExpressionContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *MemberExpressionContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIdentifierContext)
 }
 
-func (s *MemberExpressionContext) Dot() antlr.TerminalNode {
-	return s.GetToken(BODLParserDot, 0)
+func (s *MemberExpressionContext) AllDot() []antlr.TerminalNode {
+	return s.GetTokens(BODLParserDot)
 }
 
-func (s *MemberExpressionContext) MemberExpression() IMemberExpressionContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IMemberExpressionContext)(nil)).Elem(), 0)
+func (s *MemberExpressionContext) Dot(i int) antlr.TerminalNode {
+	return s.GetToken(BODLParserDot, i)
+}
+
+func (s *MemberExpressionContext) AllMemberExpression() []IMemberExpressionContext {
+	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IMemberExpressionContext)(nil)).Elem())
+	var tst = make([]IMemberExpressionContext, len(ts))
+
+	for i, t := range ts {
+		if t != nil {
+			tst[i] = t.(IMemberExpressionContext)
+		}
+	}
+
+	return tst
+}
+
+func (s *MemberExpressionContext) MemberExpression(i int) IMemberExpressionContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IMemberExpressionContext)(nil)).Elem(), i)
 
 	if t == nil {
 		return nil
@@ -4035,9 +4603,19 @@ func (s *MemberExpressionContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *MemberExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitMemberExpression(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) MemberExpression() (localctx IMemberExpressionContext) {
 	localctx = NewMemberExpressionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 46, BODLParserRULE_memberExpression)
+	p.EnterRule(localctx, 50, BODLParserRULE_memberExpression)
 
 	defer func() {
 		p.ExitRule()
@@ -4055,31 +4633,32 @@ func (p *BODLParser) MemberExpression() (localctx IMemberExpressionContext) {
 		}
 	}()
 
-	p.SetState(311)
+	var _alt int
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(318)
+		p.Identifier()
+	}
+	p.SetState(323)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 42, p.GetParserRuleContext()) {
-	case 1:
-		p.EnterOuterAlt(localctx, 1)
-		{
-			p.SetState(307)
-			p.Match(BODLParserIdentifier)
-		}
+	_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 42, p.GetParserRuleContext())
 
-	case 2:
-		p.EnterOuterAlt(localctx, 2)
-		{
-			p.SetState(308)
-			p.Match(BODLParserIdentifier)
-		}
-		{
-			p.SetState(309)
-			p.Match(BODLParserDot)
-		}
-		{
-			p.SetState(310)
-			p.MemberExpression()
-		}
+	for _alt != 2 && _alt != antlr.ATNInvalidAltNumber {
+		if _alt == 1 {
+			{
+				p.SetState(319)
+				p.Match(BODLParserDot)
+			}
+			{
+				p.SetState(320)
+				p.MemberExpression()
+			}
 
+		}
+		p.SetState(325)
+		p.GetErrorHandler().Sync(p)
+		_alt = p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 42, p.GetParserRuleContext())
 	}
 
 	return localctx
@@ -4123,22 +4702,35 @@ func NewIdentifierListContext(parser antlr.Parser, parent antlr.ParserRuleContex
 
 func (s *IdentifierListContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *IdentifierListContext) Identifier() antlr.TerminalNode {
-	return s.GetToken(BODLParserIdentifier, 0)
+func (s *IdentifierListContext) AllIdentifier() []IIdentifierContext {
+	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IIdentifierContext)(nil)).Elem())
+	var tst = make([]IIdentifierContext, len(ts))
+
+	for i, t := range ts {
+		if t != nil {
+			tst[i] = t.(IIdentifierContext)
+		}
+	}
+
+	return tst
 }
 
-func (s *IdentifierListContext) Comma() antlr.TerminalNode {
-	return s.GetToken(BODLParserComma, 0)
-}
-
-func (s *IdentifierListContext) IdentifierList() IIdentifierListContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierListContext)(nil)).Elem(), 0)
+func (s *IdentifierListContext) Identifier(i int) IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), i)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IIdentifierListContext)
+	return t.(IIdentifierContext)
+}
+
+func (s *IdentifierListContext) AllComma() []antlr.TerminalNode {
+	return s.GetTokens(BODLParserComma)
+}
+
+func (s *IdentifierListContext) Comma(i int) antlr.TerminalNode {
+	return s.GetToken(BODLParserComma, i)
 }
 
 func (s *IdentifierListContext) GetRuleContext() antlr.RuleContext {
@@ -4161,9 +4753,20 @@ func (s *IdentifierListContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *IdentifierListContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitIdentifierList(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) IdentifierList() (localctx IIdentifierListContext) {
 	localctx = NewIdentifierListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 48, BODLParserRULE_identifierList)
+	p.EnterRule(localctx, 52, BODLParserRULE_identifierList)
+	var _la int
 
 	defer func() {
 		p.ExitRule()
@@ -4181,31 +4784,28 @@ func (p *BODLParser) IdentifierList() (localctx IIdentifierListContext) {
 		}
 	}()
 
-	p.SetState(317)
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(326)
+		p.Identifier()
+	}
+	p.SetState(331)
 	p.GetErrorHandler().Sync(p)
-	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 43, p.GetParserRuleContext()) {
-	case 1:
-		p.EnterOuterAlt(localctx, 1)
-		{
-			p.SetState(313)
-			p.Match(BODLParserIdentifier)
-		}
+	_la = p.GetTokenStream().LA(1)
 
-	case 2:
-		p.EnterOuterAlt(localctx, 2)
+	for _la == BODLParserComma {
 		{
-			p.SetState(314)
-			p.Match(BODLParserIdentifier)
-		}
-		{
-			p.SetState(315)
+			p.SetState(327)
 			p.Match(BODLParserComma)
 		}
 		{
-			p.SetState(316)
-			p.IdentifierList()
+			p.SetState(328)
+			p.Identifier()
 		}
 
+		p.SetState(333)
+		p.GetErrorHandler().Sync(p)
+		_la = p.GetTokenStream().LA(1)
 	}
 
 	return localctx
@@ -4317,9 +4917,19 @@ func (s *KeywordContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *KeywordContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitKeyword(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Keyword() (localctx IKeywordContext) {
 	localctx = NewKeywordContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 50, BODLParserRULE_keyword)
+	p.EnterRule(localctx, 54, BODLParserRULE_keyword)
 	var _la int
 
 	defer func() {
@@ -4340,7 +4950,7 @@ func (p *BODLParser) Keyword() (localctx IKeywordContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(319)
+		p.SetState(334)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<BODLParserBUSINESSOBJECT)|(1<<BODLParserTO)|(1<<BODLParserASSOCIATION)|(1<<BODLParserELEMENT)|(1<<BODLParserNODE)|(1<<BODLParserACTION)|(1<<BODLParserMESSAGE)|(1<<BODLParserRAISES)|(1<<BODLParserUSING)|(1<<BODLParserIMPORT)|(1<<BODLParserAS)|(1<<BODLParserTEXT))) != 0) {
@@ -4424,9 +5034,19 @@ func (s *LiteralContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *LiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Literal() (localctx ILiteralContext) {
 	localctx = NewLiteralContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 52, BODLParserRULE_literal)
+	p.EnterRule(localctx, 56, BODLParserRULE_literal)
 	var _la int
 
 	defer func() {
@@ -4447,7 +5067,7 @@ func (p *BODLParser) Literal() (localctx ILiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(321)
+		p.SetState(336)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((_la-49)&-(0x1f+1)) == 0 && ((1<<uint((_la-49)))&((1<<(BODLParserStringLiteral-49))|(1<<(BODLParserBooleanLiteral-49))|(1<<(BODLParserDecimalLiteral-49)))) != 0) {
@@ -4535,9 +5155,19 @@ func (s *CommentsContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *CommentsContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitComments(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) Comments() (localctx ICommentsContext) {
 	localctx = NewCommentsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 54, BODLParserRULE_comments)
+	p.EnterRule(localctx, 58, BODLParserRULE_comments)
 	var _la int
 
 	defer func() {
@@ -4557,13 +5187,13 @@ func (p *BODLParser) Comments() (localctx ICommentsContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(326)
+	p.SetState(341)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	for _la == BODLParserMultiLineComment || _la == BODLParserSingleLineComment {
 		{
-			p.SetState(323)
+			p.SetState(338)
 			_la = p.GetTokenStream().LA(1)
 
 			if !(_la == BODLParserMultiLineComment || _la == BODLParserSingleLineComment) {
@@ -4574,7 +5204,7 @@ func (p *BODLParser) Comments() (localctx ICommentsContext) {
 			}
 		}
 
-		p.SetState(328)
+		p.SetState(343)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
@@ -4664,9 +5294,19 @@ func (s *CompareOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *CompareOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitCompareOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) CompareOperator() (localctx ICompareOperatorContext) {
 	localctx = NewCompareOperatorContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 56, BODLParserRULE_compareOperator)
+	p.EnterRule(localctx, 60, BODLParserRULE_compareOperator)
 	var _la int
 
 	defer func() {
@@ -4687,7 +5327,7 @@ func (p *BODLParser) CompareOperator() (localctx ICompareOperatorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(329)
+		p.SetState(344)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((_la-38)&-(0x1f+1)) == 0 && ((1<<uint((_la-38)))&((1<<(BODLParserLessThan-38))|(1<<(BODLParserMoreThan-38))|(1<<(BODLParserLessThanEquals-38))|(1<<(BODLParserGreaterThanEquals-38))|(1<<(BODLParserEquals_-38))|(1<<(BODLParserNotEquals-38)))) != 0) {
@@ -4767,9 +5407,19 @@ func (s *LogicOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
 	}
 }
 
+func (s *LogicOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitLogicOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 func (p *BODLParser) LogicOperator() (localctx ILogicOperatorContext) {
 	localctx = NewLogicOperatorContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 58, BODLParserRULE_logicOperator)
+	p.EnterRule(localctx, 62, BODLParserRULE_logicOperator)
 	var _la int
 
 	defer func() {
@@ -4790,7 +5440,7 @@ func (p *BODLParser) LogicOperator() (localctx ILogicOperatorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(331)
+		p.SetState(346)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(_la == BODLParserAnd || _la == BODLParserOr) {
@@ -4799,6 +5449,107 @@ func (p *BODLParser) LogicOperator() (localctx ILogicOperatorContext) {
 			p.GetErrorHandler().ReportMatch(p)
 			p.Consume()
 		}
+	}
+
+	return localctx
+}
+
+// IIdentifierContext is an interface to support dynamic dispatch.
+type IIdentifierContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsIdentifierContext differentiates from other interfaces.
+	IsIdentifierContext()
+}
+
+type IdentifierContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyIdentifierContext() *IdentifierContext {
+	var p = new(IdentifierContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = BODLParserRULE_identifier
+	return p
+}
+
+func (*IdentifierContext) IsIdentifierContext() {}
+
+func NewIdentifierContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *IdentifierContext {
+	var p = new(IdentifierContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = BODLParserRULE_identifier
+
+	return p
+}
+
+func (s *IdentifierContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *IdentifierContext) Identifier() antlr.TerminalNode {
+	return s.GetToken(BODLParserIdentifier, 0)
+}
+
+func (s *IdentifierContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IdentifierContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+func (s *IdentifierContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(BODLParserListener); ok {
+		listenerT.EnterIdentifier(s)
+	}
+}
+
+func (s *IdentifierContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(BODLParserListener); ok {
+		listenerT.ExitIdentifier(s)
+	}
+}
+
+func (s *IdentifierContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case BODLParserVisitor:
+		return t.VisitIdentifier(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+func (p *BODLParser) Identifier() (localctx IIdentifierContext) {
+	localctx = NewIdentifierContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 64, BODLParserRULE_identifier)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(348)
+		p.Match(BODLParserIdentifier)
 	}
 
 	return localctx

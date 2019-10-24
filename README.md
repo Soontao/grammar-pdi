@@ -15,11 +15,8 @@ Antlr Version: 4.7.2
 
 ### Build
 
-go to `./bodl/.antlr` and run (need vscode plugin)
-
 ```bash
-antlr -Dlanguage=Go -package bodl ../BODLLexer.g4 
-antlr -Dlanguage=Go -package bodl ../BODLParser.g4 
+npm run build
 ```
 
 sometimes we need manually edit generated lexer/parser code.

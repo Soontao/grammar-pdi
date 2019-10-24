@@ -3,9 +3,13 @@
     "ABAP",
     "ABSL",
     "BODL",
+    "Statment",
+    "Theo",
     "antlr",
+    "bodlgo",
     "businessobject",
     "interp",
     "stretchr"
-  ]
+  ],
+  "eslint.autoFixOnSave": true
 }

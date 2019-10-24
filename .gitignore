@@ -26,3 +26,7 @@ hs_err_pid*
 coverage.txt
 *.tokens
 *.interp
+
+# node
+
+node_modules
