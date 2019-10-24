@@ -1,6 +1,6 @@
 {
   "name": "grammar-pdi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Grammar parser for PDI BODL/ABSL",
   "main": "index.js",
   "scripts": {

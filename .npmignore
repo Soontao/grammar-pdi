@@ -1,5 +1,8 @@
 vendor
 bodl/bodlgo
+bodl/.antlr
+bodl/examples
+bodl/*.sh
 go.sum
 go.mod
 .vscode
