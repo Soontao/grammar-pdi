@@ -27,10 +27,11 @@ itemList: (element | message | node | boAction | association)*;
 element:
 	comments? annotations? ELEMENT identifier Colon typeDeclaration SemiColon;
 
-boAction: comments? ACTION identifier raiseMessage? SemiColon;
+boAction:
+	comments? annotations? ACTION identifier raiseMessage? SemiColon;
 
 message:
-	comments? MESSAGE identifier TEXT StringLiteral Colon typeList SemiColon;
+	comments? annotations? MESSAGE identifier TEXT StringLiteral Colon typeList SemiColon;
 
 node:
 	comments? annotations? NODE identifier multiplicity? raiseMessage? block?;
