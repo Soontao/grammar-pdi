@@ -17,12 +17,13 @@ TEXT: 'text';
 VALUATION: 'valuation';
 
 // Comments
-MultiLineComment: '/*' .*? '*/';
+MultiLineComment: '/*' MultiLineCommentContent '*/';
 
 SingleLineComment: SingleCommentStart CommentTextContent;
 
 CustomAnnotationStart: '///';
 
+fragment MultiLineCommentContent: .*?;
 fragment SingleCommentStart: '//' ~[\\/];
 fragment CommentTextContent: ~[\r\n\u2028\u2029]*;
 
