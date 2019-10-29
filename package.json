@@ -10,7 +10,7 @@
     "lint": "eslint --fix .",
     "test": "jest",
     "test:go": "go test -v -mod=vendor ./... -race -coverprofile=coverage.txt -covermode=atomic",
-    "prepublishOnly": "npm run build:js:umd"
+    "prepublishOnly": "npm run build:grammar && npm run build:js:umd"
   },
   "repository": {
     "type": "git",
