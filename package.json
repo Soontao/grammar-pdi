@@ -1,6 +1,6 @@
 {
   "name": "grammar-pdi",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Grammar parser for PDI BODL/ABSL",
   "main": "index.js",
   "unpkg": "./dist/grammar-pdi-umd.js",
@@ -9,6 +9,7 @@
     "build:js:umd": "webpack",
     "lint": "eslint --fix .",
     "test": "jest",
+    "test:go": "go test -v -mod=vendor ./... -race -coverprofile=coverage.txt -covermode=atomic",
     "prepublishOnly": "npm run build:js:umd"
   },
   "repository": {
@@ -25,9 +26,9 @@
     "antlr4": "^4.7.2"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.19",
-    "eslint": "^6.5.1",
-    "jest": "^24.9.0",
+    "@types/jest": "^24",
+    "eslint": "^6.6.0",
+    "jest": "^24",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
   }

@@ -2,6 +2,9 @@ lexer grammar BODLLexer;
 
 // LEXER
 
+/// Bool Literals
+BooleanLiteral: 'true' | 'false';
+
 BUSINESSOBJECT: 'businessobject';
 TO: 'to';
 ASSOCIATION: 'association';
@@ -66,9 +69,6 @@ Identifier: IdentifierStart IdentifierPart*;
 StringLiteral:
 	'"' DoubleStringCharacter* '"'
 	| '\'' SingleStringCharacter* '\'';
-
-/// Bool Literals
-BooleanLiteral: 'true' | 'false';
 
 /// Numeric Literals
 

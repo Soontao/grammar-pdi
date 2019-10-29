@@ -34,7 +34,7 @@ message:
 	comments? annotations? MESSAGE identifier TEXT StringLiteral Colon typeList SemiColon;
 
 node:
-	comments? annotations? NODE identifier multiplicity? raiseMessage? block?;
+	comments? annotations? NODE identifier multiplicity? raiseMessage? block? SemiColon?;
 
 association:
 	comments? annotations? ASSOCIATION identifier multiplicity? TO identifier

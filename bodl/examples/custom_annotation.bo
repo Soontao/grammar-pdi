@@ -10,7 +10,7 @@ import ABSL;
 businessobject Hello:B {
   
   /// [Text]
-  element a : String;  // hello a after
+  element a : String = false;  // hello a after
 
   // hello b before
   element b : String;  // hello b after
