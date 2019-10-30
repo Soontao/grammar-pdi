@@ -118,7 +118,7 @@ var parserATN = []uint16{
 	2, 199, 198, 3, 2, 2, 2, 199, 200, 3, 2, 2, 2, 200, 201, 3, 2, 2, 2, 201,
 	202, 7, 6, 2, 2, 202, 204, 5, 66, 34, 2, 203, 205, 5, 50, 26, 2, 204, 203,
 	3, 2, 2, 2, 204, 205, 3, 2, 2, 2, 205, 206, 3, 2, 2, 2, 206, 207, 7, 5,
-	2, 2, 207, 209, 5, 66, 34, 2, 208, 210, 5, 26, 14, 2, 209, 208, 3, 2, 2,
+	2, 2, 207, 209, 5, 52, 27, 2, 208, 210, 5, 26, 14, 2, 209, 208, 3, 2, 2,
 	2, 209, 210, 3, 2, 2, 2, 210, 212, 3, 2, 2, 2, 211, 213, 5, 28, 15, 2,
 	212, 211, 3, 2, 2, 2, 212, 213, 3, 2, 2, 2, 213, 214, 3, 2, 2, 2, 214,
 	215, 7, 26, 2, 2, 215, 25, 3, 2, 2, 2, 216, 217, 7, 12, 2, 2, 217, 218,
@@ -2386,21 +2386,8 @@ func (s *AssociationContext) ASSOCIATION() antlr.TerminalNode {
 	return s.GetToken(BODLParserASSOCIATION, 0)
 }
 
-func (s *AssociationContext) AllIdentifier() []IIdentifierContext {
-	var ts = s.GetTypedRuleContexts(reflect.TypeOf((*IIdentifierContext)(nil)).Elem())
-	var tst = make([]IIdentifierContext, len(ts))
-
-	for i, t := range ts {
-		if t != nil {
-			tst[i] = t.(IIdentifierContext)
-		}
-	}
-
-	return tst
-}
-
-func (s *AssociationContext) Identifier(i int) IIdentifierContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), i)
+func (s *AssociationContext) Identifier() IIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
@@ -2411,6 +2398,16 @@ func (s *AssociationContext) Identifier(i int) IIdentifierContext {
 
 func (s *AssociationContext) TO() antlr.TerminalNode {
 	return s.GetToken(BODLParserTO, 0)
+}
+
+func (s *AssociationContext) MemberExpression() IMemberExpressionContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IMemberExpressionContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IMemberExpressionContext)
 }
 
 func (s *AssociationContext) SemiColon() antlr.TerminalNode {
@@ -2564,7 +2561,7 @@ func (p *BODLParser) Association() (localctx IAssociationContext) {
 	}
 	{
 		p.SetState(205)
-		p.Identifier()
+		p.MemberExpression()
 	}
 	p.SetState(207)
 	p.GetErrorHandler().Sync(p)

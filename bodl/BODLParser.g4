@@ -37,7 +37,7 @@ node:
 	comments? annotations? NODE identifier multiplicity? raiseMessage? block? SemiColon?;
 
 association:
-	comments? annotations? ASSOCIATION identifier multiplicity? TO identifier
+	comments? annotations? ASSOCIATION identifier multiplicity? TO memberExpression
 		associationUsingDefinition? valuationDefinition? SemiColon;
 
 associationUsingDefinition: USING identifier;
