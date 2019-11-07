@@ -87,7 +87,7 @@ func (v *BaseABSLParserVisitor) VisitVariableType(ctx *VariableTypeContext) inte
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseABSLParserVisitor) VisitEmptyStatement(ctx *EmptyStatementContext) interface{} {
+func (v *BaseABSLParserVisitor) VisitProgramEmptyStatement(ctx *ProgramEmptyStatementContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

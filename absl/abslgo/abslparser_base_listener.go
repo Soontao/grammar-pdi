@@ -140,11 +140,11 @@ func (s *BaseABSLParserListener) EnterVariableType(ctx *VariableTypeContext) {}
 // ExitVariableType is called when production variableType is exited.
 func (s *BaseABSLParserListener) ExitVariableType(ctx *VariableTypeContext) {}
 
-// EnterEmptyStatement is called when production emptyStatement is entered.
-func (s *BaseABSLParserListener) EnterEmptyStatement(ctx *EmptyStatementContext) {}
+// EnterProgramEmptyStatement is called when production programEmptyStatement is entered.
+func (s *BaseABSLParserListener) EnterProgramEmptyStatement(ctx *ProgramEmptyStatementContext) {}
 
-// ExitEmptyStatement is called when production emptyStatement is exited.
-func (s *BaseABSLParserListener) ExitEmptyStatement(ctx *EmptyStatementContext) {}
+// ExitProgramEmptyStatement is called when production programEmptyStatement is exited.
+func (s *BaseABSLParserListener) ExitProgramEmptyStatement(ctx *ProgramEmptyStatementContext) {}
 
 // EnterExpressionStatement is called when production expressionStatement is entered.
 func (s *BaseABSLParserListener) EnterExpressionStatement(ctx *ExpressionStatementContext) {}

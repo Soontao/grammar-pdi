@@ -67,8 +67,8 @@ type ABSLParserVisitor interface {
 	// Visit a parse tree produced by ABSLParser#variableType.
 	VisitVariableType(ctx *VariableTypeContext) interface{}
 
-	// Visit a parse tree produced by ABSLParser#emptyStatement.
-	VisitEmptyStatement(ctx *EmptyStatementContext) interface{}
+	// Visit a parse tree produced by ABSLParser#programEmptyStatement.
+	VisitProgramEmptyStatement(ctx *ProgramEmptyStatementContext) interface{}
 
 	// Visit a parse tree produced by ABSLParser#expressionStatement.
 	VisitExpressionStatement(ctx *ExpressionStatementContext) interface{}

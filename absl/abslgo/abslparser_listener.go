@@ -67,8 +67,8 @@ type ABSLParserListener interface {
 	// EnterVariableType is called when entering the variableType production.
 	EnterVariableType(c *VariableTypeContext)
 
-	// EnterEmptyStatement is called when entering the emptyStatement production.
-	EnterEmptyStatement(c *EmptyStatementContext)
+	// EnterProgramEmptyStatement is called when entering the programEmptyStatement production.
+	EnterProgramEmptyStatement(c *ProgramEmptyStatementContext)
 
 	// EnterExpressionStatement is called when entering the expressionStatement production.
 	EnterExpressionStatement(c *ExpressionStatementContext)
@@ -463,8 +463,8 @@ type ABSLParserListener interface {
 	// ExitVariableType is called when exiting the variableType production.
 	ExitVariableType(c *VariableTypeContext)
 
-	// ExitEmptyStatement is called when exiting the emptyStatement production.
-	ExitEmptyStatement(c *EmptyStatementContext)
+	// ExitProgramEmptyStatement is called when exiting the programEmptyStatement production.
+	ExitProgramEmptyStatement(c *ProgramEmptyStatementContext)
 
 	// ExitExpressionStatement is called when exiting the expressionStatement production.
 	ExitExpressionStatement(c *ExpressionStatementContext)

@@ -132,8 +132,8 @@ ABSLParserVisitor.prototype.visitVariableType = function(ctx) {
 };
 
 
-// Visit a parse tree produced by ABSLParser#emptyStatement.
-ABSLParserVisitor.prototype.visitEmptyStatement = function(ctx) {
+// Visit a parse tree produced by ABSLParser#programEmptyStatement.
+ABSLParserVisitor.prototype.visitProgramEmptyStatement = function(ctx) {
   return this.visitChildren(ctx);
 };
 

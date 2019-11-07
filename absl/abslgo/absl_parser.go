@@ -539,7 +539,7 @@ var ruleNames = []string{
 	"program", "sourceElement", "statement", "block", "statementList", "importStatement",
 	"importFromBlock", "moduleItems", "importDefault", "importNamespace", "importFrom",
 	"aliasName", "exportStatement", "exportFromBlock", "declaration", "variableStatement",
-	"variableDeclarationList", "variableDeclaration", "variableType", "emptyStatement",
+	"variableDeclarationList", "variableDeclaration", "variableType", "programEmptyStatement",
 	"expressionStatement", "ifStatement", "iterationStatement", "varModifier",
 	"continueStatement", "breakStatement", "returnStatement", "yieldStatement",
 	"withStatement", "switchStatement", "caseBlock", "caseClauses", "caseClause",
@@ -732,7 +732,7 @@ const (
 	ABSLParserRULE_variableDeclarationList = 16
 	ABSLParserRULE_variableDeclaration     = 17
 	ABSLParserRULE_variableType            = 18
-	ABSLParserRULE_emptyStatement          = 19
+	ABSLParserRULE_programEmptyStatement   = 19
 	ABSLParserRULE_expressionStatement     = 20
 	ABSLParserRULE_ifStatement             = 21
 	ABSLParserRULE_iterationStatement      = 22
@@ -1112,14 +1112,14 @@ func (s *StatementContext) ExportStatement() IExportStatementContext {
 	return t.(IExportStatementContext)
 }
 
-func (s *StatementContext) EmptyStatement() IEmptyStatementContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IEmptyStatementContext)(nil)).Elem(), 0)
+func (s *StatementContext) ProgramEmptyStatement() IProgramEmptyStatementContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IProgramEmptyStatementContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IEmptyStatementContext)
+	return t.(IProgramEmptyStatementContext)
 }
 
 func (s *StatementContext) ClassDeclaration() IClassDeclarationContext {
@@ -1357,7 +1357,7 @@ func (p *ABSLParser) Statement() (localctx IStatementContext) {
 		p.EnterOuterAlt(localctx, 5)
 		{
 			p.SetState(162)
-			p.EmptyStatement()
+			p.ProgramEmptyStatement()
 		}
 
 	case 6:
@@ -3974,81 +3974,81 @@ func (p *ABSLParser) VariableType() (localctx IVariableTypeContext) {
 	return localctx
 }
 
-// IEmptyStatementContext is an interface to support dynamic dispatch.
-type IEmptyStatementContext interface {
+// IProgramEmptyStatementContext is an interface to support dynamic dispatch.
+type IProgramEmptyStatementContext interface {
 	antlr.ParserRuleContext
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
 
-	// IsEmptyStatementContext differentiates from other interfaces.
-	IsEmptyStatementContext()
+	// IsProgramEmptyStatementContext differentiates from other interfaces.
+	IsProgramEmptyStatementContext()
 }
 
-type EmptyStatementContext struct {
+type ProgramEmptyStatementContext struct {
 	*antlr.BaseParserRuleContext
 	parser antlr.Parser
 }
 
-func NewEmptyEmptyStatementContext() *EmptyStatementContext {
-	var p = new(EmptyStatementContext)
+func NewEmptyProgramEmptyStatementContext() *ProgramEmptyStatementContext {
+	var p = new(ProgramEmptyStatementContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = ABSLParserRULE_emptyStatement
+	p.RuleIndex = ABSLParserRULE_programEmptyStatement
 	return p
 }
 
-func (*EmptyStatementContext) IsEmptyStatementContext() {}
+func (*ProgramEmptyStatementContext) IsProgramEmptyStatementContext() {}
 
-func NewEmptyStatementContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *EmptyStatementContext {
-	var p = new(EmptyStatementContext)
+func NewProgramEmptyStatementContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ProgramEmptyStatementContext {
+	var p = new(ProgramEmptyStatementContext)
 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = ABSLParserRULE_emptyStatement
+	p.RuleIndex = ABSLParserRULE_programEmptyStatement
 
 	return p
 }
 
-func (s *EmptyStatementContext) GetParser() antlr.Parser { return s.parser }
+func (s *ProgramEmptyStatementContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *EmptyStatementContext) SemiColon() antlr.TerminalNode {
+func (s *ProgramEmptyStatementContext) SemiColon() antlr.TerminalNode {
 	return s.GetToken(ABSLParserSemiColon, 0)
 }
 
-func (s *EmptyStatementContext) GetRuleContext() antlr.RuleContext {
+func (s *ProgramEmptyStatementContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *EmptyStatementContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+func (s *ProgramEmptyStatementContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *EmptyStatementContext) EnterRule(listener antlr.ParseTreeListener) {
+func (s *ProgramEmptyStatementContext) EnterRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(ABSLParserListener); ok {
-		listenerT.EnterEmptyStatement(s)
+		listenerT.EnterProgramEmptyStatement(s)
 	}
 }
 
-func (s *EmptyStatementContext) ExitRule(listener antlr.ParseTreeListener) {
+func (s *ProgramEmptyStatementContext) ExitRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(ABSLParserListener); ok {
-		listenerT.ExitEmptyStatement(s)
+		listenerT.ExitProgramEmptyStatement(s)
 	}
 }
 
-func (s *EmptyStatementContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *ProgramEmptyStatementContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case ABSLParserVisitor:
-		return t.VisitEmptyStatement(s)
+		return t.VisitProgramEmptyStatement(s)
 
 	default:
 		return t.VisitChildren(s)
 	}
 }
 
-func (p *ABSLParser) EmptyStatement() (localctx IEmptyStatementContext) {
-	localctx = NewEmptyStatementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 38, ABSLParserRULE_emptyStatement)
+func (p *ABSLParser) ProgramEmptyStatement() (localctx IProgramEmptyStatementContext) {
+	localctx = NewProgramEmptyStatementContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 38, ABSLParserRULE_programEmptyStatement)
 
 	defer func() {
 		p.ExitRule()
@@ -8273,14 +8273,14 @@ func (s *ClassElementContext) Async(i int) antlr.TerminalNode {
 	return s.GetToken(ABSLParserAsync, i)
 }
 
-func (s *ClassElementContext) EmptyStatement() IEmptyStatementContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IEmptyStatementContext)(nil)).Elem(), 0)
+func (s *ClassElementContext) ProgramEmptyStatement() IProgramEmptyStatementContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IProgramEmptyStatementContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IEmptyStatementContext)
+	return t.(IProgramEmptyStatementContext)
 }
 
 func (s *ClassElementContext) PropertyName() IPropertyNameContext {
@@ -8401,7 +8401,7 @@ func (p *ABSLParser) ClassElement() (localctx IClassElementContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(551)
-			p.EmptyStatement()
+			p.ProgramEmptyStatement()
 		}
 
 	case 3:

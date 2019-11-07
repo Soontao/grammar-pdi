@@ -742,7 +742,7 @@ var ruleNames = [ "program", "sourceElement", "statement", "block", "statementLi
   "importDefault", "importNamespace", "importFrom", "aliasName",
   "exportStatement", "exportFromBlock", "declaration",
   "variableStatement", "variableDeclarationList", "variableDeclaration",
-  "variableType", "emptyStatement", "expressionStatement",
+  "variableType", "programEmptyStatement", "expressionStatement",
   "ifStatement", "iterationStatement", "varModifier", "continueStatement",
   "breakStatement", "returnStatement", "yieldStatement",
   "withStatement", "switchStatement", "caseBlock", "caseClauses",
@@ -925,7 +925,7 @@ ABSLParser.RULE_variableStatement = 15;
 ABSLParser.RULE_variableDeclarationList = 16;
 ABSLParser.RULE_variableDeclaration = 17;
 ABSLParser.RULE_variableType = 18;
-ABSLParser.RULE_emptyStatement = 19;
+ABSLParser.RULE_programEmptyStatement = 19;
 ABSLParser.RULE_expressionStatement = 20;
 ABSLParser.RULE_ifStatement = 21;
 ABSLParser.RULE_iterationStatement = 22;
@@ -1175,8 +1175,8 @@ StatementContext.prototype.exportStatement = function() {
   return this.getTypedRuleContext(ExportStatementContext, 0);
 };
 
-StatementContext.prototype.emptyStatement = function() {
-  return this.getTypedRuleContext(EmptyStatementContext, 0);
+StatementContext.prototype.programEmptyStatement = function() {
+  return this.getTypedRuleContext(ProgramEmptyStatementContext, 0);
 };
 
 StatementContext.prototype.classDeclaration = function() {
@@ -1300,7 +1300,7 @@ ABSLParser.prototype.statement = function() {
     case 5:
       this.enterOuterAlt(localctx, 5);
       this.state = 162;
-      this.emptyStatement();
+      this.programEmptyStatement();
       break;
 
     case 6:
@@ -3101,7 +3101,7 @@ ABSLParser.prototype.variableType = function() {
 };
 
 
-function EmptyStatementContext(parser, parent, invokingState) {
+function ProgramEmptyStatementContext(parser, parent, invokingState) {
   if(parent === undefined) {
 	    parent = null;
   }
@@ -3110,32 +3110,32 @@ function EmptyStatementContext(parser, parent, invokingState) {
   }
   antlr4.ParserRuleContext.call(this, parent, invokingState);
   this.parser = parser;
-  this.ruleIndex = ABSLParser.RULE_emptyStatement;
+  this.ruleIndex = ABSLParser.RULE_programEmptyStatement;
   return this;
 }
 
-EmptyStatementContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-EmptyStatementContext.prototype.constructor = EmptyStatementContext;
+ProgramEmptyStatementContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+ProgramEmptyStatementContext.prototype.constructor = ProgramEmptyStatementContext;
 
-EmptyStatementContext.prototype.SemiColon = function() {
+ProgramEmptyStatementContext.prototype.SemiColon = function() {
   return this.getToken(ABSLParser.SemiColon, 0);
 };
 
-EmptyStatementContext.prototype.enterRule = function(listener) {
+ProgramEmptyStatementContext.prototype.enterRule = function(listener) {
   if(listener instanceof ABSLParserListener ) {
-    listener.enterEmptyStatement(this);
+    listener.enterProgramEmptyStatement(this);
   }
 };
 
-EmptyStatementContext.prototype.exitRule = function(listener) {
+ProgramEmptyStatementContext.prototype.exitRule = function(listener) {
   if(listener instanceof ABSLParserListener ) {
-    listener.exitEmptyStatement(this);
+    listener.exitProgramEmptyStatement(this);
   }
 };
 
-EmptyStatementContext.prototype.accept = function(visitor) {
+ProgramEmptyStatementContext.prototype.accept = function(visitor) {
   if ( visitor instanceof ABSLParserVisitor ) {
-    return visitor.visitEmptyStatement(this);
+    return visitor.visitProgramEmptyStatement(this);
   } else {
     return visitor.visitChildren(this);
   }
@@ -3144,12 +3144,12 @@ EmptyStatementContext.prototype.accept = function(visitor) {
 
 
 
-ABSLParser.EmptyStatementContext = EmptyStatementContext;
+ABSLParser.ProgramEmptyStatementContext = ProgramEmptyStatementContext;
 
-ABSLParser.prototype.emptyStatement = function() {
+ABSLParser.prototype.programEmptyStatement = function() {
 
-  var localctx = new EmptyStatementContext(this, this._ctx, this.state);
-  this.enterRule(localctx, 38, ABSLParser.RULE_emptyStatement);
+  var localctx = new ProgramEmptyStatementContext(this, this._ctx, this.state);
+  this.enterRule(localctx, 38, ABSLParser.RULE_programEmptyStatement);
   try {
     this.enterOuterAlt(localctx, 1);
     this.state = 310;
@@ -6051,8 +6051,8 @@ ClassElementContext.prototype.Async = function(i) {
 };
 
 
-ClassElementContext.prototype.emptyStatement = function() {
-  return this.getTypedRuleContext(EmptyStatementContext, 0);
+ClassElementContext.prototype.programEmptyStatement = function() {
+  return this.getTypedRuleContext(ProgramEmptyStatementContext, 0);
 };
 
 ClassElementContext.prototype.propertyName = function() {
@@ -6134,7 +6134,7 @@ ABSLParser.prototype.classElement = function() {
     case 2:
       this.enterOuterAlt(localctx, 2);
       this.state = 551;
-      this.emptyStatement();
+      this.programEmptyStatement();
       break;
 
     case 3:

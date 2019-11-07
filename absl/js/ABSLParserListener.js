@@ -191,12 +191,12 @@ ABSLParserListener.prototype.exitVariableType = function(ctx) {
 };
 
 
-// Enter a parse tree produced by ABSLParser#emptyStatement.
-ABSLParserListener.prototype.enterEmptyStatement = function(ctx) {
+// Enter a parse tree produced by ABSLParser#programEmptyStatement.
+ABSLParserListener.prototype.enterProgramEmptyStatement = function(ctx) {
 };
 
-// Exit a parse tree produced by ABSLParser#emptyStatement.
-ABSLParserListener.prototype.exitEmptyStatement = function(ctx) {
+// Exit a parse tree produced by ABSLParser#programEmptyStatement.
+ABSLParserListener.prototype.exitProgramEmptyStatement = function(ctx) {
 };
 
 

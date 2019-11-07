@@ -13,7 +13,7 @@ statement:
 	| variableStatement
 	| importStatement
 	| exportStatement
-	| emptyStatement
+	| programEmptyStatement
 	| classDeclaration
 	| expressionStatement
 	| ifStatement
@@ -75,7 +75,7 @@ variableDeclaration:
 
 variableType: CollectionOf? ElementOf? singleExpression;
 
-emptyStatement: SemiColon;
+programEmptyStatement: SemiColon;
 
 expressionStatement: expressionSequence eos;
 
@@ -144,7 +144,7 @@ classDeclaration: Class Identifier classTail;
 classTail: (Extends singleExpression)? '{' classElement* '}';
 
 classElement: (Static | Identifier | Async)* methodDefinition
-	| emptyStatement
+	| programEmptyStatement
 	| '#'? propertyName '=' singleExpression;
 
 methodDefinition:
