@@ -1,6 +1,6 @@
 {
   "name": "grammar-pdi",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Grammar parser for PDI BODL/ABSL",
   "main": "index.js",
   "unpkg": "./dist/grammar-pdi-umd.js",
