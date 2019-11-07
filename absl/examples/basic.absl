@@ -1,0 +1,5 @@
+import ABSL.bo as bo
+
+foreach(var a in this){
+  raise MSG.Create("");
+}

@@ -44,5 +44,14 @@
       "printParseTree": true,
       "visualParseTree": true
     },
+    {
+      "name": "antlr4-absl-basic",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "absl/examples/basic.absl",
+      "grammar": "absl/ABSLParser.g4",
+      "startRule": "program",
+      "visualParseTree": true
+    },
   ]
 }

@@ -5,12 +5,15 @@
   "main": "index.js",
   "unpkg": "./dist/grammar-pdi-umd.js",
   "scripts": {
-    "build:grammar": "cd bodl && ./make_lib.sh && npm run lint",
+    "build:grammar": "npm run build:grammar:absl && npm run build:grammar:bodl && npm run lint",
+    "build:grammar:bodl": "cd bodl && ./make_lib.sh",
+    "build:grammar:absl": "cd absl && ./make_lib.sh",
     "build:js:umd": "webpack",
     "lint": "eslint --fix .",
     "test": "jest",
+    "build": "npm run build:grammar && npm run build:js:umd",
     "test:go": "go test -v -mod=vendor ./... -race -coverprofile=coverage.txt -covermode=atomic",
-    "prepublishOnly": "npm run build:grammar && npm run build:js:umd"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

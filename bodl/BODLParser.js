@@ -1,7 +1,7 @@
 const antlr4 = require("antlr4");
 
-var { BODLParser } = require("./BODLParser");
-var { BODLLexer } = require("./BODLLexer");
+var { BODLParser } = require("./js/BODLParser");
+var { BODLLexer } = require("./js/BODLLexer");
 var { ProgramContext } = BODLParser;
 
 /**

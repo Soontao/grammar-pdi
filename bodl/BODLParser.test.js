@@ -1,6 +1,6 @@
 var fs = require("fs");
 var path = require("path");
-var { parseSource } = require(".");
+var { parseSource } = require("./BODLParser");
 
 var readFile = (relativePath) => fs.readFileSync(
   path.join(__dirname, relativePath), { encoding: "UTF-8" }
@@ -9,7 +9,7 @@ var readFile = (relativePath) => fs.readFileSync(
 
 test("should parse basic BODL source", () => {
 
-  var source = readFile("../examples/basic.bo");
+  var source = readFile("./examples/basic.bo");
   var program = parseSource(source);
 
   var importStatements = program.statements();
@@ -30,7 +30,7 @@ test("should parse basic BODL source", () => {
 
 test("should parse complex BODL source", () => {
 
-  var source = readFile("../examples/complex.bo");
+  var source = readFile("./examples/complex.bo");
   var program = parseSource(source);
 
   var importStatements = program.statements();
@@ -69,7 +69,7 @@ test("should parse complex BODL source", () => {
 
 test("should parse custom annotation BODL source", () => {
 
-  var program = parseSource(readFile("../examples/custom_annotation.bo"));
+  var program = parseSource(readFile("./examples/custom_annotation.bo"));
 
   var firstDefinition = program.definitions().children[0];
   var annotations = firstDefinition.annotations().children;
